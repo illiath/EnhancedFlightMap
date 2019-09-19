@@ -35,4 +35,4 @@ EFM_HELPCMD_STRING			= "|c00FFFFFF%s|r";
 
 EFM_ShowUnknownTimes			= false;
 
-Lys_Debug = true;
+Lys_Debug				= false;
