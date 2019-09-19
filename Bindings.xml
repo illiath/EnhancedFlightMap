@@ -1,0 +1,31 @@
+﻿<Bindings>
+	<Binding name="EFM_OPTIONS" runOnUp="false" header="EFM">
+		InterfaceOptionsFrame_OpenToCategory(EFM_GUI);
+	</Binding>
+	<Binding name="EFM_MAP1" runOnUp="false">
+		EFM_MW_OpenMap();
+	</Binding>
+	<Binding name="EFM_MAP2" runOnUp="false">
+		EFM_MW_OpenMap(1);
+	</Binding>
+	<Binding name="EFM_MAP3" runOnUp="false">
+		EFM_MW_OpenMap(2);
+	</Binding>
+	<Binding name="EFM_MAP4" runOnUp="false">
+		EFM_MW_OpenMap(3);
+	</Binding>
+    <!-- Report to Party -->
+	<Binding name="EFM_REPORT1" runOnUp="false">
+		EFM_Report_Flight("party");
+	</Binding>
+    <!-- Report to Raid -->
+	<Binding name="EFM_REPORT2" runOnUp="false">
+		EFM_Report_Flight("raid");
+	</Binding>
+    <!-- Report to Guild -->
+	<Binding name="EFM_REPORT3" runOnUp="false">
+		EFM_Report_Flight("guild");
+	</Binding>
+    
+</Bindings>
+
