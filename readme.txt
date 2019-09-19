@@ -1,3 +1,7 @@
+*SPECIAL NOTE*
+--------------
+Due to their now being WoW and WoW Classic, the master repo is for WoW Classic. I do not intend to play WoW retail, so here's hoping nothing too major happens to cause things to be completely unusable between the versions
+
 Description
 -----------
 Enhancements to the flight system.
@@ -19,7 +23,7 @@ As before the addon will load new data on the fly, and any who supply me with an
 
 Website
 -------
-EnhancedFlightMap's official website is at http://lysaddons.game-host.org
+EnhancedFlightMap's official website is gone, I'll get around to updating the github page here with a web thingy at some point.
 
 
 Usage
