@@ -105,7 +105,7 @@ local function EFM_MW_DisplayFlightMap(continentNum)
 
 					-- Get the x and y co-ords for the node.
 					sX = w * tonumber(myNode["fmLoc"]["x"]);
-					sY = h * tonumber(myNode["fmLoc"]["y"]);
+					sY = h * abs(1-tonumber(myNode["fmLoc"]["y"]));
 
 					-- Display it.
 					button:ClearAllPoints();
@@ -132,7 +132,7 @@ local function EFM_MW_DisplayFlightMap(continentNum)
 									line:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Line");
 
 									dX = w * tonumber(endNode["fmLoc"]["x"]);
-									dY = h * tonumber(endNode["fmLoc"]["y"]);
+									dY = h * abs(1-tonumber(endNode["fmLoc"]["y"]));
 									DrawLine(line, "EFM_MapWindowNew_Map", sX, sY, dX, dY, 32, TAXIROUTE_LINEFACTOR);
 									line:Show();
 								end
