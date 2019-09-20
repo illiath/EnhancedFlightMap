@@ -237,14 +237,18 @@ function EFM_NI_GetNode_List(myContinent)
 	local nodeList		= {};
 
 	if (EFM_Data == nil) then
+		EFM_Shared_DebugMessage("GetNodeList: EFM_Data == nil", myDebug);
 		return nil;
 	end
 
 	if (EFM_Data[EFM_Global_Faction] == nil) then
+		EFM_Shared_DebugMessage("GetNodeList: EFM_Data[faction] == nil", myDebug);
 		return nil;
 	end
 
 	if (EFM_Data[EFM_Global_Faction][myContinent] == nil) then
+		EFM_Shared_DebugMessage("GetNodeList: EFM_Data[faction][continent] == nil", myDebug);
+		EFM_Shared_DebugMessage("GetNodeList: myContinent == "..myContinent, myDebug);
 		return nil;
 	end
 

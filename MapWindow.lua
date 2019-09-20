@@ -48,8 +48,8 @@ local function EFM_MW_DisplayFlightMap(continentName)
 	local numNodes		= 0;
 
 	-- Set variables that get used a lot...
-	local w		= 816;
-	local h		= 752;
+	local w			= 816;
+	local h			= 752;
 
 	-- Clear the seenRoutes variable.
 	seenRoutes = {};
@@ -59,6 +59,7 @@ local function EFM_MW_DisplayFlightMap(continentName)
 
 	local nodeList = EFM_NI_GetNode_List(continentName);
 	if (nodeList == nil) then
+		EFM_Shared_DebugMessage("MW_Display_FlightMap: nodeList is empty!", 1);
 		return;
 	end
 
@@ -190,7 +191,7 @@ This would allow this to be automatically updated based on the available contine
 
 	-- Clear the old waypoints, then draw for the new map.
 	EFM_MW_ClearPoints();
-	EFM_MW_DisplayFlightMap(newMap);
+	EFM_MW_DisplayFlightMap(EFM_Shared_GetContinentName(newMap));
 end
 
 -- Function: Routine to handle opening the map screen.
