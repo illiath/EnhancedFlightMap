@@ -1,6 +1,6 @@
 *SPECIAL NOTE*
 --------------
-Due to their now being WoW and WoW Classic, the master repo is for WoW Classic. I do not intend to play WoW retail, so here's hoping nothing too major happens to cause things to be completely unusable between the versions
+Due to there now being WoW and WoW Classic, the master repo is for WoW Classic. I do not intend to play WoW retail, so here's hoping nothing too major happens to cause things to be completely unusable between the versions. The addon I am intending to update to allow for most of the changes due to new areas/etc being automated now the WoW map API allows such things, but I'm not intending to maintain a WoW retail addon. That said, if anyone wants to help out and do that maintenance, or if you want to help with the addon through submitting patches/whatever, open an issue on my github for this addon and we can talk (likely it'll be yes *grin*).
 
 Description
 -----------
@@ -45,6 +45,12 @@ Bugs
 Please read bugreport.txt, follow the instructions therein and provide the form details in your bug report post.
 
 Even if you don't follow the format, I do need most of the information in that form...
+
+Shortcut important information for bug reports:
+ALL bug reports MUST contain the following information:-
+1) The EXACT error message from World of Warcraft.
+2) What you where doing that caused the error to occur.
+3) If you are using the supplied data, or if you are learning the flight paths yourself.
 
 
 Special Thanks
