@@ -56,25 +56,23 @@ function EFM_Map_WorldMapEvent()
 		index = index + 1;
 	end
 
-	local myFaction		= UnitFactionGroup("player");
-	local myContinent	= GetCurrentMapContinent();
-	local myZone		= GetCurrentMapZone();
+	local myFaction			= UnitFactionGroup("player");
+	
+	local mapID			= WorldMapFrame:GetMapID();
+	local mapInfo			= C_Map.GetMapInfo(mapID);
 
-	if (WorldMapDetailFrame:IsVisible()) then
-		if (myContinent == 0) then
+	if (mapInfo.mapType == 2) then
+		-- The world map locations are not currently functional...
+		--[[
+		if (EFM_MyConf.ContinentOverlay == true) then
+			EFM_Map_WorldMapDisplay(mapInfo.name);
 			return;
-		else
-			if (myZone == 0) then
-				if (EFM_MyConf.ContinentOverlay == true) then
-					EFM_Map_WorldMapDisplay(myContinent);
-					return;
-				end
-			else
-				if (EFM_MyConf.ZoneMarker == true) then
-					EFM_Map_ZoneMapDisplay(myContinent, myZone);
-					return;
-				end
-			end
+		end
+		]]
+	elseif (mapInfo.mapType == 3) then
+		if (EFM_MyConf.ZoneMarker == true) then
+			EFM_Map_ZoneMapDisplay(mapInfo.name);
+			return;
 		end
 	end
 end
@@ -84,14 +82,8 @@ function EFM_MAP_POIOnEnter(frame)
 	local displayRoutes     = {};
 	local px, py            = frame:GetCenter();
 	local align             = "ANCHOR_LEFT";
-	local wx;
-	local wy;
+	local wx, wy		= UIParent:GetCenter();
 
---	if (WorldMapButton:IsVisible()) then
---		wx, wy = WorldMapButton:GetCenter();
---	else
-		wx, wy = UIParent:GetCenter();
---	end
 	if (px <= wx) then
 		align = "ANCHOR_RIGHT";
 	end
@@ -138,14 +130,31 @@ end
 
 -- Function: Display some EFM data on the world map... *EXPERIMENTAL*
 function EFM_Map_WorldMapDisplay(myContinent)
-	local myDebug		= false;
+	local myDebug		= true;
 	local myFaction		= UnitFactionGroup("player");
-	local w			= WorldMapButton:GetWidth();
-	local h			= WorldMapButton:GetHeight();
 	local zoneList		= {};
 	local zoneName		= "";
 	knownPoints		= {};
 	local buttonCount	= 0;
+
+	local mapCanvas		= WorldMapFrame:GetCanvas();
+	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Frame X: "..WorldMapFrame:GetWidth(), myDebug);
+	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Frame Y: "..WorldMapFrame:GetHeight(), myDebug);
+	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Canvas X: "..mapCanvas:GetWidth(), myDebug);
+	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Canvas Y: "..mapCanvas:GetHeight(), myDebug);
+	
+--	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: nudgeVectorX: "..mapCanvas.nudgeVectorX, myDebug);
+--	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: nudgeVectorY: "..mapCanvas.nudgeVectorY, myDebug);
+--	nudgeVectorX
+--	nudgeVectorY
+	
+	-- Currently these are statically defined, I need to find out what the actual map detail frame window is called now...
+	local offsetX		= WorldMapFrame:GetWidth() - mapCanvas:GetWidth();
+	local offsetY		= WorldMapFrame:GetHeight() - mapCanvas:GetHeight();
+
+	local w			= mapCanvas:GetWidth();
+	local h			= mapCanvas:GetHeight();
+	
 	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Getting data for knownPoints!", myDebug);
 	knownPoints		= EFM_NI_GetNode_List(myContinent);
 	if (knownPoints ~= nil) then
@@ -168,13 +177,20 @@ function EFM_Map_WorldMapDisplay(myContinent)
 			local nodeName	= myNode["name"];
 			if (myNode["wmLoc"] ~= nil) then
 				EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay Node Name: wmLoc is NOT nil." , myDebug);
-				local mapX		= tonumber(myNode["wmLoc"]["x"]);
-				local mapY		= tonumber(myNode["wmLoc"]["y"]);
+				local mapX		= tonumber(myNode["fmLoc"]["x"]);
+				local mapY		= tonumber(myNode["fmLoc"]["y"]);
 				if ((mapX ~= nil) and (mapY ~= nil)) then
+--[[
+					local pointX = (mapX * w) + offsetX;
+					local pointY = -((mapY * h) + offsetY);
+]]
+					local pointX = (mapX * w);
+					local pointY = (mapY * h);
+				
 					buttonCount	= buttonCount + 1;
 					POI		= getglobal("EFM_MAP_POI"..buttonCount);
 					if (POI == nil) then
-						POI = CreateFrame("Button", "EFM_MAP_POI"..buttonCount, WorldMapDetailFrame, "EFM_POI_Template");
+						POI = CreateFrame("Button", "EFM_MAP_POI"..buttonCount, mapCanvas, "EFM_POI_Template");
 					end
 					POITexture	= getglobal("EFM_MAP_POI"..buttonCount.."Icon");
 
@@ -185,7 +201,7 @@ function EFM_Map_WorldMapDisplay(myContinent)
 						POITexture:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Icon-Gray");
 					end
 					POI:ClearAllPoints();
-					POI:SetPoint("CENTER", "WorldMapDetailFrame", "TOPLEFT", mapX * w, -(mapY) * h);
+					POI:SetPoint("CENTER", mapCanvas, "BOTTOMLEFT", pointX, h-pointY);
 					POI:SetAlpha(0.5);
 					POI:Show();
 
@@ -194,6 +210,8 @@ function EFM_Map_WorldMapDisplay(myContinent)
 					POI.Continent	= myContinent;
 					POI.nodeStyle	= 0;
 
+					-- Disable the route lines for now as the POI's are not showing correctly yet.
+--[[
 					-- Draw Routes on map
 					if (myNode.routes ~= nil) then
 						local flightDuration = "";
@@ -207,14 +225,14 @@ function EFM_Map_WorldMapDisplay(myContinent)
 										routepoi		= routepoi + 1;
 										line = getglobal("EFM_WM_Route"..routepoi);
 										if (line == nil) then
-											line = WorldMapDetailFrame:CreateTexture("EFM_WM_Route"..routepoi, "TOP");
+											line = mapCanvas:CreateTexture("EFM_WM_Route"..routepoi, "TOP");
 										end
 										line:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Line");
 										if (line) then
-											local destX	= tonumber(endNode["wmLoc"]["x"]);
-											local destY = tonumber(endNode["wmLoc"]["y"]);
+											local destX = tonumber(endNode["fmLoc"]["x"]);
+											local destY = tonumber(endNode["fmLoc"]["y"]);
 											if ((destX ~= nil) and (destY ~= nil)) then
-												DrawRouteLine(line, "WorldMapDetailFrame", mapX * w, (h - (mapY * h)), destX * w, (h - (destY * h)), 32);
+												DrawLine(line, mapCanvas, pointX, (h - pointY), destX * w, (h - (destY * h)), 32, TAXIROUTE_LINEFACTOR);
 												line:SetAlpha(0.5);
 												line:Show();
 											end
@@ -225,6 +243,7 @@ function EFM_Map_WorldMapDisplay(myContinent)
 						end
 						table.insert(seenRoutes, zone);
 					end
+]]					
 				end
 			end
 		end
@@ -232,10 +251,11 @@ function EFM_Map_WorldMapDisplay(myContinent)
 end
 
 -- Function: Display the zone map.
-function EFM_Map_ZoneMapDisplay(myContinent, myZone)
+function EFM_Map_ZoneMapDisplay(myZone)
 	local myFaction		= UnitFactionGroup("player");
-	local w			= WorldMapButton:GetWidth();
-	local h			= WorldMapButton:GetHeight();
+	local mapCanvas		= WorldMapFrame:GetCanvas();
+	local w			= mapCanvas:GetWidth();
+	local h			= mapCanvas:GetHeight();
 	local zoneList		= {};
 	local zoneName		= "";
 	knownPoints		= {};
@@ -245,7 +265,7 @@ function EFM_Map_ZoneMapDisplay(myContinent, myZone)
 		return nil;
 	end
 
-	knownPoints		= EFM_NI_GetNodeListByZone(EFM_Shared_GetZoneName(myContinent, myZone));
+	knownPoints		= EFM_NI_GetNodeListByZone(myZone);
 
 	-- TODO: Display only "Land" nodes at this time
 	local nodeStyle		= 0;
@@ -263,7 +283,7 @@ function EFM_Map_ZoneMapDisplay(myContinent, myZone)
 					buttonCount	= buttonCount + 1;
 					POI		= getglobal("EFM_MAP_POI"..buttonCount);
 					if (POI == nil) then
-						POI	= CreateFrame("Button", "EFM_MAP_POI"..buttonCount, WorldMapDetailFrame, "EFM_POI_Template");
+						POI	= CreateFrame("Button", "EFM_MAP_POI"..buttonCount, mapCanvas, "EFM_POI_Template");
 					end
 					POITexture	= getglobal("EFM_MAP_POI"..buttonCount.."Icon");
 
@@ -274,7 +294,7 @@ function EFM_Map_ZoneMapDisplay(myContinent, myZone)
 						POITexture:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Icon-Gray");
 					end
 					POI:ClearAllPoints();
-					POI:SetPoint("CENTER", "WorldMapDetailFrame", "TOPLEFT", (mapX/100) * w, -((mapY/100) * h));
+					POI:SetPoint("CENTER", mapCanvas, "TOPLEFT", (mapX/100) * w, -((mapY/100) * h));
 					POI:SetAlpha(1);
 					POI:Show();
 

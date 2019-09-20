@@ -38,7 +38,7 @@ local function EFM_MW_ClearPoints()
 end
 
 -- Function: Display the flight map details.
-local function EFM_MW_DisplayFlightMap(continentNum)
+local function EFM_MW_DisplayFlightMap(continentName)
 	local Texture_AltKnown = "Interface\\TaxiFrame\\UI-Taxi-Icon-Gray";
 	local Texture_CurKnown = "Interface\\TaxiFrame\\UI-Taxi-Icon-Yellow";
 
@@ -57,7 +57,7 @@ local function EFM_MW_DisplayFlightMap(continentNum)
 	-- Add all distant taxi buttons.
 	EFM_TaxiDistantButtonData = {};
 
-	local nodeList = EFM_NI_GetNode_List(continentNum);
+	local nodeList = EFM_NI_GetNode_List(continentName);
 	if (nodeList == nil) then
 		return;
 	end

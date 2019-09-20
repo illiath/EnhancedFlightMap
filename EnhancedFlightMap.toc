@@ -5,7 +5,7 @@
 ## Notes: Adds enhancements to the flight system!
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## SavedVariables: EFM_Data,EFM_WaterNodes,EFM_ImportData
+## SavedVariables: EFM_Data,EFM_WaterNodes,EFM_ImportData,EFM_Debug
 ## SavedVariablesPerCharacter: EFM_MyConf,EFM_KnownNodes,EFM_ReachableNodes
 shared_functions.lua
 

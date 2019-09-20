@@ -64,8 +64,8 @@ end
 function EFM_SF_FormatTime(duration)
    local minutes	= floor(duration / 60);
    local seconds	= duration - (minutes * 60);
-   local tens	= floor(seconds/10);
-   local single	= seconds - (tens * 10);
+   local tens		= floor(seconds/10);
+   local single		= seconds - (tens * 10);
    return minutes..":"..tens..single;
 end
 
@@ -87,13 +87,20 @@ end
 
 -- Function: Get "World Map" location
 function EFM_Shared_GetWorldMapPosition()
---	SetMapZoom(GetCurrentMapContinent());
-	local mapX, mapY = EFM_Shared_GetCurrentPlayerLocation();
-
-	mapX = EFM_SF_ValueToPrecision(mapX, 2);
-	mapY = EFM_SF_ValueToPrecision(mapY, 2);
-
-	return mapX, mapY;
+	local mapID = C_Map.GetBestMapForUnit("player");
+	
+	if(mapID) then
+		local info = C_Map.GetMapInfo(mapID);
+		if(info) then
+			while(info['mapType'] and info['mapType'] > 2) do
+				info = C_Map.GetMapInfo(info['parentMapID']);
+			end
+			if(info['mapType'] == 2) then
+				local position	= C_Map.GetPlayerMapPosition(info.mapID, "player");
+				return EFM_SF_ValueToPrecision(position.x, 2), EFM_SF_ValueToPrecision(position.y, 2);
+			end
+		end
+	end
 end
 
 -- Function: Get current continent name

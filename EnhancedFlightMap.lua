@@ -37,6 +37,10 @@ function EnhancedFlightMap_OnEvent( frame, event, ... )
 		-- This is done as there is no way (currently) to determine what node we are flying to while in flight.
 		hooksecurefunc("TakeTaxiNode", EFM_Timer_TakeTaxiNode);
 
+		-- Hook the MapCanvasMixin:OnMapChanged function.
+		-- This is done to allow us to display stuff on the blizzard map screens
+		hooksecurefunc(MapCanvasMixin, "OnMapChanged", EFM_Map_WorldMapEvent);
+	
 		-- Hook the GossipTitleButton_OnClick function.
 		-- This is done due to 1.11 changes to druid flightpaths at nighthaven, might be needed elsewhere in the future also.
 --		hooksecurefunc("GossipTitleButton_OnClick", EFM_GossipTitleButton_OnClick);
@@ -61,28 +65,15 @@ function EnhancedFlightMap_OnEvent( frame, event, ... )
 		return;
 
 	elseif (event == "PLAYER_ENTERING_WORLD") then
-		--EFM_Message("announce", event);
---		frame:RegisterEvent("WORLD_MAP_UPDATE");
 		frame:RegisterEvent("TAXIMAP_OPENED");
 		--EFM_Data_NodeFixup();
 		return;
 
 	elseif (event == "PLAYER_LEAVING_WORLD") then
-		--EFM_Message("announce", event);
---		frame:UnregisterEvent("WORLD_MAP_UPDATE");
 		frame:UnregisterEvent("TAXIMAP_OPENED");
-		-- EFM_Timer_StartRecording	= false;
-		-- EFM_Timer_Recording		= false;
-		-- EFM_FlightStatus:Hide();
-		return;
-
-	elseif ((event == "WORLD_MAP_UPDATE") or (event == "WORLD_MAP_NAME_UPDATE"))then
-		--EFM_Message("announce", event);
-		EFM_Map_WorldMapEvent();
 		return;
 
 	elseif (event == "TAXIMAP_OPENED") then
-		--EFM_Message("announce", event);
 		EFM_FM_TaxiMapOpenEvent();
 		return;
 	end
@@ -160,3 +151,10 @@ function EFM_SlashCommandHandler(msg)
 		value = getglobal("EFM_HELP_TEXT"..index);
 	end
 end
+
+
+-- Function EFM_TestFunction
+function EFM_TestFunction(event, ...)
+	EFM_Shared_DebugMessage(event, 1);
+end
+

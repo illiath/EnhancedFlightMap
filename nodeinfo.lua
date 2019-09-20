@@ -208,7 +208,7 @@ function EFM_NI_GetNode_fmLoc(X, Y, nodeStyle, myContinent)
 		myData	= EFM_WaterNodes;
 	end
 
-	EFM_Shared_DebugMessage("Searcing Continent : "..myContinent, myDebug);
+	EFM_Shared_DebugMessage("Searching Continent : "..myContinent, myDebug);
 	
 	if (myData[EFM_Global_Faction] ~= nil) then
 		if (myData[EFM_Global_Faction][myContinent] ~= nil) then
@@ -232,10 +232,9 @@ function EFM_NI_GetNode_fmLoc(X, Y, nodeStyle, myContinent)
 end
 
 -- Function: Return the list of nodes for a given continent number.
-function EFM_NI_GetNode_List(continentNum)
+function EFM_NI_GetNode_List(myContinent)
 	local myDebug		= false;
 	local nodeList		= {};
-	local myContinent	= EFM_Shared_GetContinentName(continentNum);
 
 	if (EFM_Data == nil) then
 		return nil;
@@ -261,7 +260,7 @@ end
 
 -- Function: Return the list of nodes in a given zone.
 function EFM_NI_GetNodeListByZone(zoneName)
-	local myDebug		= true;
+	local myDebug		= false;
 	local nodeList		= {};
 
 	if (EFM_Data == nil) then

@@ -73,6 +73,10 @@ function EFM_DefineData()
 		EFM_WaterNodes = {};
 	end
 	
+	if (EFM_Debug == nil) then
+		EFM_Debug = {};
+	end
+	
 end
 
 -- Function: Import preloaded data into "live" EFM data
