@@ -62,13 +62,11 @@ function EFM_Map_WorldMapEvent()
 	local mapInfo			= C_Map.GetMapInfo(mapID);
 
 	if (mapInfo.mapType == 2) then
-		-- The world map locations are not currently functional...
-		--[[
 		if (EFM_MyConf.ContinentOverlay == true) then
+			-- Disable this to not have efm do Strange Stuff (tm) on the world map
 			EFM_Map_WorldMapDisplay(mapInfo.name);
 			return;
 		end
-		]]
 	elseif (mapInfo.mapType == 3) then
 		if (EFM_MyConf.ZoneMarker == true) then
 			EFM_Map_ZoneMapDisplay(mapInfo.name);
@@ -130,7 +128,7 @@ end
 
 -- Function: Display some EFM data on the world map... *EXPERIMENTAL*
 function EFM_Map_WorldMapDisplay(myContinent)
-	local myDebug		= true;
+	local myDebug		= false;
 	local myFaction		= UnitFactionGroup("player");
 	local zoneList		= {};
 	local zoneName		= "";
@@ -138,16 +136,7 @@ function EFM_Map_WorldMapDisplay(myContinent)
 	local buttonCount	= 0;
 
 	local mapCanvas		= WorldMapFrame:GetCanvas();
-	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Frame X: "..WorldMapFrame:GetWidth(), myDebug);
-	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Frame Y: "..WorldMapFrame:GetHeight(), myDebug);
-	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Canvas X: "..mapCanvas:GetWidth(), myDebug);
-	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Canvas Y: "..mapCanvas:GetHeight(), myDebug);
-	
---	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: nudgeVectorX: "..mapCanvas.nudgeVectorX, myDebug);
---	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: nudgeVectorY: "..mapCanvas.nudgeVectorY, myDebug);
---	nudgeVectorX
---	nudgeVectorY
-	
+
 	-- Currently these are statically defined, I need to find out what the actual map detail frame window is called now...
 	local offsetX		= WorldMapFrame:GetWidth() - mapCanvas:GetWidth();
 	local offsetY		= WorldMapFrame:GetHeight() - mapCanvas:GetHeight();
@@ -176,14 +165,11 @@ function EFM_Map_WorldMapDisplay(myContinent)
 			local myNode	= EFM_NI_GetNodeByName(flightNode, nodeStyle);
 			local nodeName	= myNode["name"];
 			if (myNode["wmLoc"] ~= nil) then
-				EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay Node Name: wmLoc is NOT nil." , myDebug);
-				local mapX		= tonumber(myNode["fmLoc"]["x"]);
-				local mapY		= tonumber(myNode["fmLoc"]["y"]);
+--				EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay Node Name: wmLoc is NOT nil." , myDebug);
+				local mapX = tonumber(myNode["wmLoc"]["x"]);
+				local mapY = tonumber(myNode["wmLoc"]["y"]);
 				if ((mapX ~= nil) and (mapY ~= nil)) then
---[[
-					local pointX = (mapX * w) + offsetX;
-					local pointY = -((mapY * h) + offsetY);
-]]
+--					EFM_Shared_DebugMessage("WMD: Node is at x "..mapX..", y "..mapY , myDebug);
 					local pointX = (mapX * w);
 					local pointY = (mapY * h);
 				
@@ -209,9 +195,7 @@ function EFM_Map_WorldMapDisplay(myContinent)
 					POI.Location	= nodeName;
 					POI.Continent	= myContinent;
 					POI.nodeStyle	= 0;
-
-					-- Disable the route lines for now as the POI's are not showing correctly yet.
---[[
+					
 					-- Draw Routes on map
 					if (myNode.routes ~= nil) then
 						local flightDuration = "";
@@ -228,14 +212,14 @@ function EFM_Map_WorldMapDisplay(myContinent)
 											line = mapCanvas:CreateTexture("EFM_WM_Route"..routepoi, "TOP");
 										end
 										line:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Line");
-										if (line) then
-											local destX = tonumber(endNode["fmLoc"]["x"]);
-											local destY = tonumber(endNode["fmLoc"]["y"]);
-											if ((destX ~= nil) and (destY ~= nil)) then
-												DrawLine(line, mapCanvas, pointX, (h - pointY), destX * w, (h - (destY * h)), 32, TAXIROUTE_LINEFACTOR);
-												line:SetAlpha(0.5);
-												line:Show();
-											end
+--										if (line) then
+										local destX = tonumber(endNode["wmLoc"]["x"]);
+										local destY = tonumber(endNode["wmLoc"]["y"]);
+										if ((destX ~= nil) and (destY ~= nil)) then
+											DrawLine(line, mapCanvas, pointX, (h - pointY), destX * w, (h - (destY * h)), 32, TAXIROUTE_LINEFACTOR);
+											line:SetAlpha(0.5);
+											line:Show();
+--											end
 										end
 									end
 								end
@@ -243,7 +227,6 @@ function EFM_Map_WorldMapDisplay(myContinent)
 						end
 						table.insert(seenRoutes, zone);
 					end
-]]					
 				end
 			end
 		end

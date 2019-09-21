@@ -14,7 +14,7 @@
 	<Script file="MapWindow.lua"></Script>
 
 	<!-- Template for the map points of interests -->
-	<Button name="EFM_POI_Template" virtual="true">
+	<Button name="EFM_POI_Template" virtual="true" frameStrata="TOOLTIP">
 		<Size>
 			<AbsDimension x="16" y="16"/>
 		</Size>
@@ -29,7 +29,7 @@
 		<Scripts>
 			<OnLoad>
 				<!-- self:SetFrameStrata("TOOLTIP"); -->
-				self:SetFrameLevel(self:GetFrameLevel() + 10);
+				<!-- self:SetFrameLevel(self:GetFrameLevel() - 1); -->
 			</OnLoad>
 			<OnEnter>
 				EFM_MAP_POIOnEnter(self);
