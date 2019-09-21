@@ -156,11 +156,6 @@ function EFM_Shared_GetZoneName(continentNum, zoneNum)
 			end
 		end
 	end
---[[
-	local zoneNames = { GetMapZones(continentNum) } ;
-
-	return zoneNames[zoneNum];
-]]
 end
 
 -- Function: Get current Location

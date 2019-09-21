@@ -136,10 +136,8 @@ function EFM_Map_WorldMapDisplay(myContinent)
 	local buttonCount	= 0;
 
 	local mapCanvas		= WorldMapFrame:GetCanvas();
-
-	-- Currently these are statically defined, I need to find out what the actual map detail frame window is called now...
-	local offsetX		= WorldMapFrame:GetWidth() - mapCanvas:GetWidth();
-	local offsetY		= WorldMapFrame:GetHeight() - mapCanvas:GetHeight();
+--	local offsetX		= WorldMapFrame:GetWidth() - mapCanvas:GetWidth();
+--	local offsetY		= WorldMapFrame:GetHeight() - mapCanvas:GetHeight();
 
 	local w			= mapCanvas:GetWidth();
 	local h			= mapCanvas:GetHeight();
