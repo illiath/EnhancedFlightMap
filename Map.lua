@@ -237,6 +237,7 @@ function EFM_Map_ZoneMapDisplay(myZone)
 	local mapCanvas		= WorldMapFrame:GetCanvas();
 	local w			= mapCanvas:GetWidth();
 	local h			= mapCanvas:GetHeight();
+	local zoneContinent	= "";
 	local zoneList		= {};
 	local zoneName		= "";
 	knownPoints		= {};
@@ -247,6 +248,7 @@ function EFM_Map_ZoneMapDisplay(myZone)
 	end
 
 	knownPoints		= EFM_NI_GetNodeListByZone(myZone);
+	zoneContinent		= EFM_NI_GetContinentByZone(myZone);
 
 	-- TODO: Display only "Land" nodes at this time
 	local nodeStyle		= 0;
@@ -269,7 +271,7 @@ function EFM_Map_ZoneMapDisplay(myZone)
 					POITexture	= getglobal("EFM_MAP_POI"..buttonCount.."Icon");
 
 					-- Display the actual POI Button
-					if (EFM_NI_CheckReachable(myContinent, nodeName)) then
+					if (EFM_NI_CheckReachable(zoneContinent, nodeName)) then
 						POITexture:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Icon-Yellow");
 					else
 						POITexture:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Icon-Gray");
@@ -281,7 +283,7 @@ function EFM_Map_ZoneMapDisplay(myZone)
 
 					-- Set the Location & Continent Fields.
 					POI.Location	= nodeName;
-					POI.Continent	= myContinent;
+					POI.Continent	= zoneContinent;
 				end
 			end
 		end

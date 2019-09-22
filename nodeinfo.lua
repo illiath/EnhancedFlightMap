@@ -10,15 +10,19 @@ This file contains all the various information routines related to flight nodes.
 function EFM_NI_CheckReachable(myContinent, myNode)
 	local myDebug 		= false;
 
+	EFM_Shared_DebugMessage("Checking if node "..myNode.." is reachable on continent "..myContinent, myDebug);
+	
 	if (EFM_ReachableNodes ~= nil) then
 		if (EFM_ReachableNodes[myContinent] ~= nil) then
 			for key, val in pairs(EFM_ReachableNodes[myContinent]) do
 				if (val == myNode) then
+					EFM_Shared_DebugMessage("Yes it is!", myDebug);
 					return true;
 				end
 			end
 		end
 	end
+	EFM_Shared_DebugMessage("Awww, no it's not!", myDebug);
 	return false;
 end
 
@@ -107,6 +111,32 @@ function EFM_NI_GetNodeByName(searchNodeName, nodeStyle)
 
 	return nil;
 end
+
+-- Function: Get continent name from zone name
+function EFM_NI_GetContinentByZone(searchZoneName)
+	local myDebug	= false;
+	local myData	= EFM_Data;
+
+	if (myData ~= nil) then
+		if (myData[EFM_Global_Faction] ~= nil) then
+			for myContinent in pairs(myData[EFM_Global_Faction]) do
+				for myZone in pairs(myData[EFM_Global_Faction][myContinent]) do
+					if (myZone == searchZoneName) then
+						EFM_Shared_DebugMessage("GFBZ: Found Zone "..searchZoneName..".", myDebug);
+						return myContinent;
+					end
+				end
+			end
+		end
+	end
+
+	-- Error message?
+	EFM_Shared_DebugMessage("GFBZ: Did not find zone "..searchZoneName, myDebug);
+
+	-- Fallback, gives a value that should never (hopefully) equate to a continent name.
+	return "NO DATA FOR ZONE NAME";
+end
+
 
 -- Function: Add the flight map location to a node.
 function EFM_NI_AddNode_fmLoc(nodeName, X, Y, nodeStyle)
