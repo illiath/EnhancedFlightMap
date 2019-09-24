@@ -168,7 +168,7 @@ function EnhancedFlightMap_RegConfig()
 	EFM_GUI_Display_Options:SetBackdropBorderColor(1, 1, 1, 1.0);
 	EFM_GUI_Display_Options:SetBackdropColor(0, 0, 0, 0);
 	EFM_GUI_Display_Options:SetWidth(380)
-	EFM_GUI_Display_Options:SetHeight(150)
+	EFM_GUI_Display_Options:SetHeight(180)
 	EFM_GUI_Display_Options:ClearAllPoints()
 	EFM_GUI_Display_Options:SetPoint("TOPLEFT", EFM_GUI_Timer_Options, "BOTTOMLEFT", 0, -5)
 
@@ -205,10 +205,22 @@ function EnhancedFlightMap_RegConfig()
 	EFM_GUI_CS_Button_ContinentOverlay:SetScript("OnMouseUp", EFM_CS_Button_OnMouseDownUP)
 	EFM_GUI_CS_Button_ContinentOverlayText:SetText(EFM_GUITEXT_ContinentOverlay);
 
+	-- EFM_CS_Button_WorldOverlay
+	local EFM_GUI_CS_Button_WorldOverlay = CreateFrame("CheckButton", "EFM_GUI_CS_Button_WorldOverlay", EFM_GUI_OPTIONS_SC, "UICheckButtonTemplate")
+	EFM_GUI_CS_Button_WorldOverlay:ClearAllPoints()
+	EFM_GUI_CS_Button_WorldOverlay:SetPoint("TOPLEFT", EFM_GUI_CS_Button_ContinentOverlay, "BOTTOMLEFT", 0, 0)
+	if (EFM_MyConf.WorldOverlay == false) then
+		EFM_GUI_CS_Button_WorldOverlay:SetChecked(false) else
+		EFM_GUI_CS_Button_WorldOverlay:SetChecked(true) end
+	EFM_GUI_CS_Button_WorldOverlay:SetScript("OnClick", EFM_CS_Button_WorldOverlay_OnClick)
+	EFM_GUI_CS_Button_WorldOverlay:SetScript("OnMouseDown", EFM_CS_Button_OnMouseDownUP)
+	EFM_GUI_CS_Button_WorldOverlay:SetScript("OnMouseUp", EFM_CS_Button_OnMouseDownUP)
+	EFM_GUI_CS_Button_WorldOverlayText:SetText(EFM_GUITEXT_WorldOverlay);
+
 	-- EFM_CS_Button_DruidPaths
 	local EFM_GUI_CS_Button_DruidPaths = CreateFrame("CheckButton", "EFM_GUI_CS_Button_DruidPaths", EFM_GUI_OPTIONS_SC, "UICheckButtonTemplate")
 	EFM_GUI_CS_Button_DruidPaths:ClearAllPoints()
-	EFM_GUI_CS_Button_DruidPaths:SetPoint("TOPLEFT", EFM_GUI_CS_Button_ContinentOverlay, "BOTTOMLEFT", 0, 0)
+	EFM_GUI_CS_Button_DruidPaths:SetPoint("TOPLEFT", EFM_GUI_CS_Button_WorldOverlay, "BOTTOMLEFT", 0, 0)
 	if (EFM_MyConf.DruidPaths == false) then
 		EFM_GUI_CS_Button_DruidPaths:SetChecked(false) else
 		EFM_GUI_CS_Button_DruidPaths:SetChecked(true) end

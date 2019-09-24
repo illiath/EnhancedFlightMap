@@ -83,6 +83,7 @@ EFM_GUITEXT_LoadDruid					= "Druid";
 EFM_GUITEXT_LoadHorde					= FACTION_HORDE;				-- Should not need localization as this is the official blizzard locale-string.
 EFM_GUITEXT_LoadAll					= "Load all pre-load data";
 EFM_GUITEXT_ContinentOverlay				= "Continent Map Overlay";
+EFM_GUITEXT_WorldOverlay				= "World Map Overlay";
 EFM_GUITEXT_UpdateRecorded				= "Update Recorded data with Calculated";
 
 -- Key Binding Strings
