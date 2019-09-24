@@ -9,7 +9,7 @@ These strings are not to be localised, so they are here, and not in any of the l
 ]]
 
 -- Global define
-EFM_Version				= "Classic-2.2.7";
+EFM_Version				= "Classic-3.1.0";
 
 -- Define some stuff here to handle global stuff...
 EFM_Global_Faction			= UnitFactionGroup("player");
@@ -30,9 +30,13 @@ knownPoints				= {};
 EFM_TaxiOrigin				= "";
 EFM_TaxiDistantButtonData		= {};
 
+-- Reference globals (see data.lua)
+EFM_LocTypes				= {};
+
 -- Special strings.  These strings do not get modified for locale-specificness...
 EFM_HELPCMD_STRING			= "|c00FFFFFF%s|r";
 
+-- Show unknown flight times while in flight
 EFM_ShowUnknownTimes			= false;
 
 Lys_Debug				= false;

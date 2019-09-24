@@ -85,23 +85,24 @@ function EFM_Shared_DebugMessage(message, debug)
     end
 end
 
--- Function: Get "World Map" location
-function EFM_Shared_GetWorldMapPosition()
+-- Function: Get Current Map location
+function EFM_Shared_GetCurrentMapPosition(mapLevel)
 	local mapID = C_Map.GetBestMapForUnit("player");
 	
-	if(mapID) then
+	if (mapID ~= nil) then
 		local info = C_Map.GetMapInfo(mapID);
-		if(info) then
-			while(info['mapType'] and info['mapType'] > 2) do
+		if (info ~= nil) then
+			while(info['mapType'] and info['mapType'] > mapLevel) do
 				info = C_Map.GetMapInfo(info['parentMapID']);
 			end
-			if(info['mapType'] == 2) then
+			if(info['mapType'] == mapLevel) then
 				local position	= C_Map.GetPlayerMapPosition(info.mapID, "player");
 				return EFM_SF_ValueToPrecision(position.x, 2), EFM_SF_ValueToPrecision(position.y, 2);
 			end
 		end
 	end
 end
+
 
 -- Function: Get current continent name
 function EFM_Shared_GetCurrentContinentName()

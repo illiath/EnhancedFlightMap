@@ -46,6 +46,10 @@ function EFM_DefineData()
 		EFM_MyConf.ContinentOverlay = true;
 	end
 
+	if (EFM_MyConf.WorldOverlay	== nil) then
+		EFM_MyConf.WorldOverlay = true;
+	end
+
 	if (EFM_MyConf.UpdateRecorded	== nil) then
 		EFM_MyConf.UpdateRecorded = false;
 	end
@@ -73,9 +77,11 @@ function EFM_DefineData()
 		EFM_WaterNodes = {};
 	end
 	
-	if (EFM_Debug == nil) then
-		EFM_Debug = {};
-	end
+	-- Glocal zone location "type"
+	EFM_LocTypes[1] = "worldMapLoc";
+	EFM_LocTypes[2] = "wmLoc";
+	EFM_LocTypes[3] = "zmLoc";
+	EFM_LocTypes[4] = "fmLoc";
 	
 end
 

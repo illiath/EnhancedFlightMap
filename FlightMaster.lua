@@ -46,20 +46,15 @@ function EFM_FM_DrawOneHopLines()
 				EFM_NI_CreateNode(continent, nodeName, nodeStyle);
 			end
 
-			-- Set the Co-ordinates of the flight node.
-			local mapX, mapY = EFM_Shared_GetCurrentPlayerLocation();
-			mapX = floor(mapX * 10000) / 100;
-			mapY = floor(mapY * 10000) / 100;
-			local wMapX, wMapY = EFM_Shared_GetWorldMapPosition();
-
-			EFM_NI_AddNode_zoneLoc(nodeName, mapX, mapY, nodeStyle);
-			EFM_NI_AddNode_wmLoc(nodeName, wMapX, wMapY, nodeStyle);
 			EFM_NI_AddNode_fmLoc(nodeName, fmX, fmY, nodeStyle);
+			EFM_NI_AddNodeLoc(nodeName, nodeStyle, 3);
+			EFM_NI_AddNodeLoc(nodeName, nodeStyle, 2);
+			EFM_NI_AddNodeLoc(nodeName, nodeStyle, 1);
 			table.insert(usableNodes, nodeName);
 
 			EFM_NI_Reachable(continent, nodeName, true);
+		
 		elseif (nodeType == "REACHABLE") then
-
 			EFM_NI_AddNode_fmLoc(nodeName, fmX, fmY, nodeStyle);
 
 			-- Add the node to the routelist table

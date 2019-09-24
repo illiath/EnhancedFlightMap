@@ -7,13 +7,13 @@ This file contains all the various information routines related to flight nodes.
 ]]
 
 -- Function: Check if player is flagged to know a flight path.
-function EFM_NI_CheckReachable(myContinent, myNode)
+function EFM_NI_CheckReachable(myNode)
 	local myDebug 		= false;
 
 	EFM_Shared_DebugMessage("Checking if node "..myNode.." is reachable on continent "..myContinent, myDebug);
 	
 	if (EFM_ReachableNodes ~= nil) then
-		if (EFM_ReachableNodes[myContinent] ~= nil) then
+		for myContinent in pairs(EFM_ReachableNodes) do
 			for key, val in pairs(EFM_ReachableNodes[myContinent]) do
 				if (val == myNode) then
 					EFM_Shared_DebugMessage("Yes it is!", myDebug);
@@ -148,23 +148,20 @@ function EFM_NI_AddNode_fmLoc(nodeName, X, Y, nodeStyle)
 	end
 end
 
--- Function: Add the zone map location to a node.
-function EFM_NI_AddNode_zoneLoc(nodeName, X, Y, nodeStyle)
+-- Function: Add the map location to a node, by map level
+function EFM_NI_AddNodeLoc(nodeName, nodeStyle, mapLevel)
 	local myNode = EFM_NI_GetNodeByName(nodeName, nodeStyle);
-	if (myNode ~= nil) then
-		myNode["zmLoc"] = {};
-		myNode["zmLoc"]["x"] = tostring(X);
-		myNode["zmLoc"]["y"] = tostring(Y);
-	end
-end
+	local X, Y = EFM_Shared_GetCurrentMapPosition(mapLevel);
 
--- Function: Add the world map location to a node.
-function EFM_NI_AddNode_wmLoc(nodeName, X, Y, nodeStyle)
-	local myNode = EFM_NI_GetNodeByName(nodeName, nodeStyle);
 	if (myNode ~= nil) then
-		myNode["wmLoc"] = {};
-		myNode["wmLoc"]["x"] = tostring(X);
-		myNode["wmLoc"]["y"] = tostring(Y);
+		if (mapLevel == 3) then
+			X = floor(X * 10000) / 100;
+			Y = floor(Y * 10000) / 100;
+		end
+
+		myNode[EFM_LocTypes[mapLevel]] = {};
+		myNode[EFM_LocTypes[mapLevel]]["x"] = tostring(X);
+		myNode[EFM_LocTypes[mapLevel]]["y"] = tostring(Y);
 	end
 end
 
@@ -188,14 +185,6 @@ function EFM_NI_AddNode_FlightDuration(nodeName, destNodeName, flightDuration, n
 	EFM_Shared_DebugMessage("Adding duration from "..nodeName.." to "..destNodeName..". Time was "..flightDuration, Lys_Debug);
 
 	local myNode = EFM_NI_GetNodeByName(nodeName, nodeStyle);
-
---[[
-	if (myNode) then
-		EFM_Shared_DebugMessage(myNode.name.." exists!", Lys_Debug);
-	else
-		EFM_Shared_DebugMessage(myNode.name.." does not exist!", Lys_Debug);
-	end
-	]]
 
 	if (myNode["timers"] == nil) then
 		myNode["timers"] = {};

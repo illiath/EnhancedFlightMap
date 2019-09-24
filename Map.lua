@@ -61,15 +61,19 @@ function EFM_Map_WorldMapEvent()
 	local mapID			= WorldMapFrame:GetMapID();
 	local mapInfo			= C_Map.GetMapInfo(mapID);
 
-	if (mapInfo.mapType == 2) then
+	if (mapInfo.mapType == 1) then
+		if (EFM_MyConf.WorldOverlay == true) then
+			EFM_Map_DisplayEFMPOIs(mapInfo.name, 1);
+			return;
+		end
+	elseif (mapInfo.mapType == 2) then
 		if (EFM_MyConf.ContinentOverlay == true) then
-			-- Disable this to not have efm do Strange Stuff (tm) on the world map
-			EFM_Map_WorldMapDisplay(mapInfo.name);
+			EFM_Map_DisplayEFMPOIs(mapInfo.name, 2);
 			return;
 		end
 	elseif (mapInfo.mapType == 3) then
 		if (EFM_MyConf.ZoneMarker == true) then
-			EFM_Map_ZoneMapDisplay(mapInfo.name);
+			EFM_Map_DisplayEFMPOIs(mapInfo.name, 3);
 			return;
 		end
 	end
@@ -102,7 +106,7 @@ function EFM_MAP_POIOnEnter(frame)
 				if (not EFM_SF_StringInTable(displayRoutes, routeName)) then
 					table.insert(displayRoutes, routeName);
 					flightDuration	= EFM_NI_GetNode_FlightDuration(frame.Location, routeName);
-					if (EFM_NI_CheckReachable(frame.Continent, routeName)) then
+					if (EFM_NI_CheckReachable(routeName)) then
 						flightColour = "|c0000FF00";
 					else
 						flightColour = "|c00909090";
@@ -126,26 +130,59 @@ function EFM_MAP_POIOnEnter(frame)
 	EFM_ToolTip:Show();
 end
 
--- Function: Display some EFM data on the world map... *EXPERIMENTAL*
-function EFM_Map_WorldMapDisplay(myContinent)
+-- Function: Display some EFM data on the world map...
+function EFM_Map_DisplayEFMPOIs(locName, locLevel)
 	local myDebug		= false;
+
 	local myFaction		= UnitFactionGroup("player");
 	local zoneList		= {};
 	local zoneName		= "";
-	knownPoints		= {};
+	local knownPoints	= {};
 	local buttonCount	= 0;
 
 	local mapCanvas		= WorldMapFrame:GetCanvas();
---	local offsetX		= WorldMapFrame:GetWidth() - mapCanvas:GetWidth();
---	local offsetY		= WorldMapFrame:GetHeight() - mapCanvas:GetHeight();
-
 	local w			= mapCanvas:GetWidth();
 	local h			= mapCanvas:GetHeight();
+
+	-- World Map
+	if (locLevel == 1) then
+		for index, myContinent in pairs(EFM_GetContinentList()) do
+			for myZone in pairs(EFM_Data[EFM_Global_Faction][myContinent]) do
+				for myNode in pairs(EFM_Data[EFM_Global_Faction][myContinent][myZone]) do
+					EFM_Shared_DebugMessage("Node Added: "..EFM_Data[EFM_Global_Faction][myContinent][myZone][myNode]["name"], myDebug);
+					table.insert(knownPoints, EFM_Data[EFM_Global_Faction][myContinent][myZone][myNode]["name"]);
+				end
+			end
+		end
+		nodeLevel		= EFM_LocTypes[1];
+
+		EFM_Shared_DebugMessage("EFM_Map_DisplayEFMPOIs: Trying to display POIs on the World Map.", myDebug);
 	
-	EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: Getting data for knownPoints!", myDebug);
-	knownPoints		= EFM_NI_GetNode_List(myContinent);
+	-- Continent Map
+	elseif (locLevel == 2) then
+		myContinent		= locName;
+		knownPoints		= EFM_NI_GetNode_List(locName);
+		nodeLevel		= EFM_LocTypes[2];
+		
+	-- Zone Map
+	elseif (locLevel == 3) then
+		knownPoints		= EFM_NI_GetNodeListByZone(locName);
+		myContinent		= EFM_NI_GetContinentByZone(locName);
+		nodeLevel		= EFM_LocTypes[3];
+	end
+	
+	-- Abort if we are seeing this too early.
+	if (nodeLevel == nil) then
+		EFM_Shared_DebugMessage("EFM_Map_DisplayEFMPOIs: nodeLevel not set yet.", myDebug);
+		EFM_Shared_DebugMessage("EFM_LocTypes:"..EFM_LocTypes[1], myDebug);
+		return;
+	end
+	
+	EFM_Shared_DebugMessage("EFM_Map_DisplayEFMPOIs: Getting data for knownPoints!", myDebug);
+	EFM_Shared_DebugMessage("EFM_Map_DisplayEFMPOIs: nodeLevel: "..nodeLevel, myDebug);
+	
 	if (knownPoints ~= nil) then
-		EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay: knownPoints has data!", myDebug);
+		EFM_Shared_DebugMessage("EFM_Map_DisplayEFMPOIs: knownPoints has data!", myDebug);
 		local POI;
 		local POITexture;
 
@@ -158,19 +195,25 @@ function EFM_Map_WorldMapDisplay(myContinent)
 
 		-- Show the flight nodes
 		for index, flightNode in pairs(knownPoints) do
-			EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay Node Name: "..flightNode, myDebug);
+			EFM_Shared_DebugMessage("EFM_Map_DisplayEFMPOIs Node Name: "..flightNode, myDebug);
 
 			local myNode	= EFM_NI_GetNodeByName(flightNode, nodeStyle);
 			local nodeName	= myNode["name"];
-			if (myNode["wmLoc"] ~= nil) then
---				EFM_Shared_DebugMessage("EFM_Map_WorldMapDisplay Node Name: wmLoc is NOT nil." , myDebug);
-				local mapX = tonumber(myNode["wmLoc"]["x"]);
-				local mapY = tonumber(myNode["wmLoc"]["y"]);
+			if (myNode[nodeLevel] ~= nil) then
+				EFM_Shared_DebugMessage("EFM_Map_DisplayEFMPOIs Node Name: nodeLevel is NOT nil." , myDebug);
+				local mapX = tonumber(myNode[nodeLevel]["x"]);
+				local mapY = tonumber(myNode[nodeLevel]["y"]);
 				if ((mapX ~= nil) and (mapY ~= nil)) then
---					EFM_Shared_DebugMessage("WMD: Node is at x "..mapX..", y "..mapY , myDebug);
+					EFM_Shared_DebugMessage("EFM_Map_DisplayEFMPOIs: Node is at x "..mapX..", y "..mapY , myDebug);
+
 					local pointX = (mapX * w);
 					local pointY = (mapY * h);
-				
+
+					if (locLevel == 3) then
+						pointX = (mapX/100) * w;
+						pointY = (mapY/100) * h;
+					end
+
 					buttonCount	= buttonCount + 1;
 					POI		= getglobal("EFM_MAP_POI"..buttonCount);
 					if (POI == nil) then
@@ -179,7 +222,7 @@ function EFM_Map_WorldMapDisplay(myContinent)
 					POITexture	= getglobal("EFM_MAP_POI"..buttonCount.."Icon");
 
 					-- Display the actual POI Button
-					if (EFM_NI_CheckReachable(myContinent, nodeName)) then
+					if (EFM_NI_CheckReachable(nodeName)) then
 						POITexture:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Icon-Yellow");
 					else
 						POITexture:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Icon-Gray");
@@ -193,16 +236,16 @@ function EFM_Map_WorldMapDisplay(myContinent)
 					POI.Location	= nodeName;
 					POI.Continent	= myContinent;
 					POI.nodeStyle	= 0;
-					
-					-- Draw Routes on map
-					if (myNode.routes ~= nil) then
+
+					-- Draw Routes on map, unless we're on the zone-level then don't do that.
+					if ((myNode.routes ~= nil) and (locLevel < 3)) then
 						local flightDuration = "";
 						WorldMapTooltip:AddLine(EFM_MAP_PATHLIST, 1.0, 1.0, 1.0);
 						for key, routeName in pairs(myNode.routes) do
 							if ((routeName ~= nil) and (not EFM_SF_StringInTable(seenRoutes, routeName))) then
 								local endNode	= EFM_NI_GetNodeByName(routeName, nodeStyle);
 								if (endNode ~= nil) then
-									if (endNode["wmLoc"] ~= nil) then
+									if (endNode[nodeLevel] ~= nil) then
 										-- Create a new texture for the route line if needed
 										routepoi		= routepoi + 1;
 										line = getglobal("EFM_WM_Route"..routepoi);
@@ -210,14 +253,18 @@ function EFM_Map_WorldMapDisplay(myContinent)
 											line = mapCanvas:CreateTexture("EFM_WM_Route"..routepoi, "TOP");
 										end
 										line:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Line");
---										if (line) then
-										local destX = tonumber(endNode["wmLoc"]["x"]);
-										local destY = tonumber(endNode["wmLoc"]["y"]);
+										local destX = tonumber(endNode[nodeLevel]["x"]);
+										local destY = tonumber(endNode[nodeLevel]["y"]);
+										
+										if (locLevel == 3) then
+											destX = tonumber(endNode[nodeLevel]["x"])/100;
+											destY = tonumber(endNode[nodeLevel]["y"])/100;
+										end
+										
 										if ((destX ~= nil) and (destY ~= nil)) then
 											DrawLine(line, mapCanvas, pointX, (h - pointY), destX * w, (h - (destY * h)), 32, TAXIROUTE_LINEFACTOR);
 											line:SetAlpha(0.5);
 											line:Show();
---											end
 										end
 									end
 								end
@@ -225,65 +272,6 @@ function EFM_Map_WorldMapDisplay(myContinent)
 						end
 						table.insert(seenRoutes, zone);
 					end
-				end
-			end
-		end
-	end
-end
-
--- Function: Display the zone map.
-function EFM_Map_ZoneMapDisplay(myZone)
-	local myFaction		= UnitFactionGroup("player");
-	local mapCanvas		= WorldMapFrame:GetCanvas();
-	local w			= mapCanvas:GetWidth();
-	local h			= mapCanvas:GetHeight();
-	local zoneContinent	= "";
-	local zoneList		= {};
-	local zoneName		= "";
-	knownPoints		= {};
-	local buttonCount	= 0;
-
-	if ((myZone == 0) or (myFaction == nil) or (myContinent == 0)) then
-		return nil;
-	end
-
-	knownPoints		= EFM_NI_GetNodeListByZone(myZone);
-	zoneContinent		= EFM_NI_GetContinentByZone(myZone);
-
-	-- TODO: Display only "Land" nodes at this time
-	local nodeStyle		= 0;
-	
-	if (knownPoints ~= nil) then
-		local POI;
-		local POITexture;
-		for index, flightNode in pairs(knownPoints) do
-			local myNode	= EFM_NI_GetNodeByName(flightNode, nodeStyle);
-			local nodeName	= myNode["name"];
-			if (myNode["zmLoc"] ~= nil) then
-				local mapX		= tonumber(myNode["zmLoc"]["x"]);
-				local mapY		= tonumber(myNode["zmLoc"]["y"]);
-				if ((mapX ~= nil) and (mapY ~= nil)) then
-					buttonCount	= buttonCount + 1;
-					POI		= getglobal("EFM_MAP_POI"..buttonCount);
-					if (POI == nil) then
-						POI	= CreateFrame("Button", "EFM_MAP_POI"..buttonCount, mapCanvas, "EFM_POI_Template");
-					end
-					POITexture	= getglobal("EFM_MAP_POI"..buttonCount.."Icon");
-
-					-- Display the actual POI Button
-					if (EFM_NI_CheckReachable(zoneContinent, nodeName)) then
-						POITexture:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Icon-Yellow");
-					else
-						POITexture:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Icon-Gray");
-					end
-					POI:ClearAllPoints();
-					POI:SetPoint("CENTER", mapCanvas, "TOPLEFT", (mapX/100) * w, -((mapY/100) * h));
-					POI:SetAlpha(1);
-					POI:Show();
-
-					-- Set the Location & Continent Fields.
-					POI.Location	= nodeName;
-					POI.Continent	= zoneContinent;
 				end
 			end
 		end

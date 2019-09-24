@@ -87,7 +87,7 @@ local function EFM_MW_DisplayFlightMap(continentName)
 				if (displayNode)then
 					-- Set the texture for the flight path
 					local myTexture = Texture_AltKnown;
-					if (EFM_NI_CheckReachable(continentNum, zone)) then
+					if (EFM_NI_CheckReachable(zone)) then
 						myTexture = Texture_CurKnown;
 					end
 
