@@ -155,69 +155,65 @@ function EFM_Timer_ShowInFlightTimer(timeLeft)
 	end
 end
 
---[[
--- DO NOTE REMOVE, WE MIGHT HANDLE THESE ONCE AGAIN IN THE FUTURE! --
 
 -- Function: Replacement GossipTitleButton_OnClick to check for flightpath options.
-function EFM_GossipTitleButton_OnClick()
-	if ( this.type == "Available" ) then
-		SelectGossipAvailableQuest(self:GetID());
-	elseif ( this.type == "Active" ) then
-		SelectGossipActiveQuest(self:GetID());
-	else
-		local button_text	= self:GetText();
---		DEFAULT_CHAT_FRAME:AddMessage(button_text);
---		DEFAULT_CHAT_FRAME:AddMessage(EFM_TEST_NIGHTHAVEN);
+function EFM_GossipTitleButton_OnClick(this, button)
+	local myDebug = false;
 
-		if (string.find(button_text, EFM_TEST_NIGHTHAVEN) ~= nil) then
---			DEFAULT_CHAT_FRAME:AddMessage("EFM: Nighthaven Flight Path option");
-		
-			local orig		= EFM_NIGHTHAVEN;
-			local destNode	= nil;
-			local routeList	= {};
+	local gossipText = this:GetText();
+	
+	if (gossipText ~= "") then
+		if (string.find(gossipText, EFM_DRUID_GOSSIPFIND) ~= nil) then
+			EFM_Shared_DebugMessage("EFM: Nighthaven Flight Path Selected!", myDebug);
 
-			EFM_FN_AddNode(orig, "0.549", "0.807", "44.34", "45.91");
-            SetMapToCurrentZone();
-			EFM_KP_AddLocation(GetCurrentMapContinent(), orig);
+			local myContinent	= EFM_Shared_GetCurrentContinentName();
+			local nodeName		= GetMinimapZoneText()..", "..EFM_Shared_GetCurrentZoneName();
+			local destNode		= nil;
+			local routeList		= {};
 
-			if (UnitFactionGroup("player") == FACTION_HORDE) then
-				destNode	= EFM_FN_GetNodeByName("Thunder Bluff, Mulgore", "enUS");
-				local _, _, tempRouteData = string.find(EFM_FN_GetRouteDataByName("Thunder Bluff, Mulgore"), ".*~(.*)");
-				routeList["Thunder Bluff, Mulgore"] = tempRouteData;
-			elseif (UnitFactionGroup("player") == FACTION_ALLIANCE) then
-				destNode	= EFM_FN_GetNodeByName("Rut'theran Village, Teldrassil", "enUS");
-				local _, _, tempRouteData = string.find(EFM_FN_GetRouteDataByName("Rut'theran Village, Teldrassil"), ".*~(.*)");
-				routeList["Rut'theran Village, Teldrassil"] = tempRouteData;				
-			end
-			EFM_FN_AddRoutes(orig, routeList);
+			EFM_NI_CreateNode(myContinent, nodeName);
+			EFM_NI_Reachable(myContinent, nodeName);
 
-			if (destNode ~= nil) then
---				DEFAULT_CHAT_FRAME:AddMessage("EFM: Destination node known.");
-				EFM_TaxiDestination		= destNode[GetLocale()];
-				EFM_TaxiOrigin			= orig;
+			-- Add node map positions
+			EFM_NI_AddNodeLoc(nodeName, nodeStyle, 3);
+			EFM_NI_AddNodeLoc(nodeName, nodeStyle, 2);
+			EFM_NI_AddNodeLoc(nodeName, nodeStyle, 1);
 
-				EFM_Timer_TimeRemaining	= 0;
-				EFM_Timer_StartTime		= time();
-				EFM_Timer_LastTime		= EFM_Timer_StartTime;
+			local destName		= string.match(gossipText, EFM_DRUID_GOSSIPFIND);
+			if (destName ~= "") then
+				EFM_Shared_DebugMessage(destName, myDebug);
+				
+				-- Add route to route list
+				destNode = EFM_NI_GetNodeByName(destName, 0, 1);
+				if (destNode ~= nil) then
+					EFM_Shared_DebugMessage("Destination node known.", myDebug);
 
-				local flightTime			= EFM_FN_GetFlightDuration(EFM_TaxiOrigin, EFM_TaxiDestination);
+					table.insert(routeList, destNode.name);
+					EFM_NI_AddRoutes(nodeName, routeList, 0);
 
-				-- If there is a known flight time, calculate the duration estimate
-				if (flightTime ~= nil) then
-					EFM_Timer_TimeRemaining	= flightTime;
-					EFM_Timer_FlightTime		= flightTime;
-					EFM_Timer_TimeKnown		= true;
-				else
-					EFM_Timer_TimeKnown	= false;
-					EFM_Timer_FlightTime	= 0;
+					-- Start timing the flight!
+					EFM_TaxiOrigin			= nodeName;
+					EFM_TaxiDestination		= destNode.name;
+					EFM_Timer_TimeRemaining		= 0;
+					EFM_Timer_StartTime		= time();
+					EFM_Timer_LastTime		= EFM_Timer_StartTime;
+
+					local flightTime		= EFM_NI_GetNode_FlightDuration(nodeName, EFM_TaxiDestination);
+
+					-- If there is a known flight time, calculate the duration estimate
+					if (flightTime ~= nil) then
+						EFM_Timer_TimeRemaining	= flightTime;
+						EFM_Timer_FlightTime	= flightTime;
+						EFM_Timer_TimeKnown	= true;
+					else
+						EFM_Timer_TimeKnown 	= false;
+						EFM_Timer_FlightTime	= 0;
+					end
+
+					EFM_Timer_StartRecording    = true;
+
 				end
-
-				EFM_Timer_StartRecording = true;
 			end
 		end
-
-		SelectGossipOption(self:GetID());
 	end
 end
-]]
-

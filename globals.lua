@@ -9,7 +9,7 @@ These strings are not to be localised, so they are here, and not in any of the l
 ]]
 
 -- Global define
-EFM_Version				= "Classic-3.1.0";
+EFM_Version				= "Classic-3.2.0";
 
 -- Define some stuff here to handle global stuff...
 EFM_Global_Faction			= UnitFactionGroup("player");

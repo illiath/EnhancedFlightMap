@@ -1,5 +1,10 @@
 2019-09-23  Version 3.1.0-Classic
 ---------------------------------
+- Fix issue #5 on github, druid flightpaths now tracks and is configured.
+
+
+2019-09-23  Version 3.1.0-Classic
+---------------------------------
 - Fix issue #3 on github, zone map flight points not showing as known/unknown.
 - Add enhancement, per issue #4 on github, add flight node markers to the world map.
 - Initial preload data import, much of the information is currently missing in the dataset, but hey at least there's something now...

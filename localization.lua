@@ -68,6 +68,9 @@ EFM_MSG_REPORTERROR					= "EFM: Error: Not in flight or destination unknown!";
 -- Map screen messages
 EFM_MAP_PATHLIST					= "Available Flight Paths";
 
+-- Druid flight path gossip text dsearch string
+EFM_DRUID_GOSSIPFIND					= "I'd like to fly to (.*)\.";
+
 -- GUI Options Screen
 EFM_GUITEXT_Header					= format("%s Options", EFM_DESC);
 EFM_GUITEXT_Timer					= "Show In-Flight timers";

@@ -81,7 +81,7 @@ function EFM_NI_CreateNode(continent, nodeName, nodeStyle)
 end
 
 -- Function: Return the node entry for a given node name.
-function EFM_NI_GetNodeByName(searchNodeName, nodeStyle)
+function EFM_NI_GetNodeByName(searchNodeName, nodeStyle, partialSearch)
 	local myDebug = false;
 
 	local myData;
@@ -94,6 +94,10 @@ function EFM_NI_GetNodeByName(searchNodeName, nodeStyle)
 		EFM_Shared_DebugMessage("Searching Land Nodes.", myDebug);
 	end
 
+	if (partialSearch ~= nil) then
+		EFM_Shared_DebugMessage("partialSearch = "..partialSearch);
+	end
+	
 	if (myData ~= nil) then
 		if (myData[EFM_Global_Faction] ~= nil) then
 			for myContinent in pairs(myData[EFM_Global_Faction]) do
@@ -102,6 +106,13 @@ function EFM_NI_GetNodeByName(searchNodeName, nodeStyle)
 						if (myNode == searchNodeName) then
 							EFM_Shared_DebugMessage("Found Node "..searchNodeName..".", myDebug);
 							return myData[EFM_Global_Faction][myContinent][myZone][myNode];
+						end
+						
+						if (partialSearch == 1) then
+							if (string.find(myNode, searchNodeName) ~= nil) then
+								EFM_Shared_DebugMessage("Partial search found "..searchNodeName.." in a node named "..myNode..".", myDebug);
+								return myData[EFM_Global_Faction][myContinent][myZone][myNode];
+							end
 						end
 					end
 				end
@@ -233,12 +244,14 @@ function EFM_NI_GetNode_fmLoc(X, Y, nodeStyle, myContinent)
 		if (myData[EFM_Global_Faction][myContinent] ~= nil) then
 			for myZone in pairs(myData[EFM_Global_Faction][myContinent]) do
 				for myNode in pairs(myData[EFM_Global_Faction][myContinent][myZone]) do
-					local nodeX = myData[EFM_Global_Faction][myContinent][myZone][myNode]["fmLoc"]["x"];
-					nodeX = tonumber(nodeX);
-					local nodeY = myData[EFM_Global_Faction][myContinent][myZone][myNode]["fmLoc"]["y"]
-					nodeY = tonumber(nodeY);
-					if ((nodeX == X) and (nodeY == Y)) then
-						myNodeName = myData[EFM_Global_Faction][myContinent][myZone][myNode]["name"];
+					if (myData[EFM_Global_Faction][myContinent][myZone][myNode]["fmLoc"] ~= nil) then
+						local nodeX = myData[EFM_Global_Faction][myContinent][myZone][myNode]["fmLoc"]["x"];
+						nodeX = tonumber(nodeX);
+						local nodeY = myData[EFM_Global_Faction][myContinent][myZone][myNode]["fmLoc"]["y"]
+						nodeY = tonumber(nodeY);
+						if ((nodeX == X) and (nodeY == Y)) then
+							myNodeName = myData[EFM_Global_Faction][myContinent][myZone][myNode]["name"];
+						end
 					end
 				end
 			end
