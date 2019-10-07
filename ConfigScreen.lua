@@ -20,7 +20,7 @@ function EnhancedFlightMap_GUIConfig()
 
 	EFM_GUI_Map_EFMToggle_Button:SetFrameStrata("FULLSCREEN_DIALOG");
 
-	EFM_GUI_Map_EFMToggle_Button:SetPoint("TOPRIGHT", "WorldMapFrameCloseButton", "TOPRIGHT", -52, -7);
+	EFM_GUI_Map_EFMToggle_Button:SetPoint("TOPRIGHT", "WorldMapFrameCloseButton", "TOPRIGHT", -200, -7);
 	EFM_GUI_Map_EFMToggle_Button:SetScript("OnClick", EFM_GUI_Map_Toggle_OnClick);
 end
 
