@@ -35,8 +35,9 @@ Default_EFM_FlightData = {
 						},
 						["timers"] = {
 							["Southshore, Hillsbrad"] = 85,
-							["Aerie Peak, The Hinterlands"] = 66,
 							["Ironforge, Dun Morogh"] = 260,
+							["Aerie Peak, The Hinterlands"] = 66,
+							["Menethil Harbor, Wetlands"] = 195,
 							["Refuge Pointe, Arathi"] = 141,
 						},
 						["routes"] = {
@@ -67,13 +68,18 @@ Default_EFM_FlightData = {
 							["x"] = "0.77",
 						},
 						["timers"] = {
-							["Southshore, Hillsbrad"] = 68,
-							["Ironforge, Dun Morogh"] = 257,
-							["Chillwind Camp, Western Plaguelands"] = 54,
-							["Light's Hope Chapel, Eastern Plaguelands"] = 165,
-							["Menethil Harbor, Wetlands"] = 178,
+							["Chillwind Camp, Western Plaguelands"] = 55,
+							["Morgan's Vigil, Burning Steppes"] = 440,
 							["Thorium Point, Searing Gorge"] = 344,
 							["Refuge Pointe, Arathi"] = 75,
+							["Menethil Harbor, Wetlands"] = 176,
+							["Nethergarde Keep, Blasted Lands"] = 643,
+							["Ironforge, Dun Morogh"] = 257,
+							["Southshore, Hillsbrad"] = 68,
+							["Light's Hope Chapel, Eastern Plaguelands"] = 165,
+							["Lakeshire, Redridge"] = 504,
+							["Booty Bay, Stranglethorn"] = 712,
+							["Stormwind, Elwynn"] = 467,
 						},
 						["routes"] = {
 							"Chillwind Camp, Western Plaguelands", -- [1]
@@ -111,12 +117,13 @@ Default_EFM_FlightData = {
 						["timers"] = {
 							["Chillwind Camp, Western Plaguelands"] = 773,
 							["Sentinel Hill, Westfall"] = 181,
-							["Lakeshire, Redridge"] = 235,
+							["Lakeshire, Redridge"] = 233,
 							["Thelsamar, Loch Modan"] = 580,
-							["Ironforge, Dun Morogh"] = 479,
 							["Refuge Pointe, Arathi"] = 720,
+							["Ironforge, Dun Morogh"] = 479,
+							["Southshore, Hillsbrad"] = 735,
 							["Darkshire, Duskwood"] = 175,
-							["Nethergarde Keep, Blasted Lands"] = 273,
+							["Nethergarde Keep, Blasted Lands"] = 270,
 							["Menethil Harbor, Wetlands"] = 607,
 							["Stormwind, Elwynn"] = 220,
 						},
@@ -150,6 +157,7 @@ Default_EFM_FlightData = {
 							["Chillwind Camp, Western Plaguelands"] = 150,
 							["Aerie Peak, The Hinterlands"] = 163,
 							["Ironforge, Dun Morogh"] = 369,
+							["Southshore, Hillsbrad"] = 231,
 						},
 					},
 				},
@@ -180,11 +188,16 @@ Default_EFM_FlightData = {
 							"Stormwind, Elwynn", -- [5]
 						},
 						["timers"] = {
-							["Booty Bay, Stranglethorn"] = 171,
+							["Southshore, Hillsbrad"] = 538,
 							["Sentinel Hill, Westfall"] = 93,
-							["Nethergarde Keep, Blasted Lands"] = 98,
 							["Lakeshire, Redridge"] = 60,
+							["Nethergarde Keep, Blasted Lands"] = 98,
+							["Ironforge, Dun Morogh"] = 334,
 							["Stormwind, Elwynn"] = 88,
+							["Thelsamar, Loch Modan"] = 448,
+							["Booty Bay, Stranglethorn"] = 171,
+							["Menethil Harbor, Wetlands"] = 476,
+							["Refuge Pointe, Arathi"] = 589,
 						},
 					},
 				},
@@ -215,10 +228,11 @@ Default_EFM_FlightData = {
 						},
 						["timers"] = {
 							["Booty Bay, Stranglethorn"] = 544,
-							["Sentinel Hill, Westfall"] = 377,
+							["Sentinel Hill, Westfall"] = 350,
+							["Lakeshire, Redridge"] = 411,
 							["Thelsamar, Loch Modan"] = 164,
-							["Ironforge, Dun Morogh"] = 88,
-							["Stormwind, Elwynn"] = 279,
+							["Ironforge, Dun Morogh"] = 89,
+							["Stormwind, Elwynn"] = 269,
 							["Southshore, Hillsbrad"] = 127,
 							["Darkshire, Duskwood"] = 389,
 							["Nethergarde Keep, Blasted Lands"] = 476,
@@ -246,15 +260,21 @@ Default_EFM_FlightData = {
 							["x"] = "0.71",
 						},
 						["timers"] = {
-							["Southshore, Hillsbrad"] = 534,
+							["Southshore, Hillsbrad"] = 466,
 							["Sentinel Hill, Westfall"] = 78,
-							["Lakeshire, Redridge"] = 113,
-							["Thelsamar, Loch Modan"] = 360,
-							["Ironforge, Dun Morogh"] = 259,
+							["Chillwind Camp, Western Plaguelands"] = 553,
 							["Menethil Harbor, Wetlands"] = 364,
+							["Morgan's Vigil, Burning Steppes"] = 158,
+							["Lakeshire, Redridge"] = 113,
+							["Nethergarde Keep, Blasted Lands"] = 177,
+							["Thelsamar, Loch Modan"] = 339,
 							["Booty Bay, Stranglethorn"] = 245,
-							["Nethergarde Keep, Blasted Lands"] = 176,
-							["Darkshire, Duskwood"] = 117,
+							["Ironforge, Dun Morogh"] = 259,
+							["Darkshire, Duskwood"] = 116,
+							["Light's Hope Chapel, Eastern Plaguelands"] = 608,
+							["Aerie Peak, The Hinterlands"] = 557,
+							["Thorium Point, Searing Gorge"] = 251,
+							["Refuge Pointe, Arathi"] = 500,
 						},
 						["routes"] = {
 							"Booty Bay, Stranglethorn", -- [1]
@@ -329,9 +349,10 @@ Default_EFM_FlightData = {
 						},
 						["timers"] = {
 							["Darkshire, Duskwood"] = 92,
+							["Ironforge, Dun Morogh"] = 431,
 							["Morgan's Vigil, Burning Steppes"] = 207,
 							["Lakeshire, Redridge"] = 152,
-							["Stormwind, Elwynn"] = 190,
+							["Stormwind, Elwynn"] = 189,
 						},
 					},
 				},
@@ -350,6 +371,10 @@ Default_EFM_FlightData = {
 							["y"] = "59.41",
 							["x"] = "30.58",
 						},
+						["worldMapLoc"] = {
+							["y"] = "0.64",
+							["x"] = "0.77",
+						},
 						["routes"] = {
 							"Darkshire, Duskwood", -- [1]
 							"Morgan's Vigil, Burning Steppes", -- [2]
@@ -357,8 +382,14 @@ Default_EFM_FlightData = {
 							"Stormwind, Elwynn", -- [4]
 						},
 						["timers"] = {
-							["Darkshire, Duskwood"] = 61,
+							["Southshore, Hillsbrad"] = 514,
 							["Sentinel Hill, Westfall"] = 134,
+							["Morgan's Vigil, Burning Steppes"] = 61,
+							["Thorium Point, Searing Gorge"] = 165,
+							["Darkshire, Duskwood"] = 61,
+							["Ironforge, Dun Morogh"] = 308,
+							["Menethil Harbor, Wetlands"] = 501,
+							["Chillwind Camp, Western Plaguelands"] = 553,
 							["Stormwind, Elwynn"] = 113,
 						},
 					},
@@ -419,14 +450,19 @@ Default_EFM_FlightData = {
 						},
 						["timers"] = {
 							["Southshore, Hillsbrad"] = 265,
-							["Lakeshire, Redridge"] = 323,
-							["Menethil Harbor, Wetlands"] = 128,
+							["Sentinel Hill, Westfall"] = 288,
 							["Stormwind, Elwynn"] = 210,
-							["Chillwind Camp, Western Plaguelands"] = 294,
-							["Thorium Point, Searing Gorge"] = 87,
+							["Booty Bay, Stranglethorn"] = 455,
+							["Morgan's Vigil, Burning Steppes"] = 174,
+							["Lakeshire, Redridge"] = 323,
+							["Darkshire, Duskwood"] = 307,
+							["Nethergarde Keep, Blasted Lands"] = 379,
+							["Menethil Harbor, Wetlands"] = 129,
+							["Thelsamar, Loch Modan"] = 101,
+							["Thorium Point, Searing Gorge"] = 86,
 							["Light's Hope Chapel, Eastern Plaguelands"] = 349,
 							["Aerie Peak, The Hinterlands"] = 298,
-							["Thelsamar, Loch Modan"] = 101,
+							["Chillwind Camp, Western Plaguelands"] = 294,
 							["Refuge Pointe, Arathi"] = 253,
 						},
 						["routes"] = {
@@ -462,11 +498,15 @@ Default_EFM_FlightData = {
 							["x"] = "0.7",
 						},
 						["timers"] = {
-							["Booty Bay, Stranglethorn"] = 186,
-							["Ironforge, Dun Morogh"] = 337,
+							["Southshore, Hillsbrad"] = 601,
+							["Lakeshire, Redridge"] = 129,
 							["Darkshire, Duskwood"] = 97,
-							["Lakeshire, Redridge"] = 130,
+							["Ironforge, Dun Morogh"] = 334,
 							["Stormwind, Elwynn"] = 86,
+							["Thelsamar, Loch Modan"] = 446,
+							["Menethil Harbor, Wetlands"] = 474,
+							["Booty Bay, Stranglethorn"] = 186,
+							["Refuge Pointe, Arathi"] = 587,
 						},
 						["routes"] = {
 							"Booty Bay, Stranglethorn", -- [1]
@@ -491,6 +531,10 @@ Default_EFM_FlightData = {
 							["y"] = "68.32",
 							["x"] = "84.32",
 						},
+						["worldMapLoc"] = {
+							["y"] = "0.61",
+							["x"] = "0.79",
+						},
 						["routes"] = {
 							"Lakeshire, Redridge", -- [1]
 							"Nethergarde Keep, Blasted Lands", -- [2]
@@ -498,8 +542,12 @@ Default_EFM_FlightData = {
 							"Thorium Point, Searing Gorge", -- [4]
 						},
 						["timers"] = {
-							["Thorium Point, Searing Gorge"] = 104,
-							["Lakeshire, Redridge"] = 64,
+							["Nethergarde Keep, Blasted Lands"] = 210,
+							["Ironforge, Dun Morogh"] = 198,
+							["Southshore, Hillsbrad"] = 453,
+							["Thorium Point, Searing Gorge"] = 103,
+							["Chillwind Camp, Western Plaguelands"] = 492,
+							["Lakeshire, Redridge"] = 63,
 							["Stormwind, Elwynn"] = 151,
 						},
 					},
@@ -529,8 +577,12 @@ Default_EFM_FlightData = {
 						},
 						["timers"] = {
 							["Thelsamar, Loch Modan"] = 195,
-							["Morgan's Vigil, Burning Steppes"] = 96,
 							["Ironforge, Dun Morogh"] = 94,
+							["Southshore, Hillsbrad"] = 350,
+							["Aerie Peak, The Hinterlands"] = 392,
+							["Morgan's Vigil, Burning Steppes"] = 96,
+							["Menethil Harbor, Wetlands"] = 223,
+							["Stormwind, Elwynn"] = 247,
 						},
 					},
 				},
@@ -555,8 +607,11 @@ Default_EFM_FlightData = {
 						},
 						["timers"] = {
 							["Menethil Harbor, Wetlands"] = 152,
-							["Ironforge, Dun Morogh"] = 109,
 							["Refuge Pointe, Arathi"] = 164,
+							["Ironforge, Dun Morogh"] = 109,
+							["Chillwind Camp, Western Plaguelands"] = 291,
+							["Light's Hope Chapel, Eastern Plaguelands"] = 401,
+							["Aerie Peak, The Hinterlands"] = 236,
 							["Southshore, Hillsbrad"] = 250,
 							["Stormwind, Elwynn"] = 299,
 						},
@@ -589,7 +644,12 @@ Default_EFM_FlightData = {
 							["x"] = "0.21",
 						},
 						["timers"] = {
+							["Cenarion Hold, Silithus"] = 95,
+							["Theramore, Dustwallow Marsh"] = 258,
+							["Moonglade"] = 793,
 							["Gadgetzan, Tanaris"] = 104,
+							["Thalanaar, Feralas"] = 281,
+							["Feathermoon, Feralas"] = 270,
 						},
 						["routes"] = {
 							"Cenarion Hold, Silithus", -- [1]
@@ -617,8 +677,11 @@ Default_EFM_FlightData = {
 							["x"] = "0.16",
 						},
 						["timers"] = {
+							["Rut'theran Village, Teldrassil"] = 367,
 							["Stonetalon Peak, Stonetalon Mountains"] = 120,
 							["Theramore, Dustwallow Marsh"] = 308,
+							["Moonglade"] = 434,
+							["Gadgetzan, Tanaris"] = 464,
 							["Auberdine, Darkshore"] = 283,
 							["Thalanaar, Feralas"] = 387,
 							["Feathermoon, Feralas"] = 232,
@@ -632,6 +695,27 @@ Default_EFM_FlightData = {
 					},
 				},
 				["Moonglade"] = {
+					["Nighthaven, Moonglade"] = {
+						["routes"] = {
+							"Rut'theran Village, Teldrassil", -- [1]
+						},
+						["wmLoc"] = {
+							["y"] = "0.2",
+							["x"] = "0.52",
+						},
+						["name"] = "Nighthaven, Moonglade",
+						["zmLoc"] = {
+							["y"] = "45",
+							["x"] = "44",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.23",
+							["x"] = "0.24",
+						},
+						["timers"] = {
+							["Rut'theran Village, Teldrassil"] = 153,
+						},
+					},
 					["Moonglade"] = {
 						["fmLoc"] = {
 							["y"] = "0.2",
@@ -656,7 +740,16 @@ Default_EFM_FlightData = {
 							"Talonbranch Glade, Felwood", -- [3]
 						},
 						["timers"] = {
+							["Rut'theran Village, Teldrassil"] = 226,
+							["Cenarion Hold, Silithus"] = 774,
+							["Theramore, Dustwallow Marsh"] = 817,
+							["Gadgetzan, Tanaris"] = 704,
+							["Talrendis Point, Azshara"] = 306,
 							["Auberdine, Darkshore"] = 142,
+							["Feathermoon, Feralas"] = 567,
+							["Ratchet, The Barrens"] = 932,
+							["Astranaar, Ashenvale"] = 318,
+							["Everlook, Winterspring"] = 130,
 							["Talonbranch Glade, Felwood"] = 62,
 						},
 					},
@@ -676,9 +769,18 @@ Default_EFM_FlightData = {
 							["y"] = "7.18",
 							["x"] = "36.43",
 						},
+						["worldMapLoc"] = {
+							["y"] = "0.4",
+							["x"] = "0.16",
+						},
 						["timers"] = {
-							["Auberdine, Darkshore"] = 177,
+							["Rut'theran Village, Teldrassil"] = 261,
 							["Astranaar, Ashenvale"] = 154,
+							["Nijel's Point, Desolace"] = 128,
+							["Gadgetzan, Tanaris"] = 1009,
+							["Theramore, Dustwallow Marsh"] = 852,
+							["Auberdine, Darkshore"] = 177,
+							["Ratchet, The Barrens"] = 967,
 						},
 						["routes"] = {
 							"Astranaar, Ashenvale", -- [1]
@@ -702,13 +804,23 @@ Default_EFM_FlightData = {
 							["y"] = "36.6",
 							["x"] = "62.33",
 						},
+						["worldMapLoc"] = {
+							["y"] = "0.26",
+							["x"] = "0.3",
+						},
 						["routes"] = {
 							"Moonglade", -- [1]
 							"Talonbranch Glade, Felwood", -- [2]
 							"Talrendis Point, Azshara", -- [3]
 						},
 						["timers"] = {
+							["Rut'theran Village, Teldrassil"] = 348,
+							["Theramore, Dustwallow Marsh"] = 417,
+							["Moonglade"] = 121,
+							["Gadgetzan, Tanaris"] = 566,
 							["Talrendis Point, Azshara"] = 176,
+							["Talonbranch Glade, Felwood"] = 123,
+							["Ratchet, The Barrens"] = 311,
 						},
 					},
 				},
@@ -737,6 +849,7 @@ Default_EFM_FlightData = {
 							"Marshal's Refuge, Un'Goro Crater", -- [3]
 						},
 						["timers"] = {
+							["Gadgetzan, Tanaris"] = 189,
 							["Marshal's Refuge, Un'Goro Crater"] = 92,
 							["Thalanaar, Feralas"] = 330,
 							["Feathermoon, Feralas"] = 175,
@@ -763,7 +876,10 @@ Default_EFM_FlightData = {
 							["x"] = "0.2",
 						},
 						["timers"] = {
+							["Everlook, Winterspring"] = 328,
+							["Talrendis Point, Azshara"] = 149,
 							["Auberdine, Darkshore"] = 148,
+							["Stonetalon Peak, Stonetalon Mountains"] = 153,
 						},
 						["routes"] = {
 							"Auberdine, Darkshore", -- [1]
@@ -796,13 +912,15 @@ Default_EFM_FlightData = {
 						},
 						["timers"] = {
 							["Cenarion Hold, Silithus"] = 719,
-							["Moonglade"] = 237,
+							["Moonglade"] = 235,
 							["Talrendis Point, Azshara"] = 387,
 							["Marshal's Refuge, Un'Goro Crater"] = 811,
-							["Feathermoon, Feralas"] = 559,
-							["Astranaar, Ashenvale"] = 262,
+							["Feathermoon, Feralas"] = 558,
+							["Astranaar, Ashenvale"] = 261,
 							["Nijel's Point, Desolace"] = 377,
-							["Auberdine, Darkshore"] = 86,
+							["Talonbranch Glade, Felwood"] = 277,
+							["Everlook, Winterspring"] = 366,
+							["Auberdine, Darkshore"] = 85,
 							["Thalanaar, Feralas"] = 714,
 							["Stonetalon Peak, Stonetalon Mountains"] = 267,
 						},
@@ -828,10 +946,16 @@ Default_EFM_FlightData = {
 							["x"] = "0.21",
 						},
 						["timers"] = {
-							["Gadgetzan, Tanaris"] = 171,
-							["Ratchet, The Barrens"] = 274,
+							["Rut'theran Village, Teldrassil"] = 860,
+							["Cenarion Hold, Silithus"] = 338,
 							["Theramore, Dustwallow Marsh"] = 159,
+							["Moonglade"] = 694,
+							["Gadgetzan, Tanaris"] = 171,
+							["Marshal's Refuge, Un'Goro Crater"] = 275,
 							["Feathermoon, Feralas"] = 179,
+							["Ratchet, The Barrens"] = 274,
+							["Nijel's Point, Desolace"] = 493,
+							["Everlook, Winterspring"] = 573,
 						},
 						["routes"] = {
 							"Feathermoon, Feralas", -- [1]
@@ -864,12 +988,15 @@ Default_EFM_FlightData = {
 							"Thalanaar, Feralas", -- [4]
 						},
 						["timers"] = {
+							["Rut'theran Village, Teldrassil"] = 552,
+							["Cenarion Hold, Silithus"] = 159,
+							["Theramore, Dustwallow Marsh"] = 314,
+							["Gadgetzan, Tanaris"] = 325,
+							["Auberdine, Darkshore"] = 468,
+							["Ratchet, The Barrens"] = 429,
 							["Astranaar, Ashenvale"] = 501,
 							["Nijel's Point, Desolace"] = 227,
-							["Cenarion Hold, Silithus"] = 160,
-							["Gadgetzan, Tanaris"] = 325,
 							["Thalanaar, Feralas"] = 155,
-							["Auberdine, Darkshore"] = 468,
 							["Marshal's Refuge, Un'Goro Crater"] = 252,
 						},
 					},
@@ -899,6 +1026,7 @@ Default_EFM_FlightData = {
 						},
 						["timers"] = {
 							["Gadgetzan, Tanaris"] = 262,
+							["Talrendis Point, Azshara"] = 133,
 							["Theramore, Dustwallow Marsh"] = 106,
 						},
 					},
@@ -926,7 +1054,11 @@ Default_EFM_FlightData = {
 							["Ratchet, The Barrens"] = 135,
 							["Astranaar, Ashenvale"] = 153,
 							["Theramore, Dustwallow Marsh"] = 242,
+							["Rut'theran Village, Teldrassil"] = 386,
 							["Gadgetzan, Tanaris"] = 394,
+							["Auberdine, Darkshore"] = 302,
+							["Talonbranch Glade, Felwood"] = 284,
+							["Everlook, Winterspring"] = 179,
 						},
 						["routes"] = {
 							"Astranaar, Ashenvale", -- [1]
@@ -966,12 +1098,19 @@ Default_EFM_FlightData = {
 							"Thalanaar, Feralas", -- [6]
 						},
 						["timers"] = {
-							["Ratchet, The Barrens"] = 115,
-							["Nijel's Point, Desolace"] = 334,
+							["Rut'theran Village, Teldrassil"] = 621,
+							["Cenarion Hold, Silithus"] = 355,
+							["Moonglade"] = 535,
 							["Gadgetzan, Tanaris"] = 157,
-							["Talrendis Point, Azshara"] = 235,
+							["Talrendis Point, Azshara"] = 236,
 							["Auberdine, Darkshore"] = 620,
-							["Thalanaar, Feralas"] = 165,
+							["Feathermoon, Feralas"] = 341,
+							["Ratchet, The Barrens"] = 115,
+							["Astranaar, Ashenvale"] = 388,
+							["Nijel's Point, Desolace"] = 334,
+							["Everlook, Winterspring"] = 414,
+							["Thalanaar, Feralas"] = 163,
+							["Marshal's Refuge, Un'Goro Crater"] = 261,
 						},
 					},
 				},
@@ -1001,9 +1140,11 @@ Default_EFM_FlightData = {
 							"Talrendis Point, Azshara", -- [4]
 						},
 						["timers"] = {
-							["Everlook, Winterspring"] = 121,
-							["Auberdine, Darkshore"] = 188,
+							["Astranaar, Ashenvale"] = 364,
 							["Moonglade"] = 68,
+							["Everlook, Winterspring"] = 121,
+							["Talrendis Point, Azshara"] = 284,
+							["Auberdine, Darkshore"] = 188,
 						},
 					},
 				},
@@ -1038,7 +1179,7 @@ Default_EFM_FlightData = {
 							"Theramore, Dustwallow Marsh", -- [9]
 						},
 						["timers"] = {
-							["Rut'theran Village, Teldrassil"] = 85,
+							["Rut'theran Village, Teldrassil"] = 84,
 							["Stonetalon Peak, Stonetalon Mountains"] = 181,
 							["Theramore, Dustwallow Marsh"] = 675,
 							["Moonglade"] = 151,
@@ -1048,6 +1189,7 @@ Default_EFM_FlightData = {
 							["Ratchet, The Barrens"] = 790,
 							["Astranaar, Ashenvale"] = 176,
 							["Nijel's Point, Desolace"] = 291,
+							["Everlook, Winterspring"] = 282,
 							["Thalanaar, Feralas"] = 628,
 						},
 					},
@@ -1078,13 +1220,19 @@ Default_EFM_FlightData = {
 							"Theramore, Dustwallow Marsh", -- [4]
 						},
 						["timers"] = {
-							["Ratchet, The Barrens"] = 268,
+							["Rut'theran Village, Teldrassil"] = 773,
 							["Cenarion Hold, Silithus"] = 198,
 							["Theramore, Dustwallow Marsh"] = 154,
+							["Moonglade"] = 689,
+							["Talrendis Point, Azshara"] = 388,
+							["Marshal's Refuge, Un'Goro Crater"] = 104,
+							["Feathermoon, Feralas"] = 355,
+							["Ratchet, The Barrens"] = 263,
+							["Astranaar, Ashenvale"] = 542,
 							["Nijel's Point, Desolace"] = 484,
-							["Auberdine, Darkshore"] = 689,
+							["Everlook, Winterspring"] = 568,
 							["Thalanaar, Feralas"] = 177,
-							["Feathermoon, Feralas"] = 356,
+							["Auberdine, Darkshore"] = 689,
 						},
 					},
 				},
