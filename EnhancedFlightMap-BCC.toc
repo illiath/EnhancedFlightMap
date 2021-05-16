@@ -1,0 +1,22 @@
+## Interface: 20501
+## Title: Enhanced Flight Map
+## Author: Lysidia of Feathermoon/Myrzael (Classic)
+## Version: TBC-Classic-2.2.8
+## Notes: Adds enhancements to the flight system!
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: EFM_Data,EFM_WaterNodes,EFM_ImportData
+## SavedVariablesPerCharacter: EFM_MyConf,EFM_KnownNodes,EFM_ReachableNodes
+shared_functions.lua
+
+globals.lua
+
+localization.lua
+localization-frFR.lua
+localization-deDE.lua
+localization-ruRU.lua
+
+EnhancedFlightMap.xml
+
+FlightMapData-BCC.lua
+FlightStatus.xml
