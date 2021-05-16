@@ -276,7 +276,7 @@ function EFM_MW_Setup()
 	EFM_MW_ConfigButton:RegisterForClicks("LeftButtonUp");
 	EFM_MW_ConfigButton:ClearAllPoints();
 	EFM_MW_ConfigButton:SetPoint("TOPLEFT", EFM_MapWindowNew, "BOTTOMLEFT", 20, 66);
-	EFM_MW_ConfigButton:SetScript("OnClick", function() EFM_MapWindowNew:Hide(); InterfaceOptionsFrame_OpenToCategory(EFM_GUI); end );
+	EFM_MW_ConfigButton:SetScript("OnClick", function() EFM_MapWindowNew:Hide(); InterfaceOptionsFrame_OpenToCategory(EFM_GUI); InterfaceOptionsFrame_OpenToCategory(EFM_GUI); end );
 
 	-- Quit Button
 	local EFM_MW_QuitButton = CreateFrame("Button", "EFM_MW_QuitButton", EFM_MapWindowNew, "UIPanelButtonTemplate");
