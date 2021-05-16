@@ -229,7 +229,7 @@ end
 function EFM_MW_Setup()
 	local continentNames = EFM_GetContinentList();
 
-	local EFM_MapWindowNew = CreateFrame("FRAME", "EFM_MapWindowNew", UIParent);
+	local EFM_MapWindowNew = CreateFrame("FRAME", "EFM_MapWindowNew", BackdropTemplateMixin and "BackdropTemplate");
 
 	-- Set special details of Frame
 	EFM_MapWindowNew:SetFrameStrata("DIALOG");

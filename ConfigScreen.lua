@@ -72,7 +72,7 @@ function EnhancedFlightMap_RegConfig()
 	EFM_GUI_OPTIONS_SC:Show()
 
 	-- Timer Options Frame
-	local EFM_GUI_Timer_Options = CreateFrame("FRAME", "EFM_GUI_Timer_Options", EFM_GUI_OPTIONS_SC)
+	local EFM_GUI_Timer_Options = CreateFrame("FRAME", "EFM_GUI_Timer_Options", EFM_GUI_OPTIONS_SC, BackdropTemplateMixin and "BackdropTemplate")
 	EFM_GUI_Timer_Options:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", 
 		edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
 		tile = true, tileSize = 16, edgeSize = 16, 
@@ -160,7 +160,7 @@ function EnhancedFlightMap_RegConfig()
 	EFM_GUI_CS_Slider_TimerLocSlider:SetScript("OnValueChanged", function(self, value)  EFM_GUI_CS_Slider_Changed(); end)
 
 	-- Display Options Frame
-	local EFM_GUI_Display_Options = CreateFrame("FRAME", "EFM_GUI_Display_Options", EFM_GUI_OPTIONS_SC)
+	local EFM_GUI_Display_Options = CreateFrame("FRAME", "EFM_GUI_Display_Options", EFM_GUI_OPTIONS_SC, BackdropTemplateMixin and "BackdropTemplate")
 	EFM_GUI_Display_Options:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", 
 		edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
 		tile = true, tileSize = 16, edgeSize = 16, 
@@ -242,7 +242,7 @@ function EnhancedFlightMap_RegConfig()
 	EFM_GUI_CS_Button_UpdateRecordedText:SetText(EFM_GUITEXT_UpdateRecorded);
 
 	-- Preloaded Data Frame
-	local EFM_GUI_Preload_Data = CreateFrame("FRAME", "EFM_GUI_Preload_Data", EFM_GUI_OPTIONS_SC)
+	local EFM_GUI_Preload_Data = CreateFrame("FRAME", "EFM_GUI_Preload_Data", EFM_GUI_OPTIONS_SC, BackdropTemplateMixin and "BackdropTemplate")
 	EFM_GUI_Preload_Data:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", 
 		edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
 		tile = true, tileSize = 16, edgeSize = 16, 
