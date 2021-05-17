@@ -2013,8 +2013,8 @@ Default_EFM_FlightData = {
 						["timers"] = {
 							["Revantusk Village, The Hinterlands"] = 142,
 							["Tranquillien, Ghostlands"] = 59,
-							["Zul'Aman, Ghostlands"] = 55,
 							["Undercity, Tirisfal"] = 262,
+							["Zul'Aman, Ghostlands"] = 55,
 						},
 					},
 				},
