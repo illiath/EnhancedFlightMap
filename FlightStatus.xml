@@ -39,7 +39,7 @@
 					</Layer>
 				</Layers>
 			</Frame>
-			<Frame name="$parentPanel1" frameStrata="BACKGROUND">
+			<Frame name="$parentPanel1" frameStrata="BACKGROUND" inherits="BackdropTemplate">
 				<Size>
 					<AbsDimension x="380" y="25" />
 				</Size>
@@ -50,6 +50,11 @@
 						</Offset>
 					</Anchor>
 				</Anchors>
+				<KeyValues>
+					<KeyValue key="backdropInfo" value="BACKDROP_TOOLTIP_16_16_5555" type="global"/>
+					<KeyValue key="backdropColor" value="GOLD" type="global"/>
+					<KeyValue key="backdropBorderColor" value="GOLD" type="global"/>
+				</KeyValues>
 				<Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
 					<BackgroundInsets>
 						<AbsInset left="5" right="5" top="5" bottom="5" />
