@@ -59,7 +59,7 @@ local function EFM_MW_DisplayFlightMap(continentName)
 
 	local nodeList = EFM_NI_GetNode_List(continentName);
 	if (nodeList == nil) then
-		EFM_Shared_DebugMessage("MW_Display_FlightMap: nodeList is empty!", 1);
+		EFM_Shared_DebugMessage("MW_Display_FlightMap: nodeList is empty!", myDebug);
 		return;
 	end
 
