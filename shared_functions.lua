@@ -93,6 +93,7 @@ function EFM_Shared_GetCurrentMapPosition(mapLevel)
 		local info = C_Map.GetMapInfo(mapID);
 		if (info ~= nil) then
 			while(info['mapType'] and info['mapType'] > mapLevel) do
+				EFM_Shared_DebugMessage("mapType: "..info['mapType']..", mapLevel: "..mapLevel, 1);
 				info = C_Map.GetMapInfo(info['parentMapID']);
 			end
 			if(info['mapType'] == mapLevel) then

@@ -227,6 +227,8 @@ end
 
 -- Function: Draw the "Offline" Map Window
 function EFM_MW_Setup()
+	local wowversion, wowbuild, wowdate, wowtocversion = GetBuildInfo()
+
 	local continentNames = EFM_GetContinentList();
 
 	local EFM_MapWindowNew = CreateFrame("FRAME", "EFM_MapWindowNew", UIParent, BackdropTemplateMixin and "BackdropTemplate");
@@ -322,10 +324,8 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con2:SetPoint("TOPLEFT", EFM_MapWindowNew_Con1, "BOTTOMLEFT", 0, -2);
 	EFM_MapWindowNew_Con2:SetScript("OnClick", function() EFM_MW_ChangeMap(2); end );
 
---[[
--- We don't have these continents in Classic
-
 	-- Outland - Continent 3
+	if (wowtocversion > 20500) then
 	local EFM_MapWindowNew_Con3 = CreateFrame("Button", "EFM_MapWindowNew_Con3", EFM_MapWindowNew, "UIPanelButtonTemplate");
 	EFM_MapWindowNew_Con3:SetWidth(138);
 	EFM_MapWindowNew_Con3:SetHeight(22);
@@ -334,6 +334,10 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con3:ClearAllPoints();
 	EFM_MapWindowNew_Con3:SetPoint("TOPLEFT", EFM_MapWindowNew_Con2, "BOTTOMLEFT", 0, -2);
 	EFM_MapWindowNew_Con3:SetScript("OnClick", function() EFM_MW_ChangeMap(3); end );
+	end
+
+--[[
+-- We don't have these continents yet in Classic
 
 	-- Northrend - Continent 4
 	local EFM_MapWindowNew_Con4 = CreateFrame("Button", "EFM_MapWindowNew_Con4", EFM_MapWindowNew, "UIPanelButtonTemplate");
