@@ -725,6 +725,10 @@ Default_EFM_FlightData = {
 							["y"] = "53",
 							["x"] = "56.99",
 						},
+						["worldMapLoc"] = {
+							["y"] = "0.21",
+							["x"] = "0.07",
+						},
 						["routes"] = {
 							"The Exodar", -- [1]
 						},
@@ -1234,6 +1238,10 @@ Default_EFM_FlightData = {
 						["zmLoc"] = {
 							["y"] = "63",
 							["x"] = "68",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.29",
+							["x"] = "0.07",
 						},
 						["timers"] = {
 							["Blood Watch, Bloodmyst Isle"] = 78,
@@ -2062,17 +2070,21 @@ Default_EFM_FlightData = {
 							["y"] = "30",
 							["x"] = "45",
 						},
+						["worldMapLoc"] = {
+							["y"] = "0.22",
+							["x"] = "0.82",
+						},
 						["routes"] = {
 							"Light's Hope Chapel, Eastern Plaguelands", -- [1]
 							"Silvermoon City", -- [2]
 							"Zul'Aman, Ghostlands", -- [3]
+						},
 						["timers"] = {
 							["Light's Hope Chapel, Eastern Plaguelands"] = 60,
 							["Silvermoon City"] = 74,
 							["Zul'Aman, Ghostlands"] = 51,
 						},
 					},
-				},
 				},
 				["Undercity"] = {
 					["Undercity, Tirisfal"] = {
@@ -2159,16 +2171,19 @@ Default_EFM_FlightData = {
 							["y"] = "50",
 							["x"] = "54",
 						},
+						["worldMapLoc"] = {
+							["y"] = "0.15",
+							["x"] = "0.83",
+						},
 						["routes"] = {
 							"Tranquillien, Ghostlands", -- [1]
 							"Zul'Aman, Ghostlands", -- [2]
-
+						},
 						["timers"] = {
 							["Tranquillien, Ghostlands"] = 66,
 							["Zul'Aman, Ghostlands"] = 66,
 						},
 					},
-				},
 				},
 				["Hillsbrad Foothills"] = {
 					["Tarren Mill, Hillsbrad"] = {

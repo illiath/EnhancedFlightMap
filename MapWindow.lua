@@ -158,10 +158,10 @@ This would allow this to be automatically updated based on the available contine
 	
 	if (newMap == 2) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP0";
-
---[[
 	elseif (newMap == 3) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP530";
+
+--[[
 	elseif (newMap == 4) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP571";
 	elseif (newMap == 5) then
@@ -190,6 +190,7 @@ This would allow this to be automatically updated based on the available contine
 	EFM_MapWindowNew_MapTexture:SetTexture(continentMap);
 
 	-- Clear the old waypoints, then draw for the new map.
+	EFM_MW_ClearPoints();
 	EFM_MW_ClearPoints();
 	EFM_MW_DisplayFlightMap(EFM_Shared_GetContinentName(newMap));
 end

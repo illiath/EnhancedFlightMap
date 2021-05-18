@@ -10,11 +10,17 @@ This file contains all the various information routines related to flight nodes.
 function EFM_NI_CheckReachable(myNode)
 	local myDebug 		= false;
 
-	EFM_Shared_DebugMessage("Checking if node "..myNode.." is reachable on continent "..myContinent, myDebug);
+	if (myContinent == nil) then 
+		myContinent = "unknown";
+		EFM_Shared_DebugMessage("myContinent is empty, why? ", myDebug);
+	end
+	-- this breaks way too much 
+	-- EFM_Shared_DebugMessage("Checking if node "..myNode.." is reachable on continent "..myContinent, myDebug);
 	
 	if (EFM_ReachableNodes ~= nil) then
 		for myContinent in pairs(EFM_ReachableNodes) do
 			for key, val in pairs(EFM_ReachableNodes[myContinent]) do
+					EFM_Shared_DebugMessage("Key "..key.."Val "..val, myDebug);
 				if (val == myNode) then
 					EFM_Shared_DebugMessage("Yes it is!", myDebug);
 					return true;
@@ -267,6 +273,11 @@ end
 function EFM_NI_GetNode_List(myContinent)
 	local myDebug		= false;
 	local nodeList		= {};
+
+	if (myContinent == nil) then 
+		myContinent = "unknown";
+		EFM_Shared_DebugMessage("myContinent is empty, why? ", myDebug);
+	end
 
 	if (EFM_Data == nil) then
 		EFM_Shared_DebugMessage("GetNodeList: EFM_Data == nil", myDebug);

@@ -88,16 +88,44 @@ end
 -- Function: Get Current Map location
 function EFM_Shared_GetCurrentMapPosition(mapLevel)
 	local mapID = C_Map.GetBestMapForUnit("player");
+	local position;
+	local tbcHack;
+	local origMapID;
+
 	
 	if (mapID ~= nil) then
 		local info = C_Map.GetMapInfo(mapID);
+		
 		if (info ~= nil) then
+			
+			-- WTF can't blizzard fix this by now?? Warning: Hack ahead
+			if (mapLevel == 1) then
+				if (mapID == 1947 or 1950 or 1941 or 1942) then
+				-- This is an exodar/bloodmyst/ghostlands FP, position API broken on prepatch so hardcode that shit.
+					tbcHack = 1;
+					origMapID = mapID;
+				end
+			end
 			while(info['mapType'] and info['mapType'] > mapLevel) do
-				EFM_Shared_DebugMessage("mapType: "..info['mapType']..", mapLevel: "..mapLevel, 1);
 				info = C_Map.GetMapInfo(info['parentMapID']);
 			end
+
 			if(info['mapType'] == mapLevel) then
-				local position	= C_Map.GetPlayerMapPosition(info.mapID, "player");
+				local position = {x = 0, y = 0};
+				if (tbcHack) then
+					-- Oh god I hope this works
+					if (origMapID == 1947) then -- Exodar
+						position = {x = 0.07, y = 0.29};
+					elseif (origMapID == 1950) then -- Bloodmyst
+						position = {x = 0.07, y = 0.21};
+					elseif (origMapID == 1941) then -- Silvermoon
+						position = {x = 0.83, y = 0.15};
+					elseif (origMapID == 1942) then -- Ghostlands
+						position = {x = 0.82, y = 0.22};
+					end
+				else
+					position = C_Map.GetPlayerMapPosition(info.mapID, "player");
+				end
 				return EFM_SF_ValueToPrecision(position.x, 2), EFM_SF_ValueToPrecision(position.y, 2);
 			end
 		end
