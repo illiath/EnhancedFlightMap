@@ -380,26 +380,33 @@ function EFM_GetContinentList()
 	local continentNameList = {};
 	local continentIDList = {};
 
-	local mapID = _G["WorldMapFrame"]:GetMapID();
+	local WORLD_MAP_ID = 947
+	local COSMIC_MAP_ID = 946
 	
+	local mapID
+	
+	if select(4,GetBuildInfo()) < 20000 then
+		mapID = WORLD_MAP_ID
+	else
+		mapID = COSMIC_MAP_ID
+	end
+
 	if (mapID) then
-		-- Work our way back up to the top (World), then move down to find the continents.
-		local azerothMapInfo = MapUtil.GetMapParentInfo(mapID, Enum.UIMapType.World, TOPMOST);
-		if (azerothMapInfo.mapID) then
-			-- Get the continents.
-			local continents = C_Map.GetMapChildrenInfo(azerothMapInfo.mapID);
-			if ( continents ) then
-				for i, continentInfo in ipairs(continents) do
-					-- Filter out anything else that might have the World as a parent (e.g. Battlegrounds).
-					if (continentInfo.mapType == Enum.UIMapType.Continent) then
-						-- Save our button list.
-						tinsert(continentNameList, continentInfo.name);
-						tinsert(continentIDList, continentInfo.value);
-					end
+		-- Get the continents. hardcode a list to keep them in order 
+		local continents = C_Map.GetMapChildrenInfo(mapID, Enum.UIMapType.Continent, true)
+		
+		if ( continents ) then
+			for i, continentInfo in ipairs(continents) do
+				-- Filter out anything else that might have the World as a parent (e.g. Battlegrounds).
+				if (continentInfo.mapType == Enum.UIMapType.Continent) then
+					-- Save our button list.				
+					tinsert(continentNameList, continentInfo.name);
+					tinsert(continentIDList, continentInfo.mapID);
 				end
 			end
 		end
 	end
+	
 	
 	return continentNameList, continentIDList;
 end
