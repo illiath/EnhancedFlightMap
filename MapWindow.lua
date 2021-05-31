@@ -161,7 +161,7 @@ This would allow this to be automatically updated based on the available contine
 	elseif (newMap == 3) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP530";
 
---[[
+--[[	-- Future Use
 	elseif (newMap == 4) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP571";
 	elseif (newMap == 5) then
@@ -313,7 +313,7 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con1:RegisterForClicks("LeftButtonUp");
 	EFM_MapWindowNew_Con1:ClearAllPoints();
 	EFM_MapWindowNew_Con1:SetPoint("TOPLEFT", EFM_MapWindowNew, "TOPLEFT", 20, -45);
-	EFM_MapWindowNew_Con1:SetScript("OnClick", function() EFM_MW_ChangeMap(1); end );
+	EFM_MapWindowNew_Con1:SetScript("OnClick", function() EFM_MW_ChangeMap(1); EFM_MW_ChangeMap(1); end );
 
 	-- Kalimdor - Continent 2
 	local EFM_MapWindowNew_Con2 = CreateFrame("Button", "EFM_MapWindowNew_Con2", EFM_MapWindowNew, "UIPanelButtonTemplate");
@@ -323,7 +323,7 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con2:RegisterForClicks("LeftButtonUp");
 	EFM_MapWindowNew_Con2:ClearAllPoints();
 	EFM_MapWindowNew_Con2:SetPoint("TOPLEFT", EFM_MapWindowNew_Con1, "BOTTOMLEFT", 0, -2);
-	EFM_MapWindowNew_Con2:SetScript("OnClick", function() EFM_MW_ChangeMap(2); end );
+	EFM_MapWindowNew_Con2:SetScript("OnClick", function() EFM_MW_ChangeMap(2); EFM_MW_ChangeMap(2); end );
 
 	-- Outland - Continent 3
 	if (wowtocversion > 20500) then
@@ -334,7 +334,7 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con3:RegisterForClicks("LeftButtonUp");
 	EFM_MapWindowNew_Con3:ClearAllPoints();
 	EFM_MapWindowNew_Con3:SetPoint("TOPLEFT", EFM_MapWindowNew_Con2, "BOTTOMLEFT", 0, -2);
-	EFM_MapWindowNew_Con3:SetScript("OnClick", function() EFM_MW_ChangeMap(3); end );
+	EFM_MapWindowNew_Con3:SetScript("OnClick", function() EFM_MW_ChangeMap(3); EFM_MW_ChangeMap(3); end );
 	end
 
 --[[
@@ -380,33 +380,20 @@ function EFM_GetContinentList()
 	local continentNameList = {};
 	local continentIDList = {};
 
-	local WORLD_MAP_ID = 947
-	local COSMIC_MAP_ID = 946
-	
-	local mapID
-	
-	if select(4,GetBuildInfo()) < 20000 then
-		mapID = WORLD_MAP_ID
-	else
-		mapID = COSMIC_MAP_ID
+	local continents = {1414, 1415};
+		
+	if select(4,GetBuildInfo()) > 20000 then
+		continents = {1414, 1415, 1945}
 	end
 
-	if (mapID) then
-		-- Get the continents. hardcode a list to keep them in order 
-		local continents = C_Map.GetMapChildrenInfo(mapID, Enum.UIMapType.Continent, true)
-		
-		if ( continents ) then
-			for i, continentInfo in ipairs(continents) do
-				-- Filter out anything else that might have the World as a parent (e.g. Battlegrounds).
-				if (continentInfo.mapType == Enum.UIMapType.Continent) then
-					-- Save our button list.				
-					tinsert(continentNameList, continentInfo.name);
-					tinsert(continentIDList, continentInfo.mapID);
-				end
-			end
+	-- Get the continents. hardcode a list to keep them in order 
+	if ( continents ) then
+		for i, continentInfo in ipairs(continents) do
+			-- Save our button list.				
+			tinsert(continentNameList, C_Map.GetMapInfo(continentInfo).name);
+			tinsert(continentIDList, continentInfo);
 		end
-	end
-	
+	end	
 	
 	return continentNameList, continentIDList;
 end
