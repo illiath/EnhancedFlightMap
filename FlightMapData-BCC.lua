@@ -56,8 +56,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.54",
 						},
 						["wmLoc"] = {
-							["y"] = "0.79",
-							["x"] = "0.55",
+							["y"] = "0.82",
+							["x"] = "0.53",
 						},
 						["name"] = "Nethergarde Keep, Blasted Lands",
 						["zmLoc"] = {
@@ -65,7 +65,7 @@ Default_EFM_FlightData = {
 							["x"] = "65",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.7",
+							["y"] = "0.75",
 							["x"] = "0.8",
 						},
 						["routes"] = {
@@ -87,8 +87,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.52",
 						},
 						["wmLoc"] = {
-							["y"] = "0.67",
-							["x"] = "0.53",
+							["y"] = "0.71",
+							["x"] = "0.51",
 						},
 						["name"] = "Morgan's Vigil, Burning Steppes",
 						["zmLoc"] = {
@@ -96,7 +96,7 @@ Default_EFM_FlightData = {
 							["x"] = "84",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.61",
+							["y"] = "0.66",
 							["x"] = "0.79",
 						},
 						["routes"] = {
