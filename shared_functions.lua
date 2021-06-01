@@ -106,7 +106,7 @@ function EFM_Shared_GetCurrentMapPosition(mapLevel)
 			-- WTF can't blizzard fix this by now?? Warning: Hack ahead
 
 				if (mapLevel == 1) then
-				DEFAULT_CHAT_FRAME:AddMessage("Debug: "..currentZone, 0.8, 0.4, 0.4);
+			--	DEFAULT_CHAT_FRAME:AddMessage("Debug: "..currentZone, 0.8, 0.4, 0.4);
 					-- Oh god I hope this works
 					if (currentZone == "The Exodar") then -- Exodar
 						position = {x = 0.07, y = 0.29};
