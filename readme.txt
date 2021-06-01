@@ -1,3 +1,11 @@
+*FanUpdate*
+--------------
+I helped Lysidia with the classic data and testing, but they seem to be MIA so I fixed the TBC bugs!
+--
+Thengel of Mankrik (US)
+
+
+
 *SPECIAL NOTE*
 --------------
 Due to there now being WoW and WoW Classic, the master repo is for WoW Classic. I do not intend to play WoW retail, so here's hoping nothing too major happens to cause things to be completely unusable between the versions. The addon I am intending to update to allow for most of the changes due to new areas/etc being automated now the WoW map API allows such things, but I'm not intending to maintain a WoW retail addon. That said, if anyone wants to help out and do that maintenance, or if you want to help with the addon through submitting patches/whatever, open an issue on my github for this addon and we can talk (likely it'll be yes *grin*).
