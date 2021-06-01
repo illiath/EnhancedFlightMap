@@ -21,8 +21,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.51",
 						},
 						["wmLoc"] = {
-							["y"] = "0.37",
-							["x"] = "0.52",
+							["y"] = "0.45",
+							["x"] = "0.5",
 						},
 						["name"] = "Refuge Pointe, Arathi",
 						["zmLoc"] = {
@@ -30,7 +30,7 @@ Default_EFM_FlightData = {
 							["x"] = "45",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.37",
+							["y"] = "0.42",
 							["x"] = "0.78",
 						},
 						["routes"] = {
@@ -56,8 +56,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.54",
 						},
 						["wmLoc"] = {
-							["y"] = "0.79",
-							["x"] = "0.55",
+							["y"] = "0.82",
+							["x"] = "0.53",
 						},
 						["name"] = "Nethergarde Keep, Blasted Lands",
 						["zmLoc"] = {
@@ -65,7 +65,7 @@ Default_EFM_FlightData = {
 							["x"] = "65",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.7",
+							["y"] = "0.75",
 							["x"] = "0.8",
 						},
 						["routes"] = {
@@ -87,8 +87,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.52",
 						},
 						["wmLoc"] = {
-							["y"] = "0.67",
-							["x"] = "0.53",
+							["y"] = "0.71",
+							["x"] = "0.51",
 						},
 						["name"] = "Morgan's Vigil, Burning Steppes",
 						["zmLoc"] = {
@@ -96,7 +96,7 @@ Default_EFM_FlightData = {
 							["x"] = "84",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.61",
+							["y"] = "0.66",
 							["x"] = "0.79",
 						},
 						["routes"] = {
@@ -190,8 +190,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.44",
 						},
 						["wmLoc"] = {
-							["y"] = "0.34",
-							["x"] = "0.46",
+							["y"] = "0.43",
+							["x"] = "0.45",
 						},
 						["name"] = "Southshore, Hillsbrad",
 						["zmLoc"] = {
@@ -199,7 +199,7 @@ Default_EFM_FlightData = {
 							["x"] = "49",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.35",
+							["y"] = "0.4",
 							["x"] = "0.74",
 						},
 						["routes"] = {
@@ -268,8 +268,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.52",
 						},
 						["wmLoc"] = {
-							["y"] = "0.54",
-							["x"] = "0.53",
+							["y"] = "0.61",
+							["x"] = "0.51",
 						},
 						["name"] = "Thelsamar, Loch Modan",
 						["zmLoc"] = {
@@ -277,7 +277,7 @@ Default_EFM_FlightData = {
 							["x"] = "33",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.51",
+							["y"] = "0.56",
 							["x"] = "0.79",
 						},
 						["routes"] = {
@@ -299,8 +299,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.5",
 						},
 						["wmLoc"] = {
-							["y"] = "0.72",
-							["x"] = "0.51",
+							["y"] = "0.75",
+							["x"] = "0.5",
 						},
 						["name"] = "Lakeshire, Redridge",
 						["zmLoc"] = {
@@ -308,8 +308,8 @@ Default_EFM_FlightData = {
 							["x"] = "30",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.64",
-							["x"] = "0.77",
+							["y"] = "0.7",
+							["x"] = "0.78",
 						},
 						["routes"] = {
 							"Darkshire, Duskwood", -- [1]
@@ -472,8 +472,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.49",
 						},
 						["wmLoc"] = {
-							["y"] = "0.3",
-							["x"] = "0.51",
+							["y"] = "0.4",
+							["x"] = "0.49",
 						},
 						["name"] = "Aerie Peak, The Hinterlands",
 						["zmLoc"] = {
@@ -481,7 +481,7 @@ Default_EFM_FlightData = {
 							["x"] = "11",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.32",
+							["y"] = "0.37",
 							["x"] = "0.77",
 						},
 						["routes"] = {
@@ -507,8 +507,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.47",
 						},
 						["wmLoc"] = {
-							["y"] = "0.27",
-							["x"] = "0.49",
+							["y"] = "0.37",
+							["x"] = "0.48",
 						},
 						["name"] = "Chillwind Camp, Western Plaguelands",
 						["zmLoc"] = {
@@ -516,7 +516,7 @@ Default_EFM_FlightData = {
 							["x"] = "42",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.3",
+							["y"] = "0.35",
 							["x"] = "0.76",
 						},
 						["routes"] = {
@@ -575,8 +575,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.45",
 						},
 						["wmLoc"] = {
-							["y"] = "0.47",
-							["x"] = "0.47",
+							["y"] = "0.55",
+							["x"] = "0.46",
 						},
 						["name"] = "Menethil Harbor, Wetlands",
 						["zmLoc"] = {
@@ -584,7 +584,7 @@ Default_EFM_FlightData = {
 							["x"] = "9",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.45",
+							["y"] = "0.51",
 							["x"] = "0.74",
 						},
 						["routes"] = {
@@ -1192,7 +1192,7 @@ Default_EFM_FlightData = {
 					},
 				},
 				["The Barrens"] = {
-					["Ratchet, The Barrens"] = {
+				["Ratchet, The Barrens"] = {
 						["fmLoc"] = {
 							["y"] = "0.54",
 							["x"] = "0.6",
