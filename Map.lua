@@ -146,8 +146,9 @@ function EFM_Map_DisplayEFMPOIs(locName, locLevel)
 
 	-- World Map
 	if (locLevel == 1) then
+	local myDebug = false
 		for index, myContinent in pairs(EFM_GetContinentList()) do
-			for myZone in pairs(EFM_Data[EFM_Global_Faction][myContinent]) do
+			for myZone in pairs(EFM_Data[EFM_Global_Faction][myContinent] or {}) do
 				for myNode in pairs(EFM_Data[EFM_Global_Faction][myContinent][myZone]) do
 					EFM_Shared_DebugMessage("Node Added: "..EFM_Data[EFM_Global_Faction][myContinent][myZone][myNode]["name"], myDebug);
 					table.insert(knownPoints, EFM_Data[EFM_Global_Faction][myContinent][myZone][myNode]["name"]);

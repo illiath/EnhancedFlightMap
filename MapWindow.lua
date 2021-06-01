@@ -18,7 +18,7 @@ local function EFM_MW_ClearPoints()
 	-- Clear flight node points.
 	index = 1;
 	while (getglobal("EFM_MW_Node"..index) ~= nil) do
-		EFM_Shared_DebugMessage("Clearing Map Window Node Point "..index, Lys_Debug);
+		EFM_Shared_DebugMessage("Clearing Map Window Node Point "..index, myDebug);
 
 		POI = getglobal("EFM_MW_Node"..index);
 		EFM_MW_POIClear(POI);
@@ -28,7 +28,7 @@ local function EFM_MW_ClearPoints()
 	-- Clear flight route lines.
 	index = 1;
 	while (getglobal("EFM_MW_Route"..index) ~= nil) do
-		EFM_Shared_DebugMessage("Clearing Map Window Node Lines "..index, Lys_Debug);
+		EFM_Shared_DebugMessage("Clearing Map Window Node Lines "..index, myDebug);
 
 		POI = getglobal("EFM_MW_Route"..index);
 		POI:SetTexture("Invalid");
