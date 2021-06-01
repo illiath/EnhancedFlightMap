@@ -56,8 +56,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.54",
 						},
 						["wmLoc"] = {
-							["y"] = "0.82",
-							["x"] = "0.53",
+							["y"] = "0.79",
+							["x"] = "0.55",
 						},
 						["name"] = "Nethergarde Keep, Blasted Lands",
 						["zmLoc"] = {
@@ -65,7 +65,7 @@ Default_EFM_FlightData = {
 							["x"] = "65",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.75",
+							["y"] = "0.7",
 							["x"] = "0.8",
 						},
 						["routes"] = {
@@ -87,8 +87,8 @@ Default_EFM_FlightData = {
 							["x"] = "0.52",
 						},
 						["wmLoc"] = {
-							["y"] = "0.71",
-							["x"] = "0.51",
+							["y"] = "0.67",
+							["x"] = "0.53",
 						},
 						["name"] = "Morgan's Vigil, Burning Steppes",
 						["zmLoc"] = {
@@ -96,7 +96,7 @@ Default_EFM_FlightData = {
 							["x"] = "84",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.66",
+							["y"] = "0.61",
 							["x"] = "0.79",
 						},
 						["routes"] = {
@@ -1997,7 +1997,7 @@ Default_EFM_FlightData = {
 					["Light's Hope Chapel, Eastern Plaguelands"] = {
 						["fmLoc"] = {
 							["y"] = "0.34",
-							["x"] = "0.6",
+							["x"] = "0.61",
 						},
 						["wmLoc"] = {
 							["y"] = "0.32",
@@ -2005,12 +2005,12 @@ Default_EFM_FlightData = {
 						},
 						["name"] = "Light's Hope Chapel, Eastern Plaguelands",
 						["zmLoc"] = {
-							["y"] = "56.99",
-							["x"] = "80",
+							["y"] = "59",
+							["x"] = "81",
 						},
 						["worldMapLoc"] = {
 							["y"] = "0.3",
-							["x"] = "0.84",
+							["x"] = "0.85",
 						},
 						["routes"] = {
 							"Revantusk Village, The Hinterlands", -- [1]
