@@ -1,12 +1,12 @@
-## Interface: 11306
+## Interface: 11307
 ## Title: Enhanced Flight Map
 ## Author: Lysidia of Feathermoon/Myrzael (Classic)
-## Version: Classic-2.2.8
+## Version: 3.2.0-Classic
 ## Notes: Adds enhancements to the flight system!
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## SavedVariables: EFM_Data,EFM_WaterNodes,EFM_ImportData
-## SavedVariablesPerCharacter: EFM_MyConf,EFM_KnownNodes,EFM_ReachableNodes
+## SavedVariablesPerCharacter: EFM_MyConf,EFM_KnownNodes
 shared_functions.lua
 
 globals.lua

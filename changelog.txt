@@ -1,3 +1,14 @@
+2021-05-31  Version 3.2.0-Classic/TBC
+---------------------------------
+Lots of CHanges!
+Add all BCC Flight Nodes and timers
+Approx Horde Classic Flight Points
+Fix /efm open and /efm config
+Hack to allow positions on new Azeroth zones
+Stop saving reachable flightpoints, they are always calculated
+FanUpdate by beren12
+
+
 2019-09-23  Version 3.1.0-Classic
 ---------------------------------
 - Fix issue #5 on github, druid flightpaths now tracks and is configured.
