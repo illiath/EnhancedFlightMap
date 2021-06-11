@@ -6,7 +6,7 @@
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## SavedVariables: EFM_Data,EFM_WaterNodes,EFM_ImportData
-## SavedVariablesPerCharacter: EFM_MyConf,EFM_KnownNodes
+## SavedVariablesPerCharacter: EFM_MyConf,EFM_KnownNodes,EFM_ReachableNodes
 shared_functions.lua
 
 globals.lua
