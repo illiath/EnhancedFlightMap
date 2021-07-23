@@ -131,6 +131,7 @@ function EFM_SlashCommandHandler(msg)
 		-- Options screen details
 		elseif (msgLower == EFM_CMD_GUI) then
 			InterfaceOptionsFrame_OpenToCategory(EFM_GUI);
+			InterfaceOptionsFrame_OpenToCategory(EFM_GUI);
 			return;
 
 		-- Report on flight times

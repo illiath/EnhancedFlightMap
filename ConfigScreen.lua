@@ -72,7 +72,7 @@ function EnhancedFlightMap_RegConfig()
 	EFM_GUI_OPTIONS_SC:Show()
 
 	-- Timer Options Frame
-	local EFM_GUI_Timer_Options = CreateFrame("FRAME", "EFM_GUI_Timer_Options", EFM_GUI_OPTIONS_SC)
+	local EFM_GUI_Timer_Options = CreateFrame("FRAME", "EFM_GUI_Timer_Options", EFM_GUI_OPTIONS_SC, BackdropTemplateMixin and "BackdropTemplate")
 	EFM_GUI_Timer_Options:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", 
 		edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
 		tile = true, tileSize = 16, edgeSize = 16, 
@@ -137,6 +137,7 @@ function EnhancedFlightMap_RegConfig()
 	EFM_GUI_CS_Slider_TimerSizeSlider:SetWidth("320")
 	EFM_GUI_CS_Slider_TimerSizeSlider:SetMinMaxValues("0.1", "2")
 	EFM_GUI_CS_Slider_TimerSizeSlider:SetValueStep("0.05");
+	EFM_GUI_CS_Slider_TimerSizeSlider:SetObeyStepOnDrag(true);
 	EFM_GUI_CS_Slider_TimerSizeSlider:SetValue(EFM_MyConf.TimerSize)
 	EFM_GUI_CS_Slider_TimerSizeSliderText:SetFontObject(GameFontNormal)
 	EFM_GUI_CS_Slider_TimerSizeSliderText:SetText(format(EFM_GUITEXT_SizeSlider, EFM_MyConf.TimerSize));
@@ -149,18 +150,19 @@ function EnhancedFlightMap_RegConfig()
 	EFM_GUI_CS_Slider_TimerLocSlider:SetWidth("320")
 	EFM_GUI_CS_Slider_TimerLocSlider:SetMinMaxValues("-500", "500")
 	EFM_GUI_CS_Slider_TimerLocSlider:SetValueStep("10");
+	EFM_GUI_CS_Slider_TimerLocSlider:SetObeyStepOnDrag(true);
 	EFM_GUI_CS_Slider_TimerLocSlider:SetValue(EFM_MyConf.TimerPosition)
 	EFM_GUI_CS_Slider_TimerLocSliderText:SetFontObject(GameFontNormal)
 	EFM_GUI_CS_Slider_TimerLocSliderText:SetText(format(EFM_GUITEXT_DisplaySlider, EFM_MyConf.TimerPosition));
-	getglobal(EFM_GUI_CS_Slider_TimerLocSlider:GetName().."Low"):SetText("-200");
-	getglobal(EFM_GUI_CS_Slider_TimerLocSlider:GetName().."High"):SetText("200");
+	getglobal(EFM_GUI_CS_Slider_TimerLocSlider:GetName().."Low"):SetText("-500");
+	getglobal(EFM_GUI_CS_Slider_TimerLocSlider:GetName().."High"):SetText("500");
 
 	-- Need to be placed after both sliders have been created or we'll get an error due to a call to the function before both sliders have been created
 	EFM_GUI_CS_Slider_TimerSizeSlider:SetScript("OnValueChanged", function(self, value)  EFM_GUI_CS_Slider_Changed(); end)
 	EFM_GUI_CS_Slider_TimerLocSlider:SetScript("OnValueChanged", function(self, value)  EFM_GUI_CS_Slider_Changed(); end)
 
 	-- Display Options Frame
-	local EFM_GUI_Display_Options = CreateFrame("FRAME", "EFM_GUI_Display_Options", EFM_GUI_OPTIONS_SC)
+	local EFM_GUI_Display_Options = CreateFrame("FRAME", "EFM_GUI_Display_Options", EFM_GUI_OPTIONS_SC, BackdropTemplateMixin and "BackdropTemplate")
 	EFM_GUI_Display_Options:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", 
 		edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
 		tile = true, tileSize = 16, edgeSize = 16, 
@@ -242,7 +244,7 @@ function EnhancedFlightMap_RegConfig()
 	EFM_GUI_CS_Button_UpdateRecordedText:SetText(EFM_GUITEXT_UpdateRecorded);
 
 	-- Preloaded Data Frame
-	local EFM_GUI_Preload_Data = CreateFrame("FRAME", "EFM_GUI_Preload_Data", EFM_GUI_OPTIONS_SC)
+	local EFM_GUI_Preload_Data = CreateFrame("FRAME", "EFM_GUI_Preload_Data", EFM_GUI_OPTIONS_SC, BackdropTemplateMixin and "BackdropTemplate")
 	EFM_GUI_Preload_Data:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background", 
 		edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
 		tile = true, tileSize = 16, edgeSize = 16, 
@@ -464,8 +466,8 @@ function EFM_CS_Init()
 	EFM_CS_Button_UpdateRecordedText:SetText(EFM_GUITEXT_UpdateRecorded);
 	EFM_CS_Button_LoadAllText:SetText(EFM_GUITEXT_LoadAll);
 
-	EFM_CS_Slider_TimerLocSliderHigh:SetText("200");
-	EFM_CS_Slider_TimerLocSliderLow:SetText("-200");
+	EFM_CS_Slider_TimerLocSliderHigh:SetText("500");
+	EFM_CS_Slider_TimerLocSliderLow:SetText("-500");
 	EFM_CS_Slider_TimerLocSlider:SetValueStep(10);
 
 	EFM_CS_Slider_TimerSizeSliderHigh:SetText("2.0");
@@ -518,7 +520,7 @@ function EFM_CS_SetDefaults()
 	EFM_MyConf.ShowTimerBar		= true;
 	EFM_MyConf.ShrinkStatusBar	= true;
 	EFM_MyConf.ShowLargeBar		= false;
-	EFM_MyConf.TimerPosition	= -150;
+	EFM_MyConf.TimerPosition	= -240;
 	EFM_MyConf.TimerSize            = 1.0;
 	EFM_MyConf.UpdateRecorded	= false;
 	EFM_MyConf.LoadAll		= true;

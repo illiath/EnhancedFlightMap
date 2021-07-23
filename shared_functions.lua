@@ -88,15 +88,40 @@ end
 -- Function: Get Current Map location
 function EFM_Shared_GetCurrentMapPosition(mapLevel)
 	local mapID = C_Map.GetBestMapForUnit("player");
+	local position;
+	local currentZone = C_Map.GetMapInfo(mapID).name;
+
 	
 	if (mapID ~= nil) then
 		local info = C_Map.GetMapInfo(mapID);
+		
 		if (info ~= nil) then
+			
 			while(info['mapType'] and info['mapType'] > mapLevel) do
 				info = C_Map.GetMapInfo(info['parentMapID']);
 			end
+
 			if(info['mapType'] == mapLevel) then
-				local position	= C_Map.GetPlayerMapPosition(info.mapID, "player");
+
+			-- WTF can't blizzard fix this by now?? Warning: Hack ahead
+
+				if (mapLevel == 1) then
+			--	DEFAULT_CHAT_FRAME:AddMessage("Debug: "..currentZone, 0.8, 0.4, 0.4);
+					-- Oh god I hope this works
+					if (currentZone == "The Exodar") then -- Exodar
+						position = {x = 0.07, y = 0.29};
+					elseif (currentZone == "Bloodmyst Isle") then -- Bloodmyst
+						position = {x = 0.07, y = 0.21};
+					elseif (currentZone == "Eversong Woods") then -- Silvermoon
+						position = {x = 0.83, y = 0.15};
+					elseif (currentZone == "Ghostlands") then -- Ghostlands
+						position = {x = 0.82, y = 0.22};
+					else
+						position = C_Map.GetPlayerMapPosition(info.mapID, "player")
+					end
+				else
+					position = C_Map.GetPlayerMapPosition(info.mapID, "player");
+				end
 				return EFM_SF_ValueToPrecision(position.x, 2), EFM_SF_ValueToPrecision(position.y, 2);
 			end
 		end

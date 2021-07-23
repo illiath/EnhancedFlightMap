@@ -18,7 +18,7 @@ local function EFM_MW_ClearPoints()
 	-- Clear flight node points.
 	index = 1;
 	while (getglobal("EFM_MW_Node"..index) ~= nil) do
-		EFM_Shared_DebugMessage("Clearing Map Window Node Point "..index, Lys_Debug);
+		EFM_Shared_DebugMessage("Clearing Map Window Node Point "..index, myDebug);
 
 		POI = getglobal("EFM_MW_Node"..index);
 		EFM_MW_POIClear(POI);
@@ -28,7 +28,7 @@ local function EFM_MW_ClearPoints()
 	-- Clear flight route lines.
 	index = 1;
 	while (getglobal("EFM_MW_Route"..index) ~= nil) do
-		EFM_Shared_DebugMessage("Clearing Map Window Node Lines "..index, Lys_Debug);
+		EFM_Shared_DebugMessage("Clearing Map Window Node Lines "..index, myDebug);
 
 		POI = getglobal("EFM_MW_Route"..index);
 		POI:SetTexture("Invalid");
@@ -59,7 +59,7 @@ local function EFM_MW_DisplayFlightMap(continentName)
 
 	local nodeList = EFM_NI_GetNode_List(continentName);
 	if (nodeList == nil) then
-		EFM_Shared_DebugMessage("MW_Display_FlightMap: nodeList is empty!", 1);
+		EFM_Shared_DebugMessage("MW_Display_FlightMap: nodeList is empty!", myDebug);
 		return;
 	end
 
@@ -158,10 +158,10 @@ This would allow this to be automatically updated based on the available contine
 	
 	if (newMap == 2) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP0";
-
---[[
 	elseif (newMap == 3) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP530";
+
+--[[	-- Future Use
 	elseif (newMap == 4) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP571";
 	elseif (newMap == 5) then
@@ -190,6 +190,7 @@ This would allow this to be automatically updated based on the available contine
 	EFM_MapWindowNew_MapTexture:SetTexture(continentMap);
 
 	-- Clear the old waypoints, then draw for the new map.
+	EFM_MW_ClearPoints();
 	EFM_MW_ClearPoints();
 	EFM_MW_DisplayFlightMap(EFM_Shared_GetContinentName(newMap));
 end
@@ -227,9 +228,11 @@ end
 
 -- Function: Draw the "Offline" Map Window
 function EFM_MW_Setup()
+	local wowversion, wowbuild, wowdate, wowtocversion = GetBuildInfo()
+
 	local continentNames = EFM_GetContinentList();
 
-	local EFM_MapWindowNew = CreateFrame("FRAME", "EFM_MapWindowNew", UIParent);
+	local EFM_MapWindowNew = CreateFrame("FRAME", "EFM_MapWindowNew", UIParent, BackdropTemplateMixin and "BackdropTemplate");
 
 	-- Set special details of Frame
 	EFM_MapWindowNew:SetFrameStrata("DIALOG");
@@ -276,7 +279,7 @@ function EFM_MW_Setup()
 	EFM_MW_ConfigButton:RegisterForClicks("LeftButtonUp");
 	EFM_MW_ConfigButton:ClearAllPoints();
 	EFM_MW_ConfigButton:SetPoint("TOPLEFT", EFM_MapWindowNew, "BOTTOMLEFT", 20, 66);
-	EFM_MW_ConfigButton:SetScript("OnClick", function() EFM_MapWindowNew:Hide(); InterfaceOptionsFrame_OpenToCategory(EFM_GUI); end );
+	EFM_MW_ConfigButton:SetScript("OnClick", function() EFM_MapWindowNew:Hide(); InterfaceOptionsFrame_OpenToCategory(EFM_GUI); InterfaceOptionsFrame_OpenToCategory(EFM_GUI); end );
 
 	-- Quit Button
 	local EFM_MW_QuitButton = CreateFrame("Button", "EFM_MW_QuitButton", EFM_MapWindowNew, "UIPanelButtonTemplate");
@@ -310,7 +313,7 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con1:RegisterForClicks("LeftButtonUp");
 	EFM_MapWindowNew_Con1:ClearAllPoints();
 	EFM_MapWindowNew_Con1:SetPoint("TOPLEFT", EFM_MapWindowNew, "TOPLEFT", 20, -45);
-	EFM_MapWindowNew_Con1:SetScript("OnClick", function() EFM_MW_ChangeMap(1); end );
+	EFM_MapWindowNew_Con1:SetScript("OnClick", function() EFM_MW_ChangeMap(1); EFM_MW_ChangeMap(1); end );
 
 	-- Kalimdor - Continent 2
 	local EFM_MapWindowNew_Con2 = CreateFrame("Button", "EFM_MapWindowNew_Con2", EFM_MapWindowNew, "UIPanelButtonTemplate");
@@ -320,12 +323,10 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con2:RegisterForClicks("LeftButtonUp");
 	EFM_MapWindowNew_Con2:ClearAllPoints();
 	EFM_MapWindowNew_Con2:SetPoint("TOPLEFT", EFM_MapWindowNew_Con1, "BOTTOMLEFT", 0, -2);
-	EFM_MapWindowNew_Con2:SetScript("OnClick", function() EFM_MW_ChangeMap(2); end );
-
---[[
--- We don't have these continents in Classic
+	EFM_MapWindowNew_Con2:SetScript("OnClick", function() EFM_MW_ChangeMap(2); EFM_MW_ChangeMap(2); end );
 
 	-- Outland - Continent 3
+	if (wowtocversion > 20500) then
 	local EFM_MapWindowNew_Con3 = CreateFrame("Button", "EFM_MapWindowNew_Con3", EFM_MapWindowNew, "UIPanelButtonTemplate");
 	EFM_MapWindowNew_Con3:SetWidth(138);
 	EFM_MapWindowNew_Con3:SetHeight(22);
@@ -333,7 +334,11 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con3:RegisterForClicks("LeftButtonUp");
 	EFM_MapWindowNew_Con3:ClearAllPoints();
 	EFM_MapWindowNew_Con3:SetPoint("TOPLEFT", EFM_MapWindowNew_Con2, "BOTTOMLEFT", 0, -2);
-	EFM_MapWindowNew_Con3:SetScript("OnClick", function() EFM_MW_ChangeMap(3); end );
+	EFM_MapWindowNew_Con3:SetScript("OnClick", function() EFM_MW_ChangeMap(3); EFM_MW_ChangeMap(3); end );
+	end
+
+--[[
+-- We don't have these continents yet in Classic
 
 	-- Northrend - Continent 4
 	local EFM_MapWindowNew_Con4 = CreateFrame("Button", "EFM_MapWindowNew_Con4", EFM_MapWindowNew, "UIPanelButtonTemplate");
@@ -375,26 +380,20 @@ function EFM_GetContinentList()
 	local continentNameList = {};
 	local continentIDList = {};
 
-	local mapID = _G["WorldMapFrame"]:GetMapID();
-	
-	if (mapID) then
-		-- Work our way back up to the top (World), then move down to find the continents.
-		local azerothMapInfo = MapUtil.GetMapParentInfo(mapID, Enum.UIMapType.World, TOPMOST);
-		if (azerothMapInfo.mapID) then
-			-- Get the continents.
-			local continents = C_Map.GetMapChildrenInfo(azerothMapInfo.mapID);
-			if ( continents ) then
-				for i, continentInfo in ipairs(continents) do
-					-- Filter out anything else that might have the World as a parent (e.g. Battlegrounds).
-					if (continentInfo.mapType == Enum.UIMapType.Continent) then
-						-- Save our button list.
-						tinsert(continentNameList, continentInfo.name);
-						tinsert(continentIDList, continentInfo.value);
-					end
-				end
-			end
-		end
+	local continents = {1414, 1415};
+		
+	if select(4,GetBuildInfo()) > 20000 then
+		continents = {1414, 1415, 1945}
 	end
+
+	-- Get the continents. hardcode a list to keep them in order 
+	if ( continents ) then
+		for i, continentInfo in ipairs(continents) do
+			-- Save our button list.				
+			tinsert(continentNameList, C_Map.GetMapInfo(continentInfo).name);
+			tinsert(continentIDList, continentInfo);
+		end
+	end	
 	
 	return continentNameList, continentIDList;
 end

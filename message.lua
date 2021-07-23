@@ -55,10 +55,10 @@ function EFM_Report_Flight(reportTo)
 			SendChatMessage(myReport, "RAID");
 			return;
 
-		elseif (messageDest ~= nil) then
+		elseif (messageDest ~= "") then
 			local chanNum = tonumber(reportTo);
 			if (chanNum ~= nil) then
-				if ((chanNum > 0) and (chanNum < 10)) then
+				if ((chanNum > 0) and (chanNum < 99)) then
 					SendChatMessage(myReport, "CHANNEL", GetDefaultLanguage("player"), chanNum);
 					return;
 				end
