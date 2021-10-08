@@ -6,9 +6,20 @@ Thengel of Mankrik (US)
 
 
 
-*SPECIAL NOTE*
---------------
-Due to there now being WoW and WoW Classic, the master repo is for WoW Classic. I do not intend to play WoW retail, so here's hoping nothing too major happens to cause things to be completely unusable between the versions. The addon I am intending to update to allow for most of the changes due to new areas/etc being automated now the WoW map API allows such things, but I'm not intending to maintain a WoW retail addon. That said, if anyone wants to help out and do that maintenance, or if you want to help with the addon through submitting patches/whatever, open an issue on my github for this addon and we can talk (likely it'll be yes *grin*).
+*Note from OP (Lysidia)*
+------------------------
+First off, this repo was put up for WoW Classic only, I dropped out of playing WoW mainline during the Pandaria release.
+I came back for a time for WoW classic, hence this repo. Since WoW classic's release information as to Blizzards employee treatment has surfaced,
+and I don't support that treatment, so until I know for sure that the company has improved internally I won't be supporting them by paying for a subscription.
+That said, I feel doing subscribing or not is a personal choice, and not for me to comment on your opinions of that, so please respect that for me.
+
+So, while I won't be returning to WoW Classic, I am proud of the work I did with the various WoW addons through my years playing WoW,
+so the repos related to them will remain online as long as GitHub will keep them up :)
+
+I'm also happy to have Thengel doing their best to maintain the codebase for EFM, allowing it to continue.
+
+I can be emailed at the gmail address listed in the special thanks section if peeps feel the need to contact me directly.
+As I am working on a doctorate at the moment, I do have limited time to respond, but I will respond when I get time.
 
 Description
 -----------
