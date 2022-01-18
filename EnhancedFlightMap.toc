@@ -1,7 +1,7 @@
 ## Interface: 11307
 ## Title: Enhanced Flight Map
 ## Author: Lysidia of Feathermoon/Myrzael (Classic)
-## Version: 3.2.0-Classic
+## Version: 3.2.1-Classic
 ## Notes: Adds enhancements to the flight system!
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
