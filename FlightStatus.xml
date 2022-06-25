@@ -51,7 +51,7 @@
 					</Anchor>
 				</Anchors>
 				<KeyValues>
-					<KeyValue key="backdropInfo" value="BACKDROP_TOOLTIP_16_16_5555" type="global"/>
+					<KeyValue key="backdropInfo" value="BACKDROP_TUTORIAL_16_16" type="global"/>
 					<KeyValue key="backdropColor" value="GOLD" type="global"/>
 					<KeyValue key="backdropBorderColor" value="GOLD" type="global"/>
 				</KeyValues>
