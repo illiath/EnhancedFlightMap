@@ -2237,6 +2237,35 @@ Default_EFM_FlightData = {
 							["Ulduar, The Storm Peaks"] = 44,
 						},
 					},
+					["Dun Nifflelem, The Storm Peaks"] = {
+						["fmLoc"] = {
+							["y"] = "0.28",
+							["x"] = "0.72",
+						},
+						["wmLoc"] = {
+							["y"] = "0.27",
+							["x"] = "0.66",
+						},
+						["name"] = "Dun Nifflelem, The Storm Peaks",
+						["zmLoc"] = {
+							["y"] = "60",
+							["x"] = "62",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.11",
+							["x"] = "0.58",
+						},
+						["routes"] = {
+							"K3, The Storm Peaks", -- [1]
+							"Ulduar, The Storm Peaks", -- [2]
+							"Zim'Torga, Zul'Drak", -- [3]
+						},
+						["timers"] = {
+							["K3, The Storm Peaks"] = 88,
+							["Ulduar, The Storm Peaks"] = 84,
+							["Zim'Torga, Zul'Drak"] = 89,
+						},
+					},
 					["Frosthold, The Storm Peaks"] = {
 						["fmLoc"] = {
 							["y"] = "0.32",
@@ -5357,6 +5386,35 @@ Default_EFM_FlightData = {
 							["Grom'arsh Crash-Site, The Storm Peaks"] = 41,
 							["The Shadow Vault, Icecrown"] = 113,
 							["Ulduar, The Storm Peaks"] = 44,
+						},
+					},
+					["Dun Nifflelem, The Storm Peaks"] = {
+						["fmLoc"] = {
+							["y"] = "0.28",
+							["x"] = "0.72",
+						},
+						["wmLoc"] = {
+							["y"] = "0.27",
+							["x"] = "0.66",
+						},
+						["name"] = "Dun Nifflelem, The Storm Peaks",
+						["zmLoc"] = {
+							["y"] = "60",
+							["x"] = "62",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.11",
+							["x"] = "0.58",
+						},
+						["routes"] = {
+							"K3, The Storm Peaks", -- [1]
+							"Ulduar, The Storm Peaks", -- [2]
+							"Zim'Torga, Zul'Drak", -- [3]
+						},
+						["timers"] = {
+							["K3, The Storm Peaks"] = 88,
+							["Ulduar, The Storm Peaks"] = 84,
+							["Zim'Torga, Zul'Drak"] = 89,
 						},
 					},
 					["Camp Tunka'lo, The Storm Peaks"] = {
