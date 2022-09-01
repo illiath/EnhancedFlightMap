@@ -146,10 +146,10 @@ function EFM_Map_DisplayEFMPOIs(locName, locLevel)
 
 	-- World Map
 	if (locLevel == 1) then
-	local myDebug = false
-		for index, myContinent in pairs(EFM_GetContinentList()) do
-			for myZone in pairs(EFM_Data[EFM_Global_Faction][myContinent]) do
-				for myNode in pairs(EFM_Data[EFM_Global_Faction][myContinent][myZone]) do
+	local myDebug = true
+		for index, myContinent in pairs(EFM_GetContinentList() or {}) do
+			for myZone in pairs(EFM_Data[EFM_Global_Faction][myContinent] or {}) do
+				for myNode in pairs(EFM_Data[EFM_Global_Faction][myContinent][myZone] or {}) do
 					EFM_Shared_DebugMessage("Node Added: "..EFM_Data[EFM_Global_Faction][myContinent][myZone][myNode]["name"], myDebug);
 					table.insert(knownPoints, EFM_Data[EFM_Global_Faction][myContinent][myZone][myNode]["name"]);
 				end
@@ -166,7 +166,7 @@ function EFM_Map_DisplayEFMPOIs(locName, locLevel)
 		nodeLevel		= EFM_LocTypes[2];
 		
 	-- Zone Map
-	elseif (locLevel == 3) then
+	elseif (locLevel == 3 or locName == C_Map.GetMapInfo(125).name) then -- Working around Dalaran (Northrend) being mapType=4?
 		knownPoints		= EFM_NI_GetNodeListByZone(locName);
 		myContinent		= EFM_NI_GetContinentByZone(locName);
 		nodeLevel		= EFM_LocTypes[3];
