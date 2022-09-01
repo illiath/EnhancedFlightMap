@@ -146,7 +146,6 @@ function EFM_Map_DisplayEFMPOIs(locName, locLevel)
 
 	-- World Map
 	if (locLevel == 1) then
-	local myDebug = true
 		for index, myContinent in pairs(EFM_GetContinentList() or {}) do
 			for myZone in pairs(EFM_Data[EFM_Global_Faction][myContinent] or {}) do
 				for myNode in pairs(EFM_Data[EFM_Global_Faction][myContinent][myZone] or {}) do
