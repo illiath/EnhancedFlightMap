@@ -160,10 +160,9 @@ This would allow this to be automatically updated based on the available contine
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP0";
 	elseif (newMap == 3) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP530";
-
---[[	-- Future Use
 	elseif (newMap == 4) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP571";
+--[[	-- Future Use
 	elseif (newMap == 5) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP870";
 	elseif (newMap == 6) then
@@ -337,10 +336,8 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con3:SetScript("OnClick", function() EFM_MW_ChangeMap(3); EFM_MW_ChangeMap(3); end );
 	end
 
---[[
--- We don't have these continents yet in Classic
-
 	-- Northrend - Continent 4
+	if (wowtocversion > 30000) then
 	local EFM_MapWindowNew_Con4 = CreateFrame("Button", "EFM_MapWindowNew_Con4", EFM_MapWindowNew, "UIPanelButtonTemplate");
 	EFM_MapWindowNew_Con4:SetWidth(138);
 	EFM_MapWindowNew_Con4:SetHeight(22);
@@ -348,8 +345,10 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con4:RegisterForClicks("LeftButtonUp");
 	EFM_MapWindowNew_Con4:ClearAllPoints();
 	EFM_MapWindowNew_Con4:SetPoint("TOPLEFT", EFM_MapWindowNew_Con3, "BOTTOMLEFT", 0, -2);
-	EFM_MapWindowNew_Con4:SetScript("OnClick", function() EFM_MW_ChangeMap(4); end );
-
+	EFM_MapWindowNew_Con4:SetScript("OnClick", function() EFM_MW_ChangeMap(4); EFM_MW_ChangeMap(4); end );
+	end
+--[[
+-- We don't have these continents yet in Classic
 
 	-- DO NOT REMOVE THIS CODEBLOCK! --
 	-- The Maelstrom - Continent 5
@@ -379,11 +378,14 @@ end
 function EFM_GetContinentList()
 	local continentNameList = {};
 	local continentIDList = {};
-
-	local continents = {1414, 1415};
+	local continents = {};
 		
-	if select(4,GetBuildInfo()) > 20000 then
-		continents = {1414, 1415, 1945}
+	if (select(4,GetBuildInfo()) > 30000) then
+		continents = {1414, 1415, 1945, 113};
+	elseif (select(4,GetBuildInfo()) > 20000) then
+		continents = {1414, 1415, 1945};
+	else
+		continents = {1414, 1415};
 	end
 
 	-- Get the continents. hardcode a list to keep them in order 

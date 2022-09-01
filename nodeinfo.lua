@@ -9,13 +9,14 @@ This file contains all the various information routines related to flight nodes.
 -- Function: Check if player is flagged to know a flight path.
 function EFM_NI_CheckReachable(myNode)
 	local myDebug 		= false;
+	local myContinent	= EFM_Shared_GetCurrentContinentName();
 
 	EFM_Shared_DebugMessage("Checking if node "..myNode.." is reachable on continent "..myContinent, myDebug);
 	
 	if (EFM_ReachableNodes ~= nil) then
 		for myContinent in pairs(EFM_ReachableNodes) do
 			for key, val in pairs(EFM_ReachableNodes[myContinent]) do
-					EFM_Shared_DebugMessage("Key "..key.."Val "..val, myDebug);
+					EFM_Shared_DebugMessage("Key "..key.. "Val "..val, myDebug);
 				if (val == myNode) then
 					EFM_Shared_DebugMessage("Yes it is!", myDebug);
 					return true;
@@ -163,8 +164,16 @@ end
 -- Function: Add the map location to a node, by map level
 function EFM_NI_AddNodeLoc(nodeName, nodeStyle, mapLevel)
 	local myNode = EFM_NI_GetNodeByName(nodeName, nodeStyle);
-	local X, Y = EFM_Shared_GetCurrentMapPosition(mapLevel);
+	local X, Y
+	EFM_Shared_DebugMessage("NodeName "..nodeName.." level "..mapLevel, Lys_Debug);
 
+	-- Crap. This should work for any locale.
+	if (nodeName == C_Map.GetMapInfo(125).name and mapLevel == 3) then
+		X, Y = EFM_Shared_GetCurrentMapPosition(4);
+		EFM_Shared_DebugMessage("Fixing Dalaran Coords...", Lys_Debug);
+	else
+		X, Y = EFM_Shared_GetCurrentMapPosition(mapLevel);
+	end
 	if (myNode ~= nil) then
 		if (mapLevel == 3) then
 			X = floor(X * 10000) / 100;

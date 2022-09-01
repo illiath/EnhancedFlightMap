@@ -1,7 +1,7 @@
-## Interface: 20504
+## Interface: 30400
 ## Title: Enhanced Flight Map
-## Author: Lysidia of Feathermoon/Myrzael (Classic)
-## Version: 3.2.1-TBC-Classic
+## Author: Lysidia of Feathermoon/Myrzael & Thengel of Mankrik/Westfall (Classic)
+## Version: 3.3.0-Wrath-Classic
 ## Notes: Adds enhancements to the flight system!
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
@@ -20,5 +20,5 @@ localization-ruRU.lua
 
 EnhancedFlightMap.xml
 
-FlightMapData-BCC.lua
+FlightMapData-WOTLKC.lua
 FlightStatus.xml

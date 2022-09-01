@@ -151,6 +151,10 @@ function EFM_Shared_GetCurrentZoneName()
 	if(mapID) then
 		local info = C_Map.GetMapInfo(mapID)
 		if(info) then
+			-- BEWARE Hack because Dalaran has no Zone...
+			if(info['name'] == "Dalaran" and info['mapID'] == 125) then
+				return info['name'];
+			end
 			while(info['mapType'] and info['mapType'] > 3) do
 				info = C_Map.GetMapInfo(info['parentMapID'])
 			end
