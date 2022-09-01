@@ -5,7 +5,7 @@
 ## Notes: Adds enhancements to the flight system!
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## X-Expansion-Level: 2
+## X-Expansion-Level: 3
 ## X-Curse-Project-ID: 489980
 ## SavedVariables: EFM_Data,EFM_WaterNodes,EFM_ImportData
 ## SavedVariablesPerCharacter: EFM_MyConf,EFM_KnownNodes,EFM_ReachableNodes
