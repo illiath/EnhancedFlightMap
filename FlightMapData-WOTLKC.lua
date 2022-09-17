@@ -1130,6 +1130,27 @@ Default_EFM_FlightData = {
 					},
 				},
 				["Moonglade"] = {
+					["Nighthaven, Moonglade"] = {
+						["routes"] = {
+							"Rut'theran Village, Teldrassil", -- [1]
+						},
+						["wmLoc"] = {
+							["y"] = "0.2",
+							["x"] = "0.52",
+						},
+						["name"] = "Nighthaven, Moonglade",
+						["zmLoc"] = {
+							["y"] = "45",
+							["x"] = "44",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.33",
+							["x"] = "0.22",
+						},
+						["timers"] = {
+							["Rut'theran Village, Teldrassil"] = 153,
+						},
+					},
 					["Moonglade"] = {
 						["fmLoc"] = {
 							["y"] = "0.2",
@@ -2235,6 +2256,35 @@ Default_EFM_FlightData = {
 							["Argent Tournament Grounds, Icecrown"] = 61,
 							["Frosthold, The Storm Peaks"] = 79,
 							["Ulduar, The Storm Peaks"] = 44,
+						},
+					},
+					["Dun Nifflelem, The Storm Peaks"] = {
+						["fmLoc"] = {
+							["y"] = "0.28",
+							["x"] = "0.72",
+						},
+						["wmLoc"] = {
+							["y"] = "0.27",
+							["x"] = "0.66",
+						},
+						["name"] = "Dun Nifflelem, The Storm Peaks",
+						["zmLoc"] = {
+							["y"] = "60",
+							["x"] = "62",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.11",
+							["x"] = "0.58",
+						},
+						["routes"] = {
+							"K3, The Storm Peaks", -- [1]
+							"Ulduar, The Storm Peaks", -- [2]
+							"Zim'Torga, Zul'Drak", -- [3]
+						},
+						["timers"] = {
+							["K3, The Storm Peaks"] = 88,
+							["Ulduar, The Storm Peaks"] = 84,
+							["Zim'Torga, Zul'Drak"] = 89,
 						},
 					},
 					["Frosthold, The Storm Peaks"] = {
@@ -5357,6 +5407,35 @@ Default_EFM_FlightData = {
 							["Grom'arsh Crash-Site, The Storm Peaks"] = 41,
 							["The Shadow Vault, Icecrown"] = 113,
 							["Ulduar, The Storm Peaks"] = 44,
+						},
+					},
+					["Dun Nifflelem, The Storm Peaks"] = {
+						["fmLoc"] = {
+							["y"] = "0.28",
+							["x"] = "0.72",
+						},
+						["wmLoc"] = {
+							["y"] = "0.27",
+							["x"] = "0.66",
+						},
+						["name"] = "Dun Nifflelem, The Storm Peaks",
+						["zmLoc"] = {
+							["y"] = "60",
+							["x"] = "62",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.11",
+							["x"] = "0.58",
+						},
+						["routes"] = {
+							"K3, The Storm Peaks", -- [1]
+							"Ulduar, The Storm Peaks", -- [2]
+							"Zim'Torga, Zul'Drak", -- [3]
+						},
+						["timers"] = {
+							["K3, The Storm Peaks"] = 88,
+							["Ulduar, The Storm Peaks"] = 84,
+							["Zim'Torga, Zul'Drak"] = 89,
 						},
 					},
 					["Camp Tunka'lo, The Storm Peaks"] = {
