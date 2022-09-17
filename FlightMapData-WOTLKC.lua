@@ -1130,6 +1130,27 @@ Default_EFM_FlightData = {
 					},
 				},
 				["Moonglade"] = {
+					["Nighthaven, Moonglade"] = {
+						["routes"] = {
+							"Rut'theran Village, Teldrassil", -- [1]
+						},
+						["wmLoc"] = {
+							["y"] = "0.2",
+							["x"] = "0.52",
+						},
+						["name"] = "Nighthaven, Moonglade",
+						["zmLoc"] = {
+							["y"] = "45",
+							["x"] = "44",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.33",
+							["x"] = "0.22",
+						},
+						["timers"] = {
+							["Rut'theran Village, Teldrassil"] = 153,
+						},
+					},
 					["Moonglade"] = {
 						["fmLoc"] = {
 							["y"] = "0.2",

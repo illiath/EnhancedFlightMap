@@ -69,6 +69,22 @@ function EFM_Timer_EventFrame_OnUpdate()
 	end
 end
 
+	-- Cancel recording times if we make an emergency landing
+	hooksecurefunc("TaxiRequestEarlyLanding", function()
+		EFM_Timer_Recording = false;
+		EFM_Shared_DebugMessage("Player requested early stop.", Lys_Debug);
+	end)
+
+	hooksecurefunc("AcceptBattlefieldPort", function(index, accept)
+		EFM_Timer_Recording = false;
+		EFM_Shared_DebugMessage("Player entered BG.", Lys_Debug);
+	end)
+
+	hooksecurefunc(C_SummonInfo, "ConfirmSummon", function()
+		EFM_Timer_Recording = false;
+		EFM_Shared_DebugMessage("Player took a summon.", Lys_Debug);
+	end)
+
 -- Function: Determine remote location from taxi node
 function EFM_Timer_TakeTaxiNode(nodeID)
 	EFM_TaxiDestination	= TaxiNodeName(nodeID);
@@ -161,6 +177,7 @@ function EFM_GossipTitleButton_OnClick(this, button)
 	local myDebug = false;
 
 	local gossipText = this:GetText();
+--	local gossipText = C_GossipInfo.GetText();
 	
 	if (gossipText ~= "") then
 		if (string.find(gossipText, EFM_DRUID_GOSSIPFIND) ~= nil) then
