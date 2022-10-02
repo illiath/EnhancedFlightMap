@@ -6,9 +6,24 @@ Code inspired by Kwarz's flightpath.
 
 ]]
 
+function EFM_Timer_PauseTimer()
+	-- Pause the timer at the start of a loading scree while recording
+    if (EFM_Timer_Recording == true) then
+        EFM_Timer_Paused = true;
+    end
+end
+
+function EFM_Timer_ResumeTimer()
+	-- Resume the timer once the loading screen ends
+    EFM_Timer_Paused = false;
+end
+
 -- Function: Update
 function EFM_Timer_EventFrame_OnUpdate()
-	if (EFM_MyConf ~= nil) then
+	-- During loading screens the timer can't be calculated accurately because UnitOnTaxi("player") always return false
+	-- even when the player is going throught the portal for blood elfs starting area in a flight path
+	-- Once the loading screen ends the timer can continue being calculated
+	if (EFM_MyConf ~= nil and not EFM_Timer_Paused) then
 		local ctime;
 		
 		-- Timer Setup/End
@@ -72,16 +87,19 @@ end
 	-- Cancel recording times if we make an emergency landing
 	hooksecurefunc("TaxiRequestEarlyLanding", function()
 		EFM_Timer_Recording = false;
+        EFM_Timer_Paused = false;
 		EFM_Shared_DebugMessage("Player requested early stop.", Lys_Debug);
 	end)
 
 	hooksecurefunc("AcceptBattlefieldPort", function(index, accept)
 		EFM_Timer_Recording = false;
+        EFM_Timer_Paused = false;
 		EFM_Shared_DebugMessage("Player entered BG.", Lys_Debug);
 	end)
 
 	hooksecurefunc(C_SummonInfo, "ConfirmSummon", function()
 		EFM_Timer_Recording = false;
+        EFM_Timer_Paused = false;
 		EFM_Shared_DebugMessage("Player took a summon.", Lys_Debug);
 	end)
 

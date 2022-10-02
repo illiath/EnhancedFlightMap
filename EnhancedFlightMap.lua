@@ -51,6 +51,8 @@ function EnhancedFlightMap_OnEvent( frame, event, ... )
 		-- Register the events we want to listen for
 		frame:RegisterEvent("PLAYER_ENTERING_WORLD");
 		frame:RegisterEvent("PLAYER_LEAVING_WORLD");
+		frame:RegisterEvent("LOADING_SCREEN_DISABLED");
+		frame:RegisterEvent("LOADING_SCREEN_ENABLED");
 
 		-- Register new config screen
 		EnhancedFlightMap_RegConfig(); -- Register New Config
@@ -65,6 +67,15 @@ function EnhancedFlightMap_OnEvent( frame, event, ... )
 		return;
 
 	elseif (event == "PLAYER_ENTERING_WORLD") then
+        local isLogin = select(1, ...);
+        local isReload = select(2, ...);
+        if isLogin then
+            EFM_Shared_DebugMessage("Player entered world for the first time", Lys_Debug);
+        elseif isReload then
+            EFM_Shared_DebugMessage("Player entered world reloaded the UI", Lys_Debug);
+        else
+            EFM_Shared_DebugMessage("Player entered world zoned between map instances", Lys_Debug);
+        end
 		frame:RegisterEvent("TAXIMAP_OPENED");
 		--EFM_Data_NodeFixup();
 		return;
@@ -76,6 +87,15 @@ function EnhancedFlightMap_OnEvent( frame, event, ... )
 	elseif (event == "TAXIMAP_OPENED") then
 		EFM_FM_TaxiMapOpenEvent();
 		return;
+	elseif (event == "LOADING_SCREEN_ENABLED") then
+		-- Loading screen starts, if it happens due to a portal/teleport while in a flight path the recording won't stop but must be paused until the loading screen ends
+        EFM_Shared_DebugMessage("Player loading screen enabled", Lys_Debug);
+        EFM_Timer_PauseTimer();
+        return;
+	elseif (event == "LOADING_SCREEN_DISABLED") then
+        EFM_Shared_DebugMessage("Player loading screen disabled", Lys_Debug);
+        EFM_Timer_ResumeTimer();
+        return;
 	end
 end
 
