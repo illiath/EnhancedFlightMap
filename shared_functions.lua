@@ -108,16 +108,27 @@ function EFM_Shared_GetCurrentMapPosition(mapLevel)
 				if (mapLevel == 1) then
 			--	DEFAULT_CHAT_FRAME:AddMessage("Debug: "..currentZone, 0.8, 0.4, 0.4);
 					-- Oh god I hope this works
-					if (currentZone == "The Exodar") then -- Exodar
-						position = {x = 0.07, y = 0.29};
-					elseif (currentZone == "Bloodmyst Isle") then -- Bloodmyst
-						position = {x = 0.07, y = 0.21};
-					elseif (currentZone == "Eversong Woods") then -- Silvermoon
-						position = {x = 0.83, y = 0.15};
-					elseif (currentZone == "Ghostlands") then -- Ghostlands
-						position = {x = 0.82, y = 0.22};
-					else
-						position = C_Map.GetPlayerMapPosition(info.mapID, "player")
+					if (select(4,GetBuildInfo()) < 40000) then
+						if (currentZone == "The Exodar") then -- Exodar
+							position = {x = 0.07, y = 0.29};
+						elseif (currentZone == "Bloodmyst Isle") then -- Bloodmyst
+							position = {x = 0.07, y = 0.21};
+						elseif (currentZone == "Eversong Woods") then -- Silvermoon
+							position = {x = 0.83, y = 0.15};
+						elseif (currentZone == "Ghostlands") then -- Ghostlands
+							position = {x = 0.82, y = 0.22};
+						else
+							position = C_Map.GetPlayerMapPosition(info.mapID, "player")
+						end
+					end
+					if (select(4,GetBuildInfo()) > 40000) then
+						if (currentZone == "The Exodar") then -- Exodar
+							position = {x = 0.05, y = 0.38};
+						elseif (currentZone == "Silvermoon City") then -- Silvermoon
+							position = {x = 0.86, y = 0.24};
+						else
+							position = C_Map.GetPlayerMapPosition(info.mapID, "player")
+						end
 					end
 				else
 					position = C_Map.GetPlayerMapPosition(info.mapID, "player");

@@ -43,7 +43,7 @@ function EnhancedFlightMap_OnEvent( frame, event, ... )
 	
 		-- Hook the GossipTitleButton_OnClick function.
 		-- This is done due to 1.11 changes to druid flightpaths at nighthaven, might be needed elsewhere in the future also.
-		hooksecurefunc("GossipTitleButton_OnClick", EFM_GossipTitleButton_OnClick);
+		hooksecurefunc(_G.GossipOptionButtonMixin, "OnClick", EFM_GossipTitleButton_OnClick);
 
 		-- Call various init routines.
 		EFM_DefineData();

@@ -250,7 +250,7 @@ function EFM_Map_DisplayEFMPOIs(locName, locLevel)
 										routepoi		= routepoi + 1;
 										line = getglobal("EFM_WM_Route"..routepoi);
 										if (line == nil) then
-											line = mapCanvas:CreateTexture("EFM_WM_Route"..routepoi, "TOP");
+											line = mapCanvas:CreateTexture("EFM_WM_Route"..routepoi, "OVERLAY");
 										end
 										line:SetTexture("Interface\\TaxiFrame\\UI-Taxi-Line");
 										local destX = tonumber(endNode[nodeLevel]["x"]);
