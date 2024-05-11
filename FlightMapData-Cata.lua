@@ -745,6 +745,35 @@ Default_EFM_FlightData = {
 						},
 					},
 				},
+				["Ghostlands"] = {
+					["Zul'Aman, Ghostlands"] = {
+						["fmLoc"] = {
+							["y"] = "0.27",
+							["x"] = "0.61",
+						},
+						["wmLoc"] = {
+							["y"] = "0.24",
+							["x"] = "0.57",
+						},
+						["name"] = "Zul'Aman, Ghostlands",
+						["zmLoc"] = {
+							["y"] = "67",
+							["x"] = "74",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.33",
+							["x"] = "0.88",
+						},
+						["timers"] = {
+							["Light's Hope Chapel, Eastern Plaguelands"] = 106,
+							["Shattered Sun Staging Area"] = 252,
+						},
+						["routes"] = {
+							"Light's Hope Chapel, Eastern Plaguelands", -- [1]
+							"Shattered Sun Staging Area", -- [2]
+						},
+					},
+				},
 				["Ironforge"] = {
 					["Ironforge, Dun Morogh"] = {
 						["fmLoc"] = {
@@ -5811,8 +5840,8 @@ Default_EFM_FlightData = {
 							["x"] = "45",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.22",
-							["x"] = "0.82",
+							["y"] = "0.3",
+							["x"] = "0.86",
 						},
 						["routes"] = {
 							"Fairbreeze Village, Eversong Woods", -- [1]
@@ -5823,6 +5852,34 @@ Default_EFM_FlightData = {
 						["timers"] = {
 							["Fairbreeze Village, Eversong Woods"] = 54,
 							["Light's Hope Chapel, Eastern Plaguelands"] = 60,
+						},
+					},
+					["Zul'Aman, Ghostlands"] = {
+						["fmLoc"] = {
+							["y"] = "0.27",
+							["x"] = "0.61",
+						},
+						["wmLoc"] = {
+							["y"] = "0.24",
+							["x"] = "0.57",
+						},
+						["name"] = "Zul'Aman, Ghostlands",
+						["zmLoc"] = {
+							["y"] = "67",
+							["x"] = "74",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.33",
+							["x"] = "0.88",
+						},
+						["routes"] = {
+							"Light's Hope Chapel, Eastern Plaguelands", -- [1]
+							"Shattered Sun Staging Area", -- [2]
+							"Tranquillien, Ghostlands", -- [3]
+						},
+						["timers"] = {
+							["Light's Hope Chapel, Eastern Plaguelands"] = 106,
+							["Shattered Sun Staging Area"] = 252,
 						},
 					},
 				},
@@ -5917,36 +5974,6 @@ Default_EFM_FlightData = {
 					},
 				},
 				["Eversong Woods"] = {
-					["Silvermoon City"] = {
-						["fmLoc"] = {
-							["y"] = "0.18",
-							["x"] = "0.59",
-						},
-						["wmLoc"] = {
-							["y"] = "0.15",
-							["x"] = "0.56",
-						},
-						["name"] = "Silvermoon City",
-						["zmLoc"] = {
-							["y"] = "50",
-							["x"] = "54",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.15",
-							["x"] = "0.83",
-						},
-						["routes"] = {
-							"Fairbreeze Village, Eversong Woods", -- [1]
-							"Falconwing Square, Eversong Woods", -- [2]
-							"Shattered Sun Staging Area", -- [3]
-							"Tranquillien, Ghostlands", -- [4]
-						},
-						["timers"] = {
-							["Tranquillien, Ghostlands"] = 67,
-							["Shattered Sun Staging Area"] = 185,
-							["Falconwing Square, Eversong Woods"] = 23,
-						},
-					},
 					["Fairbreeze Village, Eversong Woods"] = {
 						["fmLoc"] = {
 							["y"] = "0.21",
@@ -5962,8 +5989,8 @@ Default_EFM_FlightData = {
 							["x"] = "43",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.15",
-							["x"] = "0.83",
+							["y"] = "0.26",
+							["x"] = "0.85",
 						},
 						["routes"] = {
 							"Silvermoon City", -- [1]
@@ -5988,14 +6015,44 @@ Default_EFM_FlightData = {
 							["x"] = "46",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.15",
-							["x"] = "0.83",
+							["y"] = "0.24",
+							["x"] = "0.85",
 						},
 						["routes"] = {
 							"Silvermoon City", -- [1]
 						},
 						["timers"] = {
 							["Silvermoon City"] = 18,
+						},
+					},
+					["Silvermoon City"] = {
+						["fmLoc"] = {
+							["y"] = "0.18",
+							["x"] = "0.59",
+						},
+						["wmLoc"] = {
+							["y"] = "0.15",
+							["x"] = "0.56",
+						},
+						["name"] = "Silvermoon City",
+						["zmLoc"] = {
+							["y"] = "50",
+							["x"] = "54",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.24",
+							["x"] = "0.86",
+						},
+						["routes"] = {
+							"Fairbreeze Village, Eversong Woods", -- [1]
+							"Falconwing Square, Eversong Woods", -- [2]
+							"Shattered Sun Staging Area", -- [3]
+							"Tranquillien, Ghostlands", -- [4]
+						},
+						["timers"] = {
+							["Tranquillien, Ghostlands"] = 67,
+							["Shattered Sun Staging Area"] = 185,
+							["Falconwing Square, Eversong Woods"] = 23,
 						},
 					},
 				},
