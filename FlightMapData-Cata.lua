@@ -2188,8 +2188,8 @@ Default_EFM_FlightData = {
 							["x"] = "56.99",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.21",
-							["x"] = "0.07",
+							["y"] = "0.31",
+							["x"] = "0.06",
 						},
 						["routes"] = {
 							"The Exodar", -- [1]
@@ -3492,8 +3492,8 @@ Default_EFM_FlightData = {
 							["x"] = "54",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.28",
-							["x"] = "0.07",
+							["y"] = "0.38",
+							["x"] = "0.05",
 						},
 						["routes"] = {
 							"Azure Watch, Azuremyst Isle", -- [1]
