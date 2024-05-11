@@ -213,9 +213,19 @@ function EFM_NI_AddNode_FlightDuration(nodeName, destNodeName, flightDuration, n
 
 	-- If no timer set, add one, if one already set, average the two times.
 	if (myNode["timers"][destNodeName] == nil) then
-		myNode["timers"][destNodeName] = flightDuration;
-	else
-		myNode["timers"][destNodeName] = floor((myNode["timers"][destNodeName] + flightDuration) / 2);
+        EFM_Shared_DebugMessage("Adding a new timer", Lys_Debug);
+		myNode["timers"][destNodeName] = flightDuration; 
+    else
+		local avgtime = floor((myNode["timers"][destNodeName] + flightDuration) / 2);
+		if (avgtime > 30) then     
+			-- If there are more than 30 seconds of discrepancy use the last timer without averaging
+			-- The difference is so big that the recorded timer should be incomplete or has been changed by Blizzard
+			EFM_Shared_DebugMessage("Replacing the previous recorded timer that was "..myNode["timers"][destNodeName] , Lys_Debug);
+			myNode["timers"][destNodeName] = flightDuration;   
+		else
+			EFM_Shared_DebugMessage("Averaging timer to "..avgtime.." The previous recorded timer was "..myNode["timers"][destNodeName], Lys_Debug);
+			myNode["timers"][destNodeName] = avgtime;
+		end
 	end
 end
 

@@ -17,6 +17,7 @@ EFM_Global_Faction			= UnitFactionGroup("player");
 -- Timer variables (see timer.lua)
 EFM_Timer_StartRecording		= false;
 EFM_Timer_Recording			= false;
+EFM_Timer_Paused			= false;
 EFM_Timer_LastTime			= time();
 EFM_Timer_TimeRemaining			= 0;
 EFM_Timer_TimeKnown			= false;
