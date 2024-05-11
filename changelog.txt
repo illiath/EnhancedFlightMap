@@ -1,3 +1,11 @@
+2024-05-12  Version 4.0.0-Classic/Cata
+---------------------------------
+Fix later Wrath/Cata LUA errors, sorry...
+Add Cata times & FP changes
+Undo Hardcode for Azeroth TBC zones except Silvermoon/Exodar
+Timer Bar is broken, does anyone know how to fix it?
+
+
 2021-05-31  Version 3.2.0-Classic/TBC
 ---------------------------------
 Lots of CHanges!

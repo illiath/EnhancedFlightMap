@@ -154,22 +154,23 @@ function EFM_MW_ChangeMap(newMap)
 --[[
 Apparently with blizzard's new map API, it's possible to find out the map file from the mapinfo...
 This would allow this to be automatically updated based on the available continents.
+https://www.wowinterface.com/forums/showthread.php?t=59321
 ]]
 	
 	if (newMap == 2) then
-		continentMap	= "Interface\\TaxiFrame\\TAXIMAP0";
+		continentMap	= "Interface\\TaxiFrame\\TAXIMAP0"; --Eastern Kingdoms
 	elseif (newMap == 3) then
-		continentMap	= "Interface\\TaxiFrame\\TAXIMAP530";
+		continentMap	= "Interface\\TaxiFrame\\TAXIMAP530"; --Outland
 	elseif (newMap == 4) then
-		continentMap	= "Interface\\TaxiFrame\\TAXIMAP571";
+		continentMap	= "Interface\\TaxiFrame\\TAXIMAP571"; --Northrend
 --[[	-- Future Use
 	elseif (newMap == 5) then
-		continentMap	= "Interface\\TaxiFrame\\TAXIMAP870";
+		continentMap	= "Interface\\TaxiFrame\\TAXIMAP870"; --Pandaria
 	elseif (newMap == 6) then
 		continentMap	= "Interface\\TaxiFrame\\TAXIMAP870";
 ]]
 	else
-		continentMap	= "Interface\\TaxiFrame\\TAXIMAP1";
+		continentMap	= "Interface\\TaxiFrame\\TAXIMAP1"; --Kalimdor
 		newMap		= 1;
 	end
 
@@ -352,6 +353,8 @@ function EFM_MW_Setup()
 
 	-- DO NOT REMOVE THIS CODEBLOCK! --
 	-- The Maelstrom - Continent 5
+	if (wowtocversion > 40000) then
+
 	local EFM_MapWindowNew_Con5 = CreateFrame("Button", "EFM_MapWindowNew_Con5", EFM_MapWindowNew, "UIPanelButtonTemplate");
 	EFM_MapWindowNew_Con5:SetWidth(138);
 	EFM_MapWindowNew_Con5:SetHeight(22);
@@ -360,6 +363,8 @@ function EFM_MW_Setup()
 	EFM_MapWindowNew_Con5:ClearAllPoints();
 	EFM_MapWindowNew_Con5:SetPoint("TOPLEFT", EFM_MapWindowNew_Con4, "BOTTOMLEFT", 0, -2);
 	EFM_MapWindowNew_Con5:SetScript("OnClick", function() EFM_MW_ChangeMap(5); end );
+	end
+	
 	-- DO NOT REMOVE THIS CODEBLOCK! --
 
 	-- Pandaria - Continent 6
