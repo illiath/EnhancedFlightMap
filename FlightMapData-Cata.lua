@@ -5504,97 +5504,422 @@ Default_EFM_FlightData = {
 		},
 		["Horde"] = {
 			["Eastern Kingdoms"] = {
-				["The Hinterlands"] = {
-					["Hiri'watha Research Station, The Hinterlands"] = {
+				["Abyssal Depths"] = {
+					["Tenebrous Cavern, Vashj'ir"] = {
 						["fmLoc"] = {
-							["x"] = "0.52",
-							["y"] = "0.42",
+							["y"] = "0.65",
+							["x"] = "0.21",
 						},
 						["wmLoc"] = {
-							["x"] = "0.51",
-							["y"] = "0.41",
+							["y"] = "0.65",
+							["x"] = "0.29",
 						},
-						["name"] = "Hiri'watha Research Station, The Hinterlands",
+						["name"] = "Tenebrous Cavern, Vashj'ir",
 						["zmLoc"] = {
-							["x"] = "32",
-							["y"] = "58",
+							["y"] = "59",
+							["x"] = "53",
 						},
 						["worldMapLoc"] = {
-							["x"] = "0.82",
-							["y"] = "0.46",
-						},
-						["timers"] = {
-							["The Menders' Stead, Western Plaguelands"] = 118,
+							["y"] = "0.66",
+							["x"] = "0.64",
 						},
 						["routes"] = {
-							"Hammerfall, Arathi", -- [1]
-							"Revantusk Village, The Hinterlands", -- [2]
-							"Tarren Mill, Hillsbrad", -- [3]
-							"Thondroril River, Eastern Plaguelands", -- [4]
+							"Legion's Rest, Vashj'ir", -- [1]
+						},
+						["timers"] = {
+							["Legion's Rest, Vashj'ir"] = 77,
 						},
 					},
-					["Revantusk Village, The Hinterlands"] = {
+				},
+				["Arathi Highlands"] = {
+					["Galen's Fall, Arathi"] = {
 						["fmLoc"] = {
-							["y"] = "0.44",
-							["x"] = "0.58",
+							["y"] = "0.45",
+							["x"] = "0.48",
 						},
 						["wmLoc"] = {
-							["y"] = "0.43",
-							["x"] = "0.56",
+							["y"] = "0.44",
+							["x"] = "0.48",
 						},
-						["name"] = "Revantusk Village, The Hinterlands",
+						["name"] = "Galen's Fall, Arathi",
 						["zmLoc"] = {
-							["y"] = "81",
-							["x"] = "81",
+							["y"] = "34",
+							["x"] = "13",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.48",
-							["x"] = "0.86",
-						},
-						["timers"] = {
-							["Hammerfall, Arathi"] = 93,
+							["y"] = "0.49",
+							["x"] = "0.8",
 						},
 						["routes"] = {
-							"Hammerfall, Arathi", -- [1]
-							"Hiri'watha Research Station, The Hinterlands", -- [2]
-							"Light's Hope Chapel, Eastern Plaguelands", -- [3]
-							"Tarren Mill, Hillsbrad", -- [4]
-							"Undercity, Tirisfal", -- [5]
+							"Undercity, Tirisfal", -- [1]
+							"Tarren Mill, Hillsbrad", -- [2]
+							"Hammerfall, Arathi", -- [3]
+							"Eastpoint Tower, Hillsbrad", -- [4]
+						},
+						["timers"] = {
+							["Hammerfall, Arathi"] = 74,
+						},
+					},
+					["Hammerfall, Arathi"] = {
+						["fmLoc"] = {
+							["y"] = "0.45",
+							["x"] = "0.54",
+						},
+						["wmLoc"] = {
+							["y"] = "0.44",
+							["x"] = "0.53",
+						},
+						["name"] = "Hammerfall, Arathi",
+						["zmLoc"] = {
+							["y"] = "33",
+							["x"] = "68",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.49",
+							["x"] = "0.84",
+						},
+						["routes"] = {
+							"Undercity, Tirisfal", -- [1]
+							"Tarren Mill, Hillsbrad", -- [2]
+							"New Kargath, Badlands", -- [3]
+							"Revantusk Village, The Hinterlands", -- [4]
+							"Galen's Fall, Arathi", -- [5]
+							"Hiri'watha Research Station, The Hinterlands", -- [6]
+							"Dragonmaw Port, Twilight Highlands", -- [7]
+						},
+						["timers"] = {
+							["Revantusk Village, The Hinterlands"] = 88,
+							["Bloodgulch, Twilight Highlands"] = 291,
+						},
+					},
+				},
+				["Badlands"] = {
+					["Bloodwatcher Point, Badlands"] = {
+						["fmLoc"] = {
+							["y"] = "0.66",
+							["x"] = "0.54",
+						},
+						["wmLoc"] = {
+							["y"] = "0.66",
+							["x"] = "0.53",
+						},
+						["name"] = "Bloodwatcher Point, Badlands",
+						["zmLoc"] = {
+							["y"] = "50",
+							["x"] = "52",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.67",
+							["x"] = "0.84",
+						},
+						["routes"] = {
+							"Fuselight, Badlands", -- [1]
+							"New Kargath, Badlands", -- [2]
+						},
+						["timers"] = {
+							["New Kargath, Badlands"] = 39,
+						},
+					},
+					["Fuselight, Badlands"] = {
+						["fmLoc"] = {
+							["y"] = "0.65",
+							["x"] = "0.56",
+						},
+						["wmLoc"] = {
+							["y"] = "0.65",
+							["x"] = "0.54",
+						},
+						["name"] = "Fuselight, Badlands",
+						["zmLoc"] = {
+							["y"] = "35",
+							["x"] = "64",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.66",
+							["x"] = "0.84",
+						},
+						["routes"] = {
+							"New Kargath, Badlands", -- [1]
+							"Light's Hope Chapel, Eastern Plaguelands", -- [2]
+						},
+					},
+					["New Kargath, Badlands"] = {
+						["fmLoc"] = {
+							["y"] = "0.65",
+							["x"] = "0.51",
+						},
+						["wmLoc"] = {
+							["y"] = "0.65",
+							["x"] = "0.5",
+						},
+						["name"] = "New Kargath, Badlands",
+						["zmLoc"] = {
+							["y"] = "39",
+							["x"] = "17",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.67",
+							["x"] = "0.81",
+						},
+						["routes"] = {
+							"Undercity, Tirisfal", -- [1]
+							"Hammerfall, Arathi", -- [2]
+							"Booty Bay, Stranglethorn", -- [3]
+							"Grom'gol, Stranglethorn", -- [4]
+							"Stonard, Swamp of Sorrows", -- [5]
+							"Flame Crest, Burning Steppes", -- [6]
+							"Thorium Point, Searing Gorge", -- [7]
+							"Bloodwatcher Point, Badlands", -- [8]
+							"Fuselight, Badlands", -- [9]
+							"Dragonmaw Port, Twilight Highlands", -- [10]
+						},
+						["timers"] = {
+							["Thorium Point, Searing Gorge"] = 63,
+						},
+					},
+				},
+				["Blasted Lands"] = {
+					["Dreadmaul Hold, Blasted Lands"] = {
+						["fmLoc"] = {
+							["y"] = "0.8",
+							["x"] = "0.52",
+						},
+						["wmLoc"] = {
+							["y"] = "0.81",
+							["x"] = "0.51",
+						},
+						["name"] = "Dreadmaul Hold, Blasted Lands",
+						["zmLoc"] = {
+							["y"] = "14",
+							["x"] = "43",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.8",
+							["x"] = "0.82",
+						},
+						["routes"] = {
+							"Stonard, Swamp of Sorrows", -- [1]
+							"Sunveil Excursion, Blasted Lands", -- [2]
+						},
+						["timers"] = {
+							["Sunveil Excursion, Blasted Lands"] = 55,
+						},
+					},
+					["Sunveil Excursion, Blasted Lands"] = {
+						["fmLoc"] = {
+							["y"] = "0.85",
+							["x"] = "0.53",
+						},
+						["wmLoc"] = {
+							["y"] = "0.86",
+							["x"] = "0.52",
+						},
+						["name"] = "Sunveil Excursion, Blasted Lands",
+						["zmLoc"] = {
+							["y"] = "72",
+							["x"] = "50",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.84",
+							["x"] = "0.83",
+						},
+						["routes"] = {
+							"Booty Bay, Stranglethorn", -- [1]
+							"Dreadmaul Hold, Blasted Lands", -- [2]
+						},
+						["timers"] = {
+							["Booty Bay, Stranglethorn"] = 172,
+						},
+					},
+				},
+				["Burning Steppes"] = {
+					["Flame Crest, Burning Steppes"] = {
+						["fmLoc"] = {
+							["y"] = "0.68",
+							["x"] = "0.5",
+						},
+						["wmLoc"] = {
+							["y"] = "0.68",
+							["x"] = "0.49",
+						},
+						["name"] = "Flame Crest, Burning Steppes",
+						["zmLoc"] = {
+							["y"] = "24",
+							["x"] = "54",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.69",
+							["x"] = "0.81",
+						},
+						["routes"] = {
+							"Bogpaddle, Swamp of Sorrows", -- [1]
+							"Grom'gol, Stranglethorn", -- [2]
+							"New Kargath, Badlands", -- [3]
+							"Stonard, Swamp of Sorrows", -- [4]
+							"Thorium Point, Searing Gorge", -- [5]
+						},
+					},
+					["Chiselgrip, Burning Steppes"] = {
+						["fmLoc"] = {
+							["y"] = "0.69",
+							["x"] = "0.49",
+						},
+						["wmLoc"] = {
+							["y"] = "0.7",
+							["x"] = "0.49",
+						},
+						["name"] = "Chiselgrip, Burning Steppes",
+						["zmLoc"] = {
+							["y"] = "41",
+							["x"] = "46",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.7",
+							["x"] = "0.8",
+						},
+						["routes"] = {
+							"Flame Crest, Burning Steppes", -- [1]
+							"Flamestar Post, Burning Steppes", -- [2]
+						},
+					},
+					["Flamestar Post, Burning Steppes"] = {
+						["fmLoc"] = {
+							["y"] = "0.7",
+							["x"] = "0.46",
+						},
+						["wmLoc"] = {
+							["y"] = "0.7",
+							["x"] = "0.47",
+						},
+						["name"] = "Flamestar Post, Burning Steppes",
+						["zmLoc"] = {
+							["y"] = "52",
+							["x"] = "17",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.71",
+							["x"] = "0.78",
+						},
+						["routes"] = {
+							"Iron Summit, Searing Gorge", -- [1]
 						},
 					},
 				},
 				["Eastern Plaguelands"] = {
-					["Thondroril River, Eastern Plaguelands"] = {
+					["Crown Guard Tower, Eastern Plaguelands"] = {
 						["fmLoc"] = {
-							["y"] = "0.35",
-							["x"] = "0.51",
+							["y"] = "0.36",
+							["x"] = "0.55",
 						},
 						["wmLoc"] = {
 							["y"] = "0.34",
-							["x"] = "0.51",
+							["x"] = "0.53",
 						},
-						["name"] = "Thondroril River, Eastern Plaguelands",
+						["name"] = "Crown Guard Tower, Eastern Plaguelands",
 						["zmLoc"] = {
-							["y"] = "65",
-							["x"] = "10",
+							["y"] = "67",
+							["x"] = "34",
 						},
 						["worldMapLoc"] = {
 							["y"] = "0.4",
-							["x"] = "0.82",
+							["x"] = "0.84",
+						},
+						["routes"] = {
+							"Light's Shield Tower, Eastern Plaguelands", -- [1]
+							"Northpass Tower, Eastern Plaguelands", -- [2]
+							"Plaguewood Tower, Eastern Plaguelands", -- [3]
+							"Thondroril River, Eastern Plaguelands", -- [4]
+						},
+						["timers"] = {
+							["Northpass Tower, Eastern Plaguelands"] = 62,
+						},
+					},
+					["Eastwall Tower, Eastern Plaguelands"] = {
+						["fmLoc"] = {
+							["y"] = "0.33",
+							["x"] = "0.59",
+						},
+						["wmLoc"] = {
+							["y"] = "0.31",
+							["x"] = "0.56",
+						},
+						["name"] = "Eastwall Tower, Eastern Plaguelands",
+						["zmLoc"] = {
+							["y"] = "43",
+							["x"] = "61",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.38",
+							["x"] = "0.86",
+						},
+						["routes"] = {
+							"Light's Hope Chapel, Eastern Plaguelands", -- [1]
+							"Light's Shield Tower, Eastern Plaguelands", -- [2]
+							"Northpass Tower, Eastern Plaguelands", -- [3]
+							"Plaguewood Tower, Eastern Plaguelands", -- [4]
+						},
+						["timers"] = {
+							["Plaguewood Tower, Eastern Plaguelands"] = 66,
+						},
+					},
+					["Light's Hope Chapel, Eastern Plaguelands"] = {
+						["fmLoc"] = {
+							["y"] = "0.34",
+							["x"] = "0.61",
+						},
+						["wmLoc"] = {
+							["y"] = "0.32",
+							["x"] = "0.57",
+						},
+						["name"] = "Light's Hope Chapel, Eastern Plaguelands",
+						["zmLoc"] = {
+							["y"] = "53",
+							["x"] = "75",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.39",
+							["x"] = "0.87",
+						},
+						["routes"] = {
+							"Eastwall Tower, Eastern Plaguelands", -- [1]
+							"Light's Shield Tower, Eastern Plaguelands", -- [2]
+							"Revantusk Village, The Hinterlands", -- [3]
+							"Thondroril River, Eastern Plaguelands", -- [4]
+							"Tranquillien, Ghostlands", -- [5]
+							"Undercity, Tirisfal", -- [6]
+							"Zul'Aman, Ghostlands", -- [7]
+						},
+						["timers"] = {
+							["Zul'Aman, Ghostlands"] = 58,
+							["Northpass Tower, Eastern Plaguelands"] = 54,
+						},
+					},
+					["Light's Shield Tower, Eastern Plaguelands"] = {
+						["fmLoc"] = {
+							["y"] = "0.34",
+							["x"] = "0.57",
+						},
+						["wmLoc"] = {
+							["y"] = "0.32",
+							["x"] = "0.55",
+						},
+						["name"] = "Light's Shield Tower, Eastern Plaguelands",
+						["zmLoc"] = {
+							["y"] = "53",
+							["x"] = "52",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.39",
+							["x"] = "0.85",
 						},
 						["routes"] = {
 							"Crown Guard Tower, Eastern Plaguelands", -- [1]
-							"Hiri'watha Research Station, The Hinterlands", -- [2]
+							"Eastwall Tower, Eastern Plaguelands", -- [2]
 							"Light's Hope Chapel, Eastern Plaguelands", -- [3]
-							"Tarren Mill, Hillsbrad", -- [4]
-							"The Bulwark, Tirisfal", -- [5]
-							"The Menders' Stead, Western Plaguelands", -- [6]
-							"Undercity, Tirisfal", -- [7]
+							"Plaguewood Tower, Eastern Plaguelands", -- [4]
 						},
 						["timers"] = {
-							["Light's Hope Chapel, Eastern Plaguelands"] = 100,
-							["The Bulwark, Tirisfal"] = 77,
-							["Hiri'watha Research Station, The Hinterlands"] = 86,
+							["Eastwall Tower, Eastern Plaguelands"] = 19,
 						},
 					},
 					["Northpass Tower, Eastern Plaguelands"] = {
@@ -5653,323 +5978,37 @@ Default_EFM_FlightData = {
 							["Crown Guard Tower, Eastern Plaguelands"] = 53,
 						},
 					},
-					["Light's Hope Chapel, Eastern Plaguelands"] = {
+					["Thondroril River, Eastern Plaguelands"] = {
 						["fmLoc"] = {
-							["y"] = "0.34",
-							["x"] = "0.61",
-						},
-						["wmLoc"] = {
-							["y"] = "0.32",
-							["x"] = "0.57",
-						},
-						["name"] = "Light's Hope Chapel, Eastern Plaguelands",
-						["zmLoc"] = {
-							["y"] = "53",
-							["x"] = "75",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.39",
-							["x"] = "0.87",
-						},
-						["routes"] = {
-							"Eastwall Tower, Eastern Plaguelands", -- [1]
-							"Light's Shield Tower, Eastern Plaguelands", -- [2]
-							"Revantusk Village, The Hinterlands", -- [3]
-							"Thondroril River, Eastern Plaguelands", -- [4]
-							"Tranquillien, Ghostlands", -- [5]
-							"Undercity, Tirisfal", -- [6]
-							"Zul'Aman, Ghostlands", -- [7]
-						},
-						["timers"] = {
-							["Zul'Aman, Ghostlands"] = 58,
-							["Northpass Tower, Eastern Plaguelands"] = 54,
-						},
-					},
-					["Crown Guard Tower, Eastern Plaguelands"] = {
-						["fmLoc"] = {
-							["y"] = "0.36",
-							["x"] = "0.55",
+							["y"] = "0.35",
+							["x"] = "0.51",
 						},
 						["wmLoc"] = {
 							["y"] = "0.34",
-							["x"] = "0.53",
+							["x"] = "0.51",
 						},
-						["name"] = "Crown Guard Tower, Eastern Plaguelands",
+						["name"] = "Thondroril River, Eastern Plaguelands",
 						["zmLoc"] = {
-							["y"] = "67",
-							["x"] = "34",
+							["y"] = "65",
+							["x"] = "10",
 						},
 						["worldMapLoc"] = {
 							["y"] = "0.4",
-							["x"] = "0.84",
-						},
-						["routes"] = {
-							"Light's Shield Tower, Eastern Plaguelands", -- [1]
-							"Northpass Tower, Eastern Plaguelands", -- [2]
-							"Plaguewood Tower, Eastern Plaguelands", -- [3]
-							"Thondroril River, Eastern Plaguelands", -- [4]
-						},
-						["timers"] = {
-							["Northpass Tower, Eastern Plaguelands"] = 62,
-						},
-					},
-					["Light's Shield Tower, Eastern Plaguelands"] = {
-						["fmLoc"] = {
-							["y"] = "0.34",
-							["x"] = "0.57",
-						},
-						["wmLoc"] = {
-							["y"] = "0.32",
-							["x"] = "0.55",
-						},
-						["name"] = "Light's Shield Tower, Eastern Plaguelands",
-						["zmLoc"] = {
-							["y"] = "53",
-							["x"] = "52",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.39",
-							["x"] = "0.85",
+							["x"] = "0.82",
 						},
 						["routes"] = {
 							"Crown Guard Tower, Eastern Plaguelands", -- [1]
-							"Eastwall Tower, Eastern Plaguelands", -- [2]
+							"Hiri'watha Research Station, The Hinterlands", -- [2]
 							"Light's Hope Chapel, Eastern Plaguelands", -- [3]
-							"Plaguewood Tower, Eastern Plaguelands", -- [4]
+							"Tarren Mill, Hillsbrad", -- [4]
+							"The Bulwark, Tirisfal", -- [5]
+							"The Menders' Stead, Western Plaguelands", -- [6]
+							"Undercity, Tirisfal", -- [7]
 						},
 						["timers"] = {
-							["Eastwall Tower, Eastern Plaguelands"] = 19,
-						},
-					},
-					["Eastwall Tower, Eastern Plaguelands"] = {
-						["fmLoc"] = {
-							["y"] = "0.33",
-							["x"] = "0.59",
-						},
-						["wmLoc"] = {
-							["y"] = "0.31",
-							["x"] = "0.56",
-						},
-						["name"] = "Eastwall Tower, Eastern Plaguelands",
-						["zmLoc"] = {
-							["y"] = "43",
-							["x"] = "61",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.38",
-							["x"] = "0.86",
-						},
-						["routes"] = {
-							"Light's Hope Chapel, Eastern Plaguelands", -- [1]
-							"Light's Shield Tower, Eastern Plaguelands", -- [2]
-							"Northpass Tower, Eastern Plaguelands", -- [3]
-							"Plaguewood Tower, Eastern Plaguelands", -- [4]
-						},
-						["timers"] = {
-							["Plaguewood Tower, Eastern Plaguelands"] = 66,
-						},
-					},
-				},
-				["The Cape of Stranglethorn"] = {
-					["Booty Bay, Stranglethorn"] = {
-						["fmLoc"] = {
-							["y"] = "0.92",
-							["x"] = "0.4",
-						},
-						["wmLoc"] = {
-							["y"] = "0.94",
-							["x"] = "0.43",
-						},
-						["name"] = "Booty Bay, Stranglethorn",
-						["zmLoc"] = {
-							["y"] = "73",
-							["x"] = "40",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.91",
-							["x"] = "0.75",
-						},
-						["timers"] = {
-							["Grom'gol, Stranglethorn"] = 75,
-						},
-						["routes"] = {
-							"Grom'gol, Stranglethorn", -- [1]
-							"New Kargath, Badlands", -- [2]
-							"Stonard, Swamp of Sorrows", -- [3]
-							"Sunveil Excursion, Blasted Lands", -- [4]
-						},
-					},
-					["Hardwrench Hideaway, Stranglethorn"] = {
-						["fmLoc"] = {
-							["y"] = "0.88",
-							["x"] = "0.4",
-						},
-						["wmLoc"] = {
-							["y"] = "0.9",
-							["x"] = "0.42",
-						},
-						["name"] = "Hardwrench Hideaway, Stranglethorn",
-						["zmLoc"] = {
-							["y"] = "29",
-							["x"] = "35",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.87",
-							["x"] = "0.75",
-						},
-						["routes"] = {
-							"Booty Bay, Stranglethorn", -- [1]
-							"Grom'gol, Stranglethorn", -- [2]
-							"Bambala, Stranglethorn", -- [3]
-						},
-					},
-				},
-				["Ghostlands"] = {
-					["Tranquillien, Ghostlands"] = {
-						["fmLoc"] = {
-							["y"] = "0.25",
-							["x"] = "0.57",
-						},
-						["wmLoc"] = {
-							["y"] = "0.22",
-							["x"] = "0.55",
-						},
-						["name"] = "Tranquillien, Ghostlands",
-						["zmLoc"] = {
-							["y"] = "30",
-							["x"] = "45",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.3",
-							["x"] = "0.86",
-						},
-						["routes"] = {
-							"Fairbreeze Village, Eversong Woods", -- [1]
-							"Light's Hope Chapel, Eastern Plaguelands", -- [2]
-							"Silvermoon City", -- [3]
-							"Zul'Aman, Ghostlands", -- [4]
-						},
-						["timers"] = {
-							["Fairbreeze Village, Eversong Woods"] = 54,
-							["Light's Hope Chapel, Eastern Plaguelands"] = 60,
-						},
-					},
-					["Zul'Aman, Ghostlands"] = {
-						["fmLoc"] = {
-							["y"] = "0.27",
-							["x"] = "0.61",
-						},
-						["wmLoc"] = {
-							["y"] = "0.24",
-							["x"] = "0.57",
-						},
-						["name"] = "Zul'Aman, Ghostlands",
-						["zmLoc"] = {
-							["y"] = "67",
-							["x"] = "74",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.33",
-							["x"] = "0.88",
-						},
-						["routes"] = {
-							"Light's Hope Chapel, Eastern Plaguelands", -- [1]
-							"Shattered Sun Staging Area", -- [2]
-							"Tranquillien, Ghostlands", -- [3]
-						},
-						["timers"] = {
-							["Light's Hope Chapel, Eastern Plaguelands"] = 106,
-							["Shattered Sun Staging Area"] = 252,
-						},
-					},
-				},
-				["Isle of Quel'Danas"] = {
-					["Shattered Sun Staging Area"] = {
-						["fmLoc"] = {
-							["y"] = "0.06",
-							["x"] = "0.58",
-						},
-						["wmLoc"] = {
-							["y"] = "0.02",
-							["x"] = "0.55",
-						},
-						["name"] = "Shattered Sun Staging Area",
-						["zmLoc"] = {
-							["y"] = "25",
-							["x"] = "48",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.13",
-							["x"] = "0.86",
-						},
-						["routes"] = {
-							"Silvermoon City", -- [1]
-							"Zul'Aman, Ghostlands", -- [2]
-						},
-						["timers"] = {
-							["Silvermoon City"] = 172,
-						},
-					},
-				},
-				["Arathi Highlands"] = {
-					["Hammerfall, Arathi"] = {
-						["fmLoc"] = {
-							["y"] = "0.45",
-							["x"] = "0.54",
-						},
-						["wmLoc"] = {
-							["y"] = "0.44",
-							["x"] = "0.53",
-						},
-						["name"] = "Hammerfall, Arathi",
-						["zmLoc"] = {
-							["y"] = "33",
-							["x"] = "68",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.49",
-							["x"] = "0.84",
-						},
-						["timers"] = {
-							["Revantusk Village, The Hinterlands"] = 88,
-							["Bloodgulch, Twilight Highlands"] = 291,
-						},
-						["routes"] = {
-							"Undercity, Tirisfal", -- [1]
-							"Tarren Mill, Hillsbrad", -- [2]
-							"New Kargath, Badlands", -- [3]
-							"Revantusk Village, The Hinterlands", -- [4]
-							"Galen's Fall, Arathi", -- [5]
-							"Hiri'watha Research Station, The Hinterlands", -- [6]
-							"Dragonmaw Port, Twilight Highlands", -- [7]
-						},
-					},
-					["Galen's Fall, Arathi"] = {
-						["fmLoc"] = {
-							["y"] = "0.45",
-							["x"] = "0.48",
-						},
-						["wmLoc"] = {
-							["y"] = "0.44",
-							["x"] = "0.48",
-						},
-						["name"] = "Galen's Fall, Arathi",
-						["zmLoc"] = {
-							["y"] = "34",
-							["x"] = "13",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.49",
-							["x"] = "0.8",
-						},
-						["timers"] = {
-							["Hammerfall, Arathi"] = 74,
-						},
-						["routes"] = {
-							"Undercity, Tirisfal", -- [1]
-							"Tarren Mill, Hillsbrad", -- [2]
-							"Hammerfall, Arathi", -- [3]
-							"Eastpoint Tower, Hillsbrad", -- [4]
+							["Light's Hope Chapel, Eastern Plaguelands"] = 100,
+							["The Bulwark, Tirisfal"] = 77,
+							["Hiri'watha Research Station, The Hinterlands"] = 86,
 						},
 					},
 				},
@@ -6056,816 +6095,66 @@ Default_EFM_FlightData = {
 						},
 					},
 				},
-				["Kelp'thar Forest"] = {
-					["Smuggler's Scar, Vashj'ir"] = {
+				["Ghostlands"] = {
+					["Tranquillien, Ghostlands"] = {
 						["fmLoc"] = {
-							["y"] = "0.58",
-							["x"] = "0.3",
+							["y"] = "0.25",
+							["x"] = "0.57",
 						},
 						["wmLoc"] = {
-							["y"] = "0.58",
-							["x"] = "0.36",
+							["y"] = "0.22",
+							["x"] = "0.55",
 						},
-						["name"] = "Smuggler's Scar, Vashj'ir",
-						["zmLoc"] = {
-							["y"] = "31",
-							["x"] = "56",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.6",
-							["x"] = "0.69",
-						},
-						["routes"] = {
-							"Sandy Beach, Vashj'ir", -- [1]
-							"Silver Tide Hollow, Vashj'ir", -- [2]
-						},
-						["timers"] = {
-							["Silver Tide Hollow, Vashj'ir"] = 83,
-						},
-					},
-				},
-				["Abyssal Depths"] = {
-					["Tenebrous Cavern, Vashj'ir"] = {
-						["fmLoc"] = {
-							["y"] = "0.65",
-							["x"] = "0.21",
-						},
-						["wmLoc"] = {
-							["y"] = "0.65",
-							["x"] = "0.29",
-						},
-						["name"] = "Tenebrous Cavern, Vashj'ir",
-						["zmLoc"] = {
-							["y"] = "59",
-							["x"] = "53",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.66",
-							["x"] = "0.64",
-						},
-						["routes"] = {
-							"Legion's Rest, Vashj'ir", -- [1]
-						},
-						["timers"] = {
-							["Legion's Rest, Vashj'ir"] = 77,
-						},
-					},
-				},
-				["Searing Gorge"] = {
-					["Thorium Point, Searing Gorge"] = {
-						["fmLoc"] = {
-							["y"] = "0.65",
-							["x"] = "0.46",
-						},
-						["wmLoc"] = {
-							["y"] = "0.65",
-							["x"] = "0.47",
-						},
-						["name"] = "Thorium Point, Searing Gorge",
+						["name"] = "Tranquillien, Ghostlands",
 						["zmLoc"] = {
 							["y"] = "30",
-							["x"] = "34",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.66",
-							["x"] = "0.79",
-						},
-						["timers"] = {
-							["Flame Crest, Burning Steppes"] = 61,
-						},
-						["routes"] = {
-							"New Kargath, Badlands", -- [1]
-							"Flame Crest, Burning Steppes", -- [2]
-						},
-					},
-					["Iron Summit, Searing Gorge"] = {
-						["fmLoc"] = {
-							["y"] = "0.67",
-							["x"] = "0.46",
-						},
-						["wmLoc"] = {
-							["y"] = "0.67",
-							["x"] = "0.47",
-						},
-						["name"] = "Iron Summit, Searing Gorge",
-						["zmLoc"] = {
-							["y"] = "68",
-							["x"] = "41",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.68",
-							["x"] = "0.79",
-						},
-						["routes"] = {
-							"Thorium Point, Searing Gorge", -- [1]
-						},
-					},
-				},
-				["Western Plaguelands"] = {
-					["The Menders' Stead, Western Plaguelands"] = {
-						["fmLoc"] = {
-							["y"] = "0.36",
-							["x"] = "0.48",
-						},
-						["wmLoc"] = {
-							["y"] = "0.34",
-							["x"] = "0.48",
-						},
-						["name"] = "The Menders' Stead, Western Plaguelands",
-						["zmLoc"] = {
-							["y"] = "52",
-							["x"] = "50",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.4",
-							["x"] = "0.8",
-						},
-						["routes"] = {
-							"Thondroril River, Eastern Plaguelands", -- [1]
-						},
-					},
-					["Andorhal, Western Plaguelands"] = {
-						["fmLoc"] = {
-							["y"] = "0.37",
-							["x"] = "0.48",
-						},
-						["wmLoc"] = {
-							["y"] = "0.35",
-							["x"] = "0.48",
-						},
-						["name"] = "Andorhal, Western Plaguelands",
-						["zmLoc"] = {
-							["y"] = "64",
-							["x"] = "46",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.41",
-							["x"] = "0.8",
-						},
-						["routes"] = {
-							"The Bulwark, Tirisfal", -- [1]
-							"Hiri'watha Research Station, The Hinterlands", -- [2]
-							"The Menders' Stead, Western Plaguelands", -- [3]
-						},
-					},
-					["Hearthglen, Western Plaguelands"] = {
-						["fmLoc"] = {
-							["y"] = "0.32",
-							["x"] = "0.47",
-						},
-						["wmLoc"] = {
-							["y"] = "0.3",
-							["x"] = "0.48",
-						},
-						["name"] = "Hearthglen, Western Plaguelands",
-						["zmLoc"] = {
-							["y"] = "18",
-							["x"] = "44",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.37",
-							["x"] = "0.79",
-						},
-						["routes"] = {
-							"Plaguewood Tower, Eastern Plaguelands", -- [1]
-							"The Menders' Stead, Western Plaguelands", -- [2]
-						},
-					},
-				},
-				["Undercity"] = {
-					["Undercity, Tirisfal"] = {
-						["fmLoc"] = {
-							["y"] = "0.37",
-							["x"] = "0.41",
-						},
-						["wmLoc"] = {
-							["y"] = "0.35",
-							["x"] = "0.43",
-						},
-						["name"] = "Undercity, Tirisfal",
-						["zmLoc"] = {
-							["y"] = "48",
-							["x"] = "63",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.41",
-							["x"] = "0.76",
-						},
-						["timers"] = {
-							["Sandy Beach, Vashj'ir"] = 345,
-							["The Sepulcher, Silverpine Forest"] = 100,
-						},
-						["routes"] = {
-							"The Sepulcher, Silverpine Forest", -- [1]
-							"Tarren Mill, Hillsbrad", -- [2]
-							"Hammerfall, Arathi", -- [3]
-							"New Kargath, Badlands", -- [4]
-							"Light's Hope Chapel, Eastern Plaguelands", -- [5]
-							"Revantusk Village, The Hinterlands", -- [6]
-							"Thondroril River, Eastern Plaguelands", -- [7]
-							"The Bulwark, Tirisfal", -- [8]
-							"Brill, Tirisfal Glades", -- [9]
-							"Galen's Fall, Arathi", -- [10]
-							"Sandy Beach, Vashj'ir", -- [11]
-						},
-					},
-				},
-				["Tirisfal Glades"] = {
-					["The Bulwark, Tirisfal"] = {
-						["fmLoc"] = {
-							["y"] = "0.36",
-							["x"] = "0.45",
-						},
-						["wmLoc"] = {
-							["y"] = "0.34",
-							["x"] = "0.46",
-						},
-						["name"] = "The Bulwark, Tirisfal",
-						["zmLoc"] = {
-							["y"] = "68.99",
-							["x"] = "83",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.4",
-							["x"] = "0.78",
-						},
-						["routes"] = {
-							"Brill, Tirisfal Glades", -- [1]
-							"Tarren Mill, Hillsbrad", -- [2]
-							"Thondroril River, Eastern Plaguelands", -- [3]
-							"Undercity, Tirisfal", -- [4]
-						},
-						["timers"] = {
-							["Thondroril River, Eastern Plaguelands"] = 73,
-						},
-					},
-					["Brill, Tirisfal Glades"] = {
-						["fmLoc"] = {
-							["y"] = "0.34",
-							["x"] = "0.41",
-						},
-						["wmLoc"] = {
-							["y"] = "0.32",
-							["x"] = "0.43",
-						},
-						["name"] = "Brill, Tirisfal Glades",
-						["zmLoc"] = {
-							["y"] = "51",
-							["x"] = "58",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.39",
-							["x"] = "0.75",
-						},
-						["routes"] = {
-							"Undercity, Tirisfal", -- [1]
-							"The Bulwark, Tirisfal", -- [2]
-						},
-					},
-				},
-				["Northern Stranglethorn"] = {
-					["Grom'gol, Stranglethorn"] = {
-						["fmLoc"] = {
-							["y"] = "0.85",
-							["x"] = "0.42",
-						},
-						["wmLoc"] = {
-							["y"] = "0.86",
-							["x"] = "0.44",
-						},
-						["name"] = "Grom'gol, Stranglethorn",
-						["zmLoc"] = {
-							["y"] = "51",
-							["x"] = "39",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.85",
-							["x"] = "0.76",
-						},
-						["timers"] = {
-							["Bambala, Stranglethorn"] = 57,
-						},
-						["routes"] = {
-							"Booty Bay, Stranglethorn", -- [1]
-							"New Kargath, Badlands", -- [2]
-							"Stonard, Swamp of Sorrows", -- [3]
-							"Flame Crest, Burning Steppes", -- [4]
-							"Bambala, Stranglethorn", -- [5]
-						},
-					},
-					["Bambala, Stranglethorn"] = {
-						["fmLoc"] = {
-							["y"] = "0.84",
-							["x"] = "0.45",
-						},
-						["wmLoc"] = {
-							["y"] = "0.85",
-							["x"] = "0.46",
-						},
-						["name"] = "Bambala, Stranglethorn",
-						["zmLoc"] = {
-							["y"] = "39",
-							["x"] = "62",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.84",
-							["x"] = "0.78",
-						},
-						["timers"] = {
-							["Grom'gol, Stranglethorn"] = 48,
-						},
-						["routes"] = {
-							"Grom'gol, Stranglethorn", -- [1]
-						},
-					},
-				},
-				["Silverpine Forest"] = {
-					["The Forsaken Front, Silverpine Forest"] = {
-						["fmLoc"] = {
-							["y"] = "0.43",
-							["x"] = "0.38",
-						},
-						["wmLoc"] = {
-							["y"] = "0.41",
-							["x"] = "0.41",
-						},
-						["name"] = "The Forsaken Front, Silverpine Forest",
-						["zmLoc"] = {
-							["y"] = "63",
-							["x"] = "50",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.46",
-							["x"] = "0.74",
-						},
-						["routes"] = {
-							"The Sepulcher, Silverpine Forest", -- [1]
-						},
-					},
-					["Forsaken High Command, Silverpine Forest"] = {
-						["fmLoc"] = {
-							["y"] = "0.37",
-							["x"] = "0.39",
-						},
-						["wmLoc"] = {
-							["y"] = "0.35",
-							["x"] = "0.42",
-						},
-						["name"] = "Forsaken High Command, Silverpine Forest",
-						["zmLoc"] = {
-							["y"] = "8",
-							["x"] = "56.99",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.41",
-							["x"] = "0.74",
-						},
-						["routes"] = {
-							"The Sepulcher, Silverpine Forest", -- [1]
-							"Undercity, Tirisfal", -- [2]
-							"Brill, Tirisfal Glades", -- [3]
-						},
-					},
-					["The Sepulcher, Silverpine Forest"] = {
-						["fmLoc"] = {
-							["y"] = "0.4",
-							["x"] = "0.37",
-						},
-						["wmLoc"] = {
-							["y"] = "0.39",
-							["x"] = "0.4",
-						},
-						["name"] = "The Sepulcher, Silverpine Forest",
-						["zmLoc"] = {
-							["y"] = "42",
 							["x"] = "45",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.44",
-							["x"] = "0.73",
+							["y"] = "0.3",
+							["x"] = "0.86",
 						},
 						["routes"] = {
-							"Undercity, Tirisfal", -- [1]
-							"Tarren Mill, Hillsbrad", -- [2]
-						},
-						["timers"] = {
-							["Tarren Mill, Hillsbrad"] = 96,
-						},
-					},
-				},
-				["Blasted Lands"] = {
-					["Sunveil Excursion, Blasted Lands"] = {
-						["fmLoc"] = {
-							["y"] = "0.85",
-							["x"] = "0.53",
-						},
-						["wmLoc"] = {
-							["y"] = "0.86",
-							["x"] = "0.52",
-						},
-						["name"] = "Sunveil Excursion, Blasted Lands",
-						["zmLoc"] = {
-							["y"] = "72",
-							["x"] = "50",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.84",
-							["x"] = "0.83",
-						},
-						["timers"] = {
-							["Booty Bay, Stranglethorn"] = 172,
-						},
-						["routes"] = {
-							"Booty Bay, Stranglethorn", -- [1]
-							"Dreadmaul Hold, Blasted Lands", -- [2]
-						},
-					},
-					["Dreadmaul Hold, Blasted Lands"] = {
-						["fmLoc"] = {
-							["y"] = "0.8",
-							["x"] = "0.52",
-						},
-						["wmLoc"] = {
-							["y"] = "0.81",
-							["x"] = "0.51",
-						},
-						["name"] = "Dreadmaul Hold, Blasted Lands",
-						["zmLoc"] = {
-							["y"] = "14",
-							["x"] = "43",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.8",
-							["x"] = "0.82",
-						},
-						["timers"] = {
-							["Sunveil Excursion, Blasted Lands"] = 55,
-						},
-						["routes"] = {
-							"Stonard, Swamp of Sorrows", -- [1]
-							"Sunveil Excursion, Blasted Lands", -- [2]
-						},
-					},
-				},
-				["Shimmering Expanse"] = {
-					["Sandy Beach, Vashj'ir"] = {
-						["fmLoc"] = {
-							["y"] = "0.62",
-							["x"] = "0.29",
-						},
-						["wmLoc"] = {
-							["y"] = "0.62",
-							["x"] = "0.35",
-						},
-						["name"] = "Sandy Beach, Vashj'ir",
-						["zmLoc"] = {
-							["y"] = "28",
-							["x"] = "61",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.64",
-							["x"] = "0.69",
-						},
-						["timers"] = {
-							["Stygian Bounty, Vashj'ir"] = 45,
-							["Undercity, Tirisfal"] = 358,
-						},
-						["routes"] = {
-							"Stygian Bounty, Vashj'ir", -- [1]
-							"Undercity, Tirisfal", -- [2]
-						},
-					},
-					["Silver Tide Hollow, Vashj'ir"] = {
-						["fmLoc"] = {
-							["y"] = "0.63",
-							["x"] = "0.27",
-						},
-						["wmLoc"] = {
-							["y"] = "0.63",
-							["x"] = "0.34",
-						},
-						["name"] = "Silver Tide Hollow, Vashj'ir",
-						["zmLoc"] = {
-							["y"] = "41",
-							["x"] = "49",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.65",
-							["x"] = "0.67",
-						},
-						["routes"] = {
-							"Legion's Rest, Vashj'ir", -- [1]
-							"Sandy Beach, Vashj'ir", -- [2]
-							"Smuggler's Scar, Vashj'ir", -- [3]
-						},
-						["timers"] = {
-							["Sandy Beach, Vashj'ir"] = 36,
-							["Legion's Rest, Vashj'ir"] = 48,
-						},
-					},
-					["Legion's Rest, Vashj'ir"] = {
-						["fmLoc"] = {
-							["y"] = "0.66",
-							["x"] = "0.28",
-						},
-						["wmLoc"] = {
-							["y"] = "0.66",
-							["x"] = "0.34",
-						},
-						["name"] = "Legion's Rest, Vashj'ir",
-						["zmLoc"] = {
-							["y"] = "63",
-							["x"] = "50",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.67",
-							["x"] = "0.67",
-						},
-						["routes"] = {
-							"Silver Tide Hollow, Vashj'ir", -- [1]
-							"Tenebrous Cavern, Vashj'ir", -- [2]
-						},
-						["timers"] = {
-							["Tenebrous Cavern, Vashj'ir"] = 72,
-						},
-					},
-				},
-				["Burning Steppes"] = {
-					["Flamestar Post, Burning Steppes"] = {
-						["fmLoc"] = {
-							["y"] = "0.7",
-							["x"] = "0.46",
-						},
-						["wmLoc"] = {
-							["y"] = "0.7",
-							["x"] = "0.47",
-						},
-						["name"] = "Flamestar Post, Burning Steppes",
-						["zmLoc"] = {
-							["y"] = "52",
-							["x"] = "17",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.71",
-							["x"] = "0.78",
-						},
-						["routes"] = {
-							"Iron Summit, Searing Gorge", -- [1]
-						},
-					},
-					["Flame Crest, Burning Steppes"] = {
-						["fmLoc"] = {
-							["y"] = "0.68",
-							["x"] = "0.5",
-						},
-						["wmLoc"] = {
-							["y"] = "0.68",
-							["x"] = "0.49",
-						},
-						["name"] = "Flame Crest, Burning Steppes",
-						["zmLoc"] = {
-							["y"] = "24",
-							["x"] = "54",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.69",
-							["x"] = "0.81",
-						},
-						["routes"] = {
-							"Bogpaddle, Swamp of Sorrows", -- [1]
-							"Grom'gol, Stranglethorn", -- [2]
-							"New Kargath, Badlands", -- [3]
-							"Stonard, Swamp of Sorrows", -- [4]
-							"Thorium Point, Searing Gorge", -- [5]
-						},
-					},
-					["Chiselgrip, Burning Steppes"] = {
-						["fmLoc"] = {
-							["y"] = "0.69",
-							["x"] = "0.49",
-						},
-						["wmLoc"] = {
-							["y"] = "0.7",
-							["x"] = "0.49",
-						},
-						["name"] = "Chiselgrip, Burning Steppes",
-						["zmLoc"] = {
-							["y"] = "41",
-							["x"] = "46",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.7",
-							["x"] = "0.8",
-						},
-						["routes"] = {
-							"Flame Crest, Burning Steppes", -- [1]
-							"Flamestar Post, Burning Steppes", -- [2]
-						},
-					},
-				},
-				["Badlands"] = {
-					["Bloodwatcher Point, Badlands"] = {
-						["fmLoc"] = {
-							["y"] = "0.66",
-							["x"] = "0.54",
-						},
-						["wmLoc"] = {
-							["y"] = "0.66",
-							["x"] = "0.53",
-						},
-						["name"] = "Bloodwatcher Point, Badlands",
-						["zmLoc"] = {
-							["y"] = "50",
-							["x"] = "52",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.67",
-							["x"] = "0.84",
-						},
-						["timers"] = {
-							["New Kargath, Badlands"] = 39,
-						},
-						["routes"] = {
-							"Fuselight, Badlands", -- [1]
-							"New Kargath, Badlands", -- [2]
-						},
-					},
-					["New Kargath, Badlands"] = {
-						["fmLoc"] = {
-							["y"] = "0.65",
-							["x"] = "0.51",
-						},
-						["wmLoc"] = {
-							["y"] = "0.65",
-							["x"] = "0.5",
-						},
-						["name"] = "New Kargath, Badlands",
-						["zmLoc"] = {
-							["y"] = "39",
-							["x"] = "17",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.67",
-							["x"] = "0.81",
-						},
-						["timers"] = {
-							["Thorium Point, Searing Gorge"] = 63,
-						},
-						["routes"] = {
-							"Undercity, Tirisfal", -- [1]
-							"Hammerfall, Arathi", -- [2]
-							"Booty Bay, Stranglethorn", -- [3]
-							"Grom'gol, Stranglethorn", -- [4]
-							"Stonard, Swamp of Sorrows", -- [5]
-							"Flame Crest, Burning Steppes", -- [6]
-							"Thorium Point, Searing Gorge", -- [7]
-							"Bloodwatcher Point, Badlands", -- [8]
-							"Fuselight, Badlands", -- [9]
-							"Dragonmaw Port, Twilight Highlands", -- [10]
-						},
-					},
-					["Fuselight, Badlands"] = {
-						["fmLoc"] = {
-							["y"] = "0.65",
-							["x"] = "0.56",
-						},
-						["wmLoc"] = {
-							["y"] = "0.65",
-							["x"] = "0.54",
-						},
-						["name"] = "Fuselight, Badlands",
-						["zmLoc"] = {
-							["y"] = "35",
-							["x"] = "64",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.66",
-							["x"] = "0.84",
-						},
-						["routes"] = {
-							"New Kargath, Badlands", -- [1]
+							"Fairbreeze Village, Eversong Woods", -- [1]
 							"Light's Hope Chapel, Eastern Plaguelands", -- [2]
-						},
-					},
-				},
-				["Swamp of Sorrows"] = {
-					["Bogpaddle, Swamp of Sorrows"] = {
-						["fmLoc"] = {
-							["y"] = "0.76",
-							["x"] = "0.56",
-						},
-						["wmLoc"] = {
-							["y"] = "0.77",
-							["x"] = "0.54",
-						},
-						["name"] = "Bogpaddle, Swamp of Sorrows",
-						["zmLoc"] = {
-							["y"] = "12",
-							["x"] = "72",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.76",
-							["x"] = "0.84",
+							"Silvermoon City", -- [3]
+							"Zul'Aman, Ghostlands", -- [4]
 						},
 						["timers"] = {
-							["Stonard, Swamp of Sorrows"] = 42,
-						},
-						["routes"] = {
-							"Stonard, Swamp of Sorrows", -- [1]
-							"Flame Crest, Burning Steppes", -- [2]
+							["Fairbreeze Village, Eversong Woods"] = 54,
+							["Light's Hope Chapel, Eastern Plaguelands"] = 60,
 						},
 					},
-					["Stonard, Swamp of Sorrows"] = {
+					["Zul'Aman, Ghostlands"] = {
 						["fmLoc"] = {
-							["y"] = "0.78",
-							["x"] = "0.53",
+							["y"] = "0.27",
+							["x"] = "0.61",
 						},
 						["wmLoc"] = {
-							["y"] = "0.79",
-							["x"] = "0.52",
+							["y"] = "0.24",
+							["x"] = "0.57",
 						},
-						["name"] = "Stonard, Swamp of Sorrows",
+						["name"] = "Zul'Aman, Ghostlands",
 						["zmLoc"] = {
-							["y"] = "55",
-							["x"] = "47",
+							["y"] = "67",
+							["x"] = "74",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.79",
-							["x"] = "0.83",
-						},
-						["timers"] = {
-							["Dreadmaul Hold, Blasted Lands"] = 28,
+							["y"] = "0.33",
+							["x"] = "0.88",
 						},
 						["routes"] = {
-							"Booty Bay, Stranglethorn", -- [1]
-							"Grom'gol, Stranglethorn", -- [2]
-							"New Kargath, Badlands", -- [3]
-							"Flame Crest, Burning Steppes", -- [4]
-							"Bogpaddle, Swamp of Sorrows", -- [5]
-							"Dreadmaul Hold, Blasted Lands", -- [6]
+							"Light's Hope Chapel, Eastern Plaguelands", -- [1]
+							"Shattered Sun Staging Area", -- [2]
+							"Tranquillien, Ghostlands", -- [3]
+						},
+						["timers"] = {
+							["Light's Hope Chapel, Eastern Plaguelands"] = 106,
+							["Shattered Sun Staging Area"] = 252,
 						},
 					},
 				},
 				["Hillsbrad Foothills"] = {
-					["Southpoint Gate, Hillsbrad"] = {
-						["fmLoc"] = {
-							["y"] = "0.44",
-							["x"] = "0.41",
-						},
-						["wmLoc"] = {
-							["y"] = "0.43",
-							["x"] = "0.43",
-						},
-						["name"] = "Southpoint Gate, Hillsbrad",
-						["zmLoc"] = {
-							["y"] = "64",
-							["x"] = "29",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.48",
-							["x"] = "0.75",
-						},
-						["timers"] = {
-							["Ruins of Southshore, Hillsbrad"] = 37,
-						},
-						["routes"] = {
-							"The Forsaken Front, Silverpine Forest", -- [1]
-							"Ruins of Southshore, Hillsbrad", -- [2]
-						},
-					},
-					["Tarren Mill, Hillsbrad"] = {
-						["fmLoc"] = {
-							["y"] = "0.42",
-							["x"] = "0.45",
-						},
-						["wmLoc"] = {
-							["y"] = "0.41",
-							["x"] = "0.46",
-						},
-						["name"] = "Tarren Mill, Hillsbrad",
-						["zmLoc"] = {
-							["y"] = "46",
-							["x"] = "56",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.46",
-							["x"] = "0.78",
-						},
-						["routes"] = {
-							"Galen's Fall, Arathi", -- [1]
-							"Hammerfall, Arathi", -- [2]
-							"Hiri'watha Research Station, The Hinterlands", -- [3]
-							"Revantusk Village, The Hinterlands", -- [4]
-							"Ruins of Southshore, Hillsbrad", -- [5]
-							"The Bulwark, Tirisfal", -- [6]
-							"The Sepulcher, Silverpine Forest", -- [7]
-							"Thondroril River, Eastern Plaguelands", -- [8]
-							"Undercity, Tirisfal", -- [9]
-						},
-						["timers"] = {
-							["Thondroril River, Eastern Plaguelands"] = 108,
-						},
-					},
 					["Eastpoint Tower, Hillsbrad"] = {
 						["fmLoc"] = {
 							["y"] = "0.44",
@@ -6913,6 +6202,608 @@ Default_EFM_FlightData = {
 							"Southpoint Gate, Hillsbrad", -- [2]
 						},
 					},
+					["Southpoint Gate, Hillsbrad"] = {
+						["fmLoc"] = {
+							["y"] = "0.44",
+							["x"] = "0.41",
+						},
+						["wmLoc"] = {
+							["y"] = "0.43",
+							["x"] = "0.43",
+						},
+						["name"] = "Southpoint Gate, Hillsbrad",
+						["zmLoc"] = {
+							["y"] = "64",
+							["x"] = "29",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.48",
+							["x"] = "0.75",
+						},
+						["routes"] = {
+							"The Forsaken Front, Silverpine Forest", -- [1]
+							"Ruins of Southshore, Hillsbrad", -- [2]
+						},
+						["timers"] = {
+							["Ruins of Southshore, Hillsbrad"] = 37,
+						},
+					},
+					["Tarren Mill, Hillsbrad"] = {
+						["fmLoc"] = {
+							["y"] = "0.42",
+							["x"] = "0.45",
+						},
+						["wmLoc"] = {
+							["y"] = "0.41",
+							["x"] = "0.46",
+						},
+						["name"] = "Tarren Mill, Hillsbrad",
+						["zmLoc"] = {
+							["y"] = "46",
+							["x"] = "56",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.46",
+							["x"] = "0.78",
+						},
+						["routes"] = {
+							"Galen's Fall, Arathi", -- [1]
+							"Hammerfall, Arathi", -- [2]
+							"Hiri'watha Research Station, The Hinterlands", -- [3]
+							"Revantusk Village, The Hinterlands", -- [4]
+							"Ruins of Southshore, Hillsbrad", -- [5]
+							"The Bulwark, Tirisfal", -- [6]
+							"The Sepulcher, Silverpine Forest", -- [7]
+							"Thondroril River, Eastern Plaguelands", -- [8]
+							"Undercity, Tirisfal", -- [9]
+						},
+						["timers"] = {
+							["Thondroril River, Eastern Plaguelands"] = 108,
+						},
+					},
+				},
+				["Isle of Quel'Danas"] = {
+					["Shattered Sun Staging Area"] = {
+						["fmLoc"] = {
+							["y"] = "0.06",
+							["x"] = "0.58",
+						},
+						["wmLoc"] = {
+							["y"] = "0.02",
+							["x"] = "0.55",
+						},
+						["name"] = "Shattered Sun Staging Area",
+						["zmLoc"] = {
+							["y"] = "25",
+							["x"] = "48",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.13",
+							["x"] = "0.86",
+						},
+						["routes"] = {
+							"Silvermoon City", -- [1]
+							"Zul'Aman, Ghostlands", -- [2]
+						},
+						["timers"] = {
+							["Silvermoon City"] = 172,
+						},
+					},
+				},
+				["Kelp'thar Forest"] = {
+					["Smuggler's Scar, Vashj'ir"] = {
+						["fmLoc"] = {
+							["y"] = "0.58",
+							["x"] = "0.3",
+						},
+						["wmLoc"] = {
+							["y"] = "0.58",
+							["x"] = "0.36",
+						},
+						["name"] = "Smuggler's Scar, Vashj'ir",
+						["zmLoc"] = {
+							["y"] = "31",
+							["x"] = "56",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.6",
+							["x"] = "0.69",
+						},
+						["routes"] = {
+							"Sandy Beach, Vashj'ir", -- [1]
+							"Silver Tide Hollow, Vashj'ir", -- [2]
+						},
+						["timers"] = {
+							["Silver Tide Hollow, Vashj'ir"] = 83,
+						},
+					},
+				},
+				["Northern Stranglethorn"] = {
+					["Bambala, Stranglethorn"] = {
+						["fmLoc"] = {
+							["y"] = "0.84",
+							["x"] = "0.45",
+						},
+						["wmLoc"] = {
+							["y"] = "0.85",
+							["x"] = "0.46",
+						},
+						["name"] = "Bambala, Stranglethorn",
+						["zmLoc"] = {
+							["y"] = "39",
+							["x"] = "62",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.84",
+							["x"] = "0.78",
+						},
+						["routes"] = {
+							"Grom'gol, Stranglethorn", -- [1]
+						},
+						["timers"] = {
+							["Grom'gol, Stranglethorn"] = 48,
+						},
+					},
+					["Grom'gol, Stranglethorn"] = {
+						["fmLoc"] = {
+							["y"] = "0.85",
+							["x"] = "0.42",
+						},
+						["wmLoc"] = {
+							["y"] = "0.86",
+							["x"] = "0.44",
+						},
+						["name"] = "Grom'gol, Stranglethorn",
+						["zmLoc"] = {
+							["y"] = "51",
+							["x"] = "39",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.85",
+							["x"] = "0.76",
+						},
+						["routes"] = {
+							"Booty Bay, Stranglethorn", -- [1]
+							"New Kargath, Badlands", -- [2]
+							"Stonard, Swamp of Sorrows", -- [3]
+							"Flame Crest, Burning Steppes", -- [4]
+							"Bambala, Stranglethorn", -- [5]
+						},
+						["timers"] = {
+							["Bambala, Stranglethorn"] = 57,
+						},
+					},
+				},
+				["Searing Gorge"] = {
+					["Thorium Point, Searing Gorge"] = {
+						["fmLoc"] = {
+							["y"] = "0.65",
+							["x"] = "0.46",
+						},
+						["wmLoc"] = {
+							["y"] = "0.65",
+							["x"] = "0.47",
+						},
+						["name"] = "Thorium Point, Searing Gorge",
+						["zmLoc"] = {
+							["y"] = "30",
+							["x"] = "34",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.66",
+							["x"] = "0.79",
+						},
+						["routes"] = {
+							"New Kargath, Badlands", -- [1]
+							"Flame Crest, Burning Steppes", -- [2]
+						},
+						["timers"] = {
+							["Flame Crest, Burning Steppes"] = 61,
+						},
+					},
+					["Iron Summit, Searing Gorge"] = {
+						["fmLoc"] = {
+							["y"] = "0.67",
+							["x"] = "0.46",
+						},
+						["wmLoc"] = {
+							["y"] = "0.67",
+							["x"] = "0.47",
+						},
+						["name"] = "Iron Summit, Searing Gorge",
+						["zmLoc"] = {
+							["y"] = "68",
+							["x"] = "41",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.68",
+							["x"] = "0.79",
+						},
+						["routes"] = {
+							"Thorium Point, Searing Gorge", -- [1]
+						},
+					},
+				},
+				["Silverpine Forest"] = {
+					["Forsaken High Command, Silverpine Forest"] = {
+						["fmLoc"] = {
+							["y"] = "0.37",
+							["x"] = "0.39",
+						},
+						["wmLoc"] = {
+							["y"] = "0.35",
+							["x"] = "0.42",
+						},
+						["name"] = "Forsaken High Command, Silverpine Forest",
+						["zmLoc"] = {
+							["y"] = "8",
+							["x"] = "56.99",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.41",
+							["x"] = "0.74",
+						},
+						["routes"] = {
+							"The Sepulcher, Silverpine Forest", -- [1]
+							"Undercity, Tirisfal", -- [2]
+							"Brill, Tirisfal Glades", -- [3]
+						},
+					},
+					["The Forsaken Front, Silverpine Forest"] = {
+						["fmLoc"] = {
+							["y"] = "0.43",
+							["x"] = "0.38",
+						},
+						["wmLoc"] = {
+							["y"] = "0.41",
+							["x"] = "0.41",
+						},
+						["name"] = "The Forsaken Front, Silverpine Forest",
+						["zmLoc"] = {
+							["y"] = "63",
+							["x"] = "50",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.46",
+							["x"] = "0.74",
+						},
+						["routes"] = {
+							"The Sepulcher, Silverpine Forest", -- [1]
+						},
+					},
+					["The Sepulcher, Silverpine Forest"] = {
+						["fmLoc"] = {
+							["y"] = "0.4",
+							["x"] = "0.37",
+						},
+						["wmLoc"] = {
+							["y"] = "0.39",
+							["x"] = "0.4",
+						},
+						["name"] = "The Sepulcher, Silverpine Forest",
+						["zmLoc"] = {
+							["y"] = "42",
+							["x"] = "45",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.44",
+							["x"] = "0.73",
+						},
+						["routes"] = {
+							"Undercity, Tirisfal", -- [1]
+							"Tarren Mill, Hillsbrad", -- [2]
+						},
+						["timers"] = {
+							["Tarren Mill, Hillsbrad"] = 96,
+						},
+					},
+				},
+				["Shimmering Expanse"] = {
+					["Legion's Rest, Vashj'ir"] = {
+						["fmLoc"] = {
+							["y"] = "0.66",
+							["x"] = "0.28",
+						},
+						["wmLoc"] = {
+							["y"] = "0.66",
+							["x"] = "0.34",
+						},
+						["name"] = "Legion's Rest, Vashj'ir",
+						["zmLoc"] = {
+							["y"] = "63",
+							["x"] = "50",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.67",
+							["x"] = "0.67",
+						},
+						["routes"] = {
+							"Silver Tide Hollow, Vashj'ir", -- [1]
+							"Tenebrous Cavern, Vashj'ir", -- [2]
+						},
+						["timers"] = {
+							["Tenebrous Cavern, Vashj'ir"] = 72,
+						},
+					},
+					["Sandy Beach, Vashj'ir"] = {
+						["fmLoc"] = {
+							["y"] = "0.62",
+							["x"] = "0.29",
+						},
+						["wmLoc"] = {
+							["y"] = "0.62",
+							["x"] = "0.35",
+						},
+						["name"] = "Sandy Beach, Vashj'ir",
+						["zmLoc"] = {
+							["y"] = "28",
+							["x"] = "61",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.64",
+							["x"] = "0.69",
+						},
+						["routes"] = {
+							"Stygian Bounty, Vashj'ir", -- [1]
+							"Undercity, Tirisfal", -- [2]
+						},
+						["timers"] = {
+							["Stygian Bounty, Vashj'ir"] = 45,
+							["Undercity, Tirisfal"] = 358,
+						},
+					},
+					["Silver Tide Hollow, Vashj'ir"] = {
+						["fmLoc"] = {
+							["y"] = "0.63",
+							["x"] = "0.27",
+						},
+						["wmLoc"] = {
+							["y"] = "0.63",
+							["x"] = "0.34",
+						},
+						["name"] = "Silver Tide Hollow, Vashj'ir",
+						["zmLoc"] = {
+							["y"] = "41",
+							["x"] = "49",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.65",
+							["x"] = "0.67",
+						},
+						["routes"] = {
+							"Legion's Rest, Vashj'ir", -- [1]
+							"Sandy Beach, Vashj'ir", -- [2]
+							"Smuggler's Scar, Vashj'ir", -- [3]
+						},
+						["timers"] = {
+							["Sandy Beach, Vashj'ir"] = 36,
+							["Legion's Rest, Vashj'ir"] = 48,
+						},
+					},
+				},
+				["Swamp of Sorrows"] = {
+					["Bogpaddle, Swamp of Sorrows"] = {
+						["fmLoc"] = {
+							["y"] = "0.76",
+							["x"] = "0.56",
+						},
+						["wmLoc"] = {
+							["y"] = "0.77",
+							["x"] = "0.54",
+						},
+						["name"] = "Bogpaddle, Swamp of Sorrows",
+						["zmLoc"] = {
+							["y"] = "12",
+							["x"] = "72",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.76",
+							["x"] = "0.84",
+						},
+						["routes"] = {
+							"Stonard, Swamp of Sorrows", -- [1]
+							"Flame Crest, Burning Steppes", -- [2]
+						},
+						["timers"] = {
+							["Stonard, Swamp of Sorrows"] = 42,
+						},
+					},
+					["Stonard, Swamp of Sorrows"] = {
+						["fmLoc"] = {
+							["y"] = "0.78",
+							["x"] = "0.53",
+						},
+						["wmLoc"] = {
+							["y"] = "0.79",
+							["x"] = "0.52",
+						},
+						["name"] = "Stonard, Swamp of Sorrows",
+						["zmLoc"] = {
+							["y"] = "55",
+							["x"] = "47",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.79",
+							["x"] = "0.83",
+						},
+						["routes"] = {
+							"Booty Bay, Stranglethorn", -- [1]
+							"Grom'gol, Stranglethorn", -- [2]
+							"New Kargath, Badlands", -- [3]
+							"Flame Crest, Burning Steppes", -- [4]
+							"Bogpaddle, Swamp of Sorrows", -- [5]
+							"Dreadmaul Hold, Blasted Lands", -- [6]
+						},
+						["timers"] = {
+							["Dreadmaul Hold, Blasted Lands"] = 28,
+						},
+					},
+				},
+				["The Cape of Stranglethorn"] = {
+					["Booty Bay, Stranglethorn"] = {
+						["fmLoc"] = {
+							["y"] = "0.92",
+							["x"] = "0.4",
+						},
+						["wmLoc"] = {
+							["y"] = "0.94",
+							["x"] = "0.43",
+						},
+						["name"] = "Booty Bay, Stranglethorn",
+						["zmLoc"] = {
+							["y"] = "73",
+							["x"] = "40",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.91",
+							["x"] = "0.75",
+						},
+						["routes"] = {
+							"Grom'gol, Stranglethorn", -- [1]
+							"New Kargath, Badlands", -- [2]
+							"Stonard, Swamp of Sorrows", -- [3]
+							"Sunveil Excursion, Blasted Lands", -- [4]
+						},
+						["timers"] = {
+							["Grom'gol, Stranglethorn"] = 75,
+						},
+					},
+					["Hardwrench Hideaway, Stranglethorn"] = {
+						["fmLoc"] = {
+							["y"] = "0.88",
+							["x"] = "0.4",
+						},
+						["wmLoc"] = {
+							["y"] = "0.9",
+							["x"] = "0.42",
+						},
+						["name"] = "Hardwrench Hideaway, Stranglethorn",
+						["zmLoc"] = {
+							["y"] = "29",
+							["x"] = "35",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.87",
+							["x"] = "0.75",
+						},
+						["routes"] = {
+							"Booty Bay, Stranglethorn", -- [1]
+							"Grom'gol, Stranglethorn", -- [2]
+							"Bambala, Stranglethorn", -- [3]
+						},
+					},
+				},
+				["The Hinterlands"] = {
+					["Hiri'watha Research Station, The Hinterlands"] = {
+						["fmLoc"] = {
+							["x"] = "0.52",
+							["y"] = "0.42",
+						},
+						["wmLoc"] = {
+							["x"] = "0.51",
+							["y"] = "0.41",
+						},
+						["name"] = "Hiri'watha Research Station, The Hinterlands",
+						["zmLoc"] = {
+							["x"] = "32",
+							["y"] = "58",
+						},
+						["worldMapLoc"] = {
+							["x"] = "0.82",
+							["y"] = "0.46",
+						},
+						["routes"] = {
+							"Hammerfall, Arathi", -- [1]
+							"Revantusk Village, The Hinterlands", -- [2]
+							"Tarren Mill, Hillsbrad", -- [3]
+							"Thondroril River, Eastern Plaguelands", -- [4]
+						},
+						["timers"] = {
+							["The Menders' Stead, Western Plaguelands"] = 118,
+						},
+					},
+					["Revantusk Village, The Hinterlands"] = {
+						["fmLoc"] = {
+							["y"] = "0.44",
+							["x"] = "0.58",
+						},
+						["wmLoc"] = {
+							["y"] = "0.43",
+							["x"] = "0.56",
+						},
+						["name"] = "Revantusk Village, The Hinterlands",
+						["zmLoc"] = {
+							["y"] = "81",
+							["x"] = "81",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.48",
+							["x"] = "0.86",
+						},
+						["routes"] = {
+							"Hammerfall, Arathi", -- [1]
+							"Hiri'watha Research Station, The Hinterlands", -- [2]
+							"Light's Hope Chapel, Eastern Plaguelands", -- [3]
+							"Tarren Mill, Hillsbrad", -- [4]
+							"Undercity, Tirisfal", -- [5]
+						},
+						["timers"] = {
+							["Hammerfall, Arathi"] = 93,
+						},
+					},
+				},
+				["Tirisfal Glades"] = {
+					["Brill, Tirisfal Glades"] = {
+						["fmLoc"] = {
+							["y"] = "0.34",
+							["x"] = "0.41",
+						},
+						["wmLoc"] = {
+							["y"] = "0.32",
+							["x"] = "0.43",
+						},
+						["name"] = "Brill, Tirisfal Glades",
+						["zmLoc"] = {
+							["y"] = "51",
+							["x"] = "58",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.39",
+							["x"] = "0.75",
+						},
+						["routes"] = {
+							"Undercity, Tirisfal", -- [1]
+							"The Bulwark, Tirisfal", -- [2]
+						},
+					},
+					["The Bulwark, Tirisfal"] = {
+						["fmLoc"] = {
+							["y"] = "0.36",
+							["x"] = "0.45",
+						},
+						["wmLoc"] = {
+							["y"] = "0.34",
+							["x"] = "0.46",
+						},
+						["name"] = "The Bulwark, Tirisfal",
+						["zmLoc"] = {
+							["y"] = "68.99",
+							["x"] = "83",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.4",
+							["x"] = "0.78",
+						},
+						["routes"] = {
+							"Brill, Tirisfal Glades", -- [1]
+							"Tarren Mill, Hillsbrad", -- [2]
+							"Thondroril River, Eastern Plaguelands", -- [3]
+							"Undercity, Tirisfal", -- [4]
+						},
+						["timers"] = {
+							["Thondroril River, Eastern Plaguelands"] = 73,
+						},
+					},
 				},
 				["Twilight Highlands"] = {
 					["Bloodgulch, Twilight Highlands"] = {
@@ -6933,15 +6824,15 @@ Default_EFM_FlightData = {
 							["y"] = "0.57",
 							["x"] = "0.87",
 						},
-						["timers"] = {
-							["Dragonmaw Port, Twilight Highlands"] = 57,
-							["Crushblow, Twilight Highlands"] = 59,
-						},
 						["routes"] = {
 							"Crushblow, Twilight Highlands", -- [1]
 							"Dragonmaw Port, Twilight Highlands", -- [2]
 							"The Gullet, Twilight Highlands", -- [3]
 							"The Krazzworks, Twilight Highlands", -- [4]
+						},
+						["timers"] = {
+							["Dragonmaw Port, Twilight Highlands"] = 57,
+							["Crushblow, Twilight Highlands"] = 59,
 						},
 					},
 					["Crushblow, Twilight Highlands"] = {
@@ -6962,39 +6853,13 @@ Default_EFM_FlightData = {
 							["y"] = "0.61",
 							["x"] = "0.86",
 						},
-						["timers"] = {
-							["The Gullet, Twilight Highlands"] = 54,
-						},
 						["routes"] = {
 							"Bloodgulch, Twilight Highlands", -- [1]
 							"Dragonmaw Port, Twilight Highlands", -- [2]
 							"The Gullet, Twilight Highlands", -- [3]
 						},
-					},
-					["The Krazzworks, Twilight Highlands"] = {
-						["fmLoc"] = {
-							["y"] = "0.52",
-							["x"] = "0.64",
-						},
-						["wmLoc"] = {
-							["y"] = "0.51",
-							["x"] = "0.6",
-						},
-						["name"] = "The Krazzworks, Twilight Highlands",
-						["zmLoc"] = {
-							["y"] = "17",
-							["x"] = "75",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.55",
-							["x"] = "0.9",
-						},
 						["timers"] = {
-							["Bloodgulch, Twilight Highlands"] = 55,
-						},
-						["routes"] = {
-							"Bloodgulch, Twilight Highlands", -- [1]
-							"Dragonmaw Port, Twilight Highlands", -- [2]
+							["The Gullet, Twilight Highlands"] = 54,
 						},
 					},
 					["The Gullet, Twilight Highlands"] = {
@@ -7018,6 +6883,141 @@ Default_EFM_FlightData = {
 						["routes"] = {
 							"Bloodgulch, Twilight Highlands", -- [1]
 							"Crushblow, Twilight Highlands", -- [2]
+						},
+					},
+					["The Krazzworks, Twilight Highlands"] = {
+						["fmLoc"] = {
+							["y"] = "0.52",
+							["x"] = "0.64",
+						},
+						["wmLoc"] = {
+							["y"] = "0.51",
+							["x"] = "0.6",
+						},
+						["name"] = "The Krazzworks, Twilight Highlands",
+						["zmLoc"] = {
+							["y"] = "17",
+							["x"] = "75",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.55",
+							["x"] = "0.9",
+						},
+						["routes"] = {
+							"Bloodgulch, Twilight Highlands", -- [1]
+							"Dragonmaw Port, Twilight Highlands", -- [2]
+						},
+						["timers"] = {
+							["Bloodgulch, Twilight Highlands"] = 55,
+						},
+					},
+				},
+				["Undercity"] = {
+					["Undercity, Tirisfal"] = {
+						["fmLoc"] = {
+							["y"] = "0.37",
+							["x"] = "0.41",
+						},
+						["wmLoc"] = {
+							["y"] = "0.35",
+							["x"] = "0.43",
+						},
+						["name"] = "Undercity, Tirisfal",
+						["zmLoc"] = {
+							["y"] = "48",
+							["x"] = "63",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.41",
+							["x"] = "0.76",
+						},
+						["routes"] = {
+							"The Sepulcher, Silverpine Forest", -- [1]
+							"Tarren Mill, Hillsbrad", -- [2]
+							"Hammerfall, Arathi", -- [3]
+							"New Kargath, Badlands", -- [4]
+							"Light's Hope Chapel, Eastern Plaguelands", -- [5]
+							"Revantusk Village, The Hinterlands", -- [6]
+							"Thondroril River, Eastern Plaguelands", -- [7]
+							"The Bulwark, Tirisfal", -- [8]
+							"Brill, Tirisfal Glades", -- [9]
+							"Galen's Fall, Arathi", -- [10]
+							"Sandy Beach, Vashj'ir", -- [11]
+						},
+						["timers"] = {
+							["Sandy Beach, Vashj'ir"] = 345,
+							["The Sepulcher, Silverpine Forest"] = 100,
+						},
+					},
+				},
+				["Western Plaguelands"] = {
+					["Andorhal, Western Plaguelands"] = {
+						["fmLoc"] = {
+							["y"] = "0.37",
+							["x"] = "0.48",
+						},
+						["wmLoc"] = {
+							["y"] = "0.35",
+							["x"] = "0.48",
+						},
+						["name"] = "Andorhal, Western Plaguelands",
+						["zmLoc"] = {
+							["y"] = "64",
+							["x"] = "46",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.41",
+							["x"] = "0.8",
+						},
+						["routes"] = {
+							"The Bulwark, Tirisfal", -- [1]
+							"Hiri'watha Research Station, The Hinterlands", -- [2]
+							"The Menders' Stead, Western Plaguelands", -- [3]
+						},
+					},
+					["Hearthglen, Western Plaguelands"] = {
+						["fmLoc"] = {
+							["y"] = "0.32",
+							["x"] = "0.47",
+						},
+						["wmLoc"] = {
+							["y"] = "0.3",
+							["x"] = "0.48",
+						},
+						["name"] = "Hearthglen, Western Plaguelands",
+						["zmLoc"] = {
+							["y"] = "18",
+							["x"] = "44",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.37",
+							["x"] = "0.79",
+						},
+						["routes"] = {
+							"Plaguewood Tower, Eastern Plaguelands", -- [1]
+							"The Menders' Stead, Western Plaguelands", -- [2]
+						},
+					},
+					["The Menders' Stead, Western Plaguelands"] = {
+						["fmLoc"] = {
+							["y"] = "0.36",
+							["x"] = "0.48",
+						},
+						["wmLoc"] = {
+							["y"] = "0.34",
+							["x"] = "0.48",
+						},
+						["name"] = "The Menders' Stead, Western Plaguelands",
+						["zmLoc"] = {
+							["y"] = "52",
+							["x"] = "50",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.4",
+							["x"] = "0.8",
+						},
+						["routes"] = {
+							"Thondroril River, Eastern Plaguelands", -- [1]
 						},
 					},
 				},
@@ -7095,15 +7095,15 @@ Default_EFM_FlightData = {
 							["y"] = "0.5",
 							["x"] = "0.23",
 						},
-						["timers"] = {
-							["Orgrimmar, Durotar"] = 101,
-						},
 						["routes"] = {
 							"Bilgewater Harbor, Azshara", -- [1]
 							"Emerald Sanctuary, Felwood", -- [2]
 							"Orgrimmar, Durotar", -- [3]
 							"The Crossroads, Northern Barrens", -- [4]
 							"Zoram'gar Outpost, Ashenvale", -- [5]
+						},
+						["timers"] = {
+							["Orgrimmar, Durotar"] = 101,
 						},
 					},
 					["Zoram'gar Outpost, Ashenvale"] = {
@@ -7124,9 +7124,6 @@ Default_EFM_FlightData = {
 							["y"] = "0.47",
 							["x"] = "0.15",
 						},
-						["timers"] = {
-							["Sun Rock Retreat, Stonetalon Mountains"] = 125,
-						},
 						["routes"] = {
 							"Emerald Sanctuary, Felwood", -- [1]
 							"Splintertree Post, Ashenvale", -- [2]
@@ -7134,61 +7131,42 @@ Default_EFM_FlightData = {
 							"The Crossroads, Northern Barrens", -- [4]
 							"Thunder Bluff, Mulgore", -- [5]
 						},
+						["timers"] = {
+							["Sun Rock Retreat, Stonetalon Mountains"] = 125,
+						},
 					},
 				},
 				["Azshara"] = {
-					["Valormok, Azshara"] = {
+					["Bilgewater Harbor, Azshara"] = {
 						["fmLoc"] = {
-							["y"] = "0.38",
-							["x"] = "0.62",
-						},
-						["wmLoc"] = {
-							["y"] = "0.39",
-							["x"] = "0.57",
-						},
-						["name"] = "Valormok, Azshara",
-						["zmLoc"] = {
-							["y"] = "65",
-							["x"] = "14",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.48",
-							["x"] = "0.26",
-						},
-						["timers"] = {
-							["Orgrimmar, Durotar"] = 75,
-						},
-						["routes"] = {
-							"Bilgewater Harbor, Azshara", -- [1]
-							"Gates of Sothann, Hyjal", -- [2]
-							"Orgrimmar, Durotar", -- [3]
-							"Splintertree Post, Ashenvale", -- [4]
-						},
-					},
-					["Southern Rocketway, Azshara"] = {
-						["fmLoc"] = {
-							["y"] = "0.4",
+							["y"] = "0.36",
 							["x"] = "0.7",
 						},
 						["wmLoc"] = {
-							["y"] = "0.41",
+							["y"] = "0.37",
 							["x"] = "0.63",
 						},
-						["name"] = "Southern Rocketway, Azshara",
+						["name"] = "Bilgewater Harbor, Azshara",
 						["zmLoc"] = {
-							["y"] = "74",
-							["x"] = "51",
+							["y"] = "49",
+							["x"] = "52",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.49",
+							["y"] = "0.46",
 							["x"] = "0.3",
 						},
-						["timers"] = {
-							["Bilgewater Harbor, Azshara"] = 40,
-						},
 						["routes"] = {
-							"Bilgewater Harbor, Azshara", -- [1]
-							"Orgrimmar, Durotar", -- [2]
+							"Everlook, Winterspring", -- [1]
+							"Northern Rocketway, Azshara", -- [2]
+							"Orgrimmar, Durotar", -- [3]
+							"Southern Rocketway, Azshara", -- [4]
+							"Splintertree Post, Ashenvale", -- [5]
+							"The Crossroads, Northern Barrens", -- [6]
+							"Thunder Bluff, Mulgore", -- [7]
+						},
+						["timers"] = {
+							["Everlook, Winterspring"] = 150,
+							["Northern Rocketway, Azshara"] = 53,
 						},
 					},
 					["Northern Rocketway, Azshara"] = {
@@ -7209,43 +7187,65 @@ Default_EFM_FlightData = {
 							["y"] = "0.43",
 							["x"] = "0.32",
 						},
-						["timers"] = {
-							["Bilgewater Harbor, Azshara"] = 50,
-						},
 						["routes"] = {
 							"Bilgewater Harbor, Azshara", -- [1]
 						},
+						["timers"] = {
+							["Bilgewater Harbor, Azshara"] = 50,
+						},
 					},
-					["Bilgewater Harbor, Azshara"] = {
+					["Southern Rocketway, Azshara"] = {
 						["fmLoc"] = {
-							["y"] = "0.36",
+							["y"] = "0.4",
 							["x"] = "0.7",
 						},
 						["wmLoc"] = {
-							["y"] = "0.37",
+							["y"] = "0.41",
 							["x"] = "0.63",
 						},
-						["name"] = "Bilgewater Harbor, Azshara",
+						["name"] = "Southern Rocketway, Azshara",
 						["zmLoc"] = {
-							["y"] = "49",
-							["x"] = "52",
+							["y"] = "74",
+							["x"] = "51",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.46",
+							["y"] = "0.49",
 							["x"] = "0.3",
 						},
+						["routes"] = {
+							"Bilgewater Harbor, Azshara", -- [1]
+							"Orgrimmar, Durotar", -- [2]
+						},
 						["timers"] = {
-							["Everlook, Winterspring"] = 150,
-							["Northern Rocketway, Azshara"] = 53,
+							["Bilgewater Harbor, Azshara"] = 40,
+						},
+					},
+					["Valormok, Azshara"] = {
+						["fmLoc"] = {
+							["y"] = "0.38",
+							["x"] = "0.62",
+						},
+						["wmLoc"] = {
+							["y"] = "0.39",
+							["x"] = "0.57",
+						},
+						["name"] = "Valormok, Azshara",
+						["zmLoc"] = {
+							["y"] = "65",
+							["x"] = "14",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.48",
+							["x"] = "0.26",
 						},
 						["routes"] = {
-							"Everlook, Winterspring", -- [1]
-							"Northern Rocketway, Azshara", -- [2]
+							"Bilgewater Harbor, Azshara", -- [1]
+							"Gates of Sothann, Hyjal", -- [2]
 							"Orgrimmar, Durotar", -- [3]
-							"Southern Rocketway, Azshara", -- [4]
-							"Splintertree Post, Ashenvale", -- [5]
-							"The Crossroads, Northern Barrens", -- [6]
-							"Thunder Bluff, Mulgore", -- [7]
+							"Splintertree Post, Ashenvale", -- [4]
+						},
+						["timers"] = {
+							["Orgrimmar, Durotar"] = 75,
 						},
 					},
 				},
@@ -7272,35 +7272,6 @@ Default_EFM_FlightData = {
 							"Shadowprey Village, Desolace", -- [1]
 							"Karnum's Glade, Desolace", -- [2]
 							"Thunk's Abode, Desolace", -- [3]
-						},
-					},
-					["Shadowprey Village, Desolace"] = {
-						["fmLoc"] = {
-							["y"] = "0.58",
-							["x"] = "0.31",
-						},
-						["wmLoc"] = {
-							["y"] = "0.59",
-							["x"] = "0.37",
-						},
-						["name"] = "Shadowprey Village, Desolace",
-						["zmLoc"] = {
-							["y"] = "74",
-							["x"] = "21",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.63",
-							["x"] = "0.11",
-						},
-						["timers"] = {
-							["Thunder Bluff, Mulgore"] = 180,
-							["Camp Ataya, Feralas"] = 70,
-						},
-						["routes"] = {
-							"Camp Ataya, Feralas", -- [1]
-							"Camp Mojache, Feralas", -- [2]
-							"Sun Rock Retreat, Stonetalon Mountains", -- [3]
-							"Thunder Bluff, Mulgore", -- [4]
 						},
 					},
 					["Furien's Post, Desolace"] = {
@@ -7356,6 +7327,35 @@ Default_EFM_FlightData = {
 							"Thunk's Abode, Desolace", -- [3]
 						},
 					},
+					["Shadowprey Village, Desolace"] = {
+						["fmLoc"] = {
+							["y"] = "0.58",
+							["x"] = "0.31",
+						},
+						["wmLoc"] = {
+							["y"] = "0.59",
+							["x"] = "0.37",
+						},
+						["name"] = "Shadowprey Village, Desolace",
+						["zmLoc"] = {
+							["y"] = "74",
+							["x"] = "21",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.63",
+							["x"] = "0.11",
+						},
+						["routes"] = {
+							"Camp Ataya, Feralas", -- [1]
+							"Camp Mojache, Feralas", -- [2]
+							"Sun Rock Retreat, Stonetalon Mountains", -- [3]
+							"Thunder Bluff, Mulgore", -- [4]
+						},
+						["timers"] = {
+							["Thunder Bluff, Mulgore"] = 180,
+							["Camp Ataya, Feralas"] = 70,
+						},
+					},
 					["Thunk's Abode, Desolace"] = {
 						["fmLoc"] = {
 							["y"] = "0.53",
@@ -7382,31 +7382,6 @@ Default_EFM_FlightData = {
 					},
 				},
 				["Durotar"] = {
-					["Sen'jin Village, Durotar"] = {
-						["fmLoc"] = {
-							["y"] = "0.54",
-							["x"] = "0.65",
-						},
-						["wmLoc"] = {
-							["y"] = "0.55",
-							["x"] = "0.59",
-						},
-						["name"] = "Sen'jin Village, Durotar",
-						["zmLoc"] = {
-							["y"] = "73",
-							["x"] = "55",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.6",
-							["x"] = "0.28",
-						},
-						["timers"] = {
-							["Razor Hill, Durotar"] = 37,
-						},
-						["routes"] = {
-							"Razor Hill, Durotar", -- [1]
-						},
-					},
 					["Razor Hill, Durotar"] = {
 						["fmLoc"] = {
 							["y"] = "0.5",
@@ -7430,6 +7405,31 @@ Default_EFM_FlightData = {
 							"Sen'jin Village, Durotar", -- [2]
 						},
 					},
+					["Sen'jin Village, Durotar"] = {
+						["fmLoc"] = {
+							["y"] = "0.54",
+							["x"] = "0.65",
+						},
+						["wmLoc"] = {
+							["y"] = "0.55",
+							["x"] = "0.59",
+						},
+						["name"] = "Sen'jin Village, Durotar",
+						["zmLoc"] = {
+							["y"] = "73",
+							["x"] = "55",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.6",
+							["x"] = "0.28",
+						},
+						["routes"] = {
+							"Razor Hill, Durotar", -- [1]
+						},
+						["timers"] = {
+							["Razor Hill, Durotar"] = 37,
+						},
+					},
 				},
 				["Dustwallow Marsh"] = {
 					["Brackenwall Village, Dustwallow Marsh"] = {
@@ -7450,12 +7450,6 @@ Default_EFM_FlightData = {
 							["y"] = "0.67",
 							["x"] = "0.23",
 						},
-						["timers"] = {
-							["Desolation Hold, Southern Barrens"] = 56,
-							["Vendetta Point, Southern Barrens"] = 59,
-							["Ratchet, Northern Barrens"] = 90,
-							["Mudsprocket, Dustwallow Marsh"] = 63,
-						},
 						["routes"] = {
 							"Desolation Hold, Southern Barrens", -- [1]
 							"Gadgetzan, Tanaris", -- [2]
@@ -7466,6 +7460,12 @@ Default_EFM_FlightData = {
 							"Thunder Bluff, Mulgore", -- [7]
 							"Vendetta Point, Southern Barrens", -- [8]
 							"Westreach Summit, Thousand Needles", -- [9]
+						},
+						["timers"] = {
+							["Desolation Hold, Southern Barrens"] = 56,
+							["Vendetta Point, Southern Barrens"] = 59,
+							["Ratchet, Northern Barrens"] = 90,
+							["Mudsprocket, Dustwallow Marsh"] = 63,
 						},
 					},
 					["Mudsprocket, Dustwallow Marsh"] = {
@@ -7517,67 +7517,14 @@ Default_EFM_FlightData = {
 							["y"] = "0.45",
 							["x"] = "0.2",
 						},
-						["timers"] = {
-							["Splintertree Post, Ashenvale"] = 82,
-						},
 						["routes"] = {
 							"Splintertree Post, Ashenvale", -- [1]
 							"Whisperwind Grove, Felwood", -- [2]
 							"Wildheart Point, Felwood", -- [3]
 							"Zoram'gar Outpost, Ashenvale", -- [4]
 						},
-					},
-					["Whisperwind Grove, Felwood"] = {
-						["fmLoc"] = {
-							["y"] = "0.26",
-							["x"] = "0.48",
-						},
-						["wmLoc"] = {
-							["y"] = "0.27",
-							["x"] = "0.48",
-						},
-						["name"] = "Whisperwind Grove, Felwood",
-						["zmLoc"] = {
-							["y"] = "28",
-							["x"] = "43",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.38",
-							["x"] = "0.19",
-						},
 						["timers"] = {
-							["Wildheart Point, Felwood"] = 61,
-						},
-						["routes"] = {
-							"Emerald Sanctuary, Felwood", -- [1]
-							"Wildheart Point, Felwood", -- [2]
-							"Irontree Clearing, Felwood", -- [3]
-						},
-					},
-					["Wildheart Point, Felwood"] = {
-						["fmLoc"] = {
-							["y"] = "0.31",
-							["x"] = "0.48",
-						},
-						["wmLoc"] = {
-							["y"] = "0.32",
-							["x"] = "0.48",
-						},
-						["name"] = "Wildheart Point, Felwood",
-						["zmLoc"] = {
-							["y"] = "61",
-							["x"] = "44",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.42",
-							["x"] = "0.19",
-						},
-						["timers"] = {
-							["Emerald Sanctuary, Felwood"] = 34,
-						},
-						["routes"] = {
-							"Emerald Sanctuary, Felwood", -- [1]
-							"Whisperwind Grove, Felwood", -- [2]
+							["Splintertree Post, Ashenvale"] = 82,
 						},
 					},
 					["Irontree Clearing, Felwood"] = {
@@ -7598,13 +7545,66 @@ Default_EFM_FlightData = {
 							["y"] = "0.36",
 							["x"] = "0.21",
 						},
-						["timers"] = {
-							["Whisperwind Grove, Felwood"] = 41,
-						},
 						["routes"] = {
 							"Everlook, Winterspring", -- [1]
 							"Moonglade", -- [2]
 							"Whisperwind Grove, Felwood", -- [3]
+						},
+						["timers"] = {
+							["Whisperwind Grove, Felwood"] = 41,
+						},
+					},
+					["Whisperwind Grove, Felwood"] = {
+						["fmLoc"] = {
+							["y"] = "0.26",
+							["x"] = "0.48",
+						},
+						["wmLoc"] = {
+							["y"] = "0.27",
+							["x"] = "0.48",
+						},
+						["name"] = "Whisperwind Grove, Felwood",
+						["zmLoc"] = {
+							["y"] = "28",
+							["x"] = "43",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.38",
+							["x"] = "0.19",
+						},
+						["routes"] = {
+							"Emerald Sanctuary, Felwood", -- [1]
+							"Wildheart Point, Felwood", -- [2]
+							"Irontree Clearing, Felwood", -- [3]
+						},
+						["timers"] = {
+							["Wildheart Point, Felwood"] = 61,
+						},
+					},
+					["Wildheart Point, Felwood"] = {
+						["fmLoc"] = {
+							["y"] = "0.31",
+							["x"] = "0.48",
+						},
+						["wmLoc"] = {
+							["y"] = "0.32",
+							["x"] = "0.48",
+						},
+						["name"] = "Wildheart Point, Felwood",
+						["zmLoc"] = {
+							["y"] = "61",
+							["x"] = "44",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.42",
+							["x"] = "0.19",
+						},
+						["routes"] = {
+							"Emerald Sanctuary, Felwood", -- [1]
+							"Whisperwind Grove, Felwood", -- [2]
+						},
+						["timers"] = {
+							["Emerald Sanctuary, Felwood"] = 34,
 						},
 					},
 				},
@@ -7714,43 +7714,41 @@ Default_EFM_FlightData = {
 							["y"] = "0.34",
 							["x"] = "0.22",
 						},
-						["timers"] = {
-							["Irontree Clearing, Felwood"] = 74,
-						},
 						["routes"] = {
 							"Everlook, Winterspring", -- [1]
 							"Irontree Clearing, Felwood", -- [2]
 							"Nordrassil, Hyjal", -- [3]
 						},
+						["timers"] = {
+							["Irontree Clearing, Felwood"] = 74,
+						},
 					},
 				},
 				["Mount Hyjal"] = {
-					["Shrine of Aviana, Hyjal"] = {
+					["Grove of Aessina, Hyjal"] = {
 						["fmLoc"] = {
 							["y"] = "0.3",
-							["x"] = "0.56",
+							["x"] = "0.52",
 						},
 						["wmLoc"] = {
 							["y"] = "0.31",
-							["x"] = "0.53",
+							["x"] = "0.51",
 						},
-						["name"] = "Shrine of Aviana, Hyjal",
+						["name"] = "Grove of Aessina, Hyjal",
 						["zmLoc"] = {
-							["y"] = "42",
-							["x"] = "41",
+							["y"] = "36",
+							["x"] = "19",
 						},
 						["worldMapLoc"] = {
-							["y"] = "0.42",
-							["x"] = "0.23",
-						},
-						["timers"] = {
-							["Gates of Sothann, Hyjal"] = 65,
+							["y"] = "0.41",
+							["x"] = "0.21",
 						},
 						["routes"] = {
-							"Grove of Aessina, Hyjal", -- [1]
+							"Shrine of Aviana, Hyjal", -- [1]
 							"Nordrassil, Hyjal", -- [2]
-							"Gates of Sothann, Hyjal", -- [3]
-							"Sanctuary of Malorne, Hyjal", -- [4]
+						},
+						["timers"] = {
+							["Shrine of Aviana, Hyjal"] = 42,
 						},
 					},
 					["Nordrassil, Hyjal"] = {
@@ -7778,32 +7776,6 @@ Default_EFM_FlightData = {
 							"Grove of Aessina, Hyjal", -- [4]
 						},
 					},
-					["Grove of Aessina, Hyjal"] = {
-						["fmLoc"] = {
-							["y"] = "0.3",
-							["x"] = "0.52",
-						},
-						["wmLoc"] = {
-							["y"] = "0.31",
-							["x"] = "0.51",
-						},
-						["name"] = "Grove of Aessina, Hyjal",
-						["zmLoc"] = {
-							["y"] = "36",
-							["x"] = "19",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.41",
-							["x"] = "0.21",
-						},
-						["timers"] = {
-							["Shrine of Aviana, Hyjal"] = 42,
-						},
-						["routes"] = {
-							"Shrine of Aviana, Hyjal", -- [1]
-							"Nordrassil, Hyjal", -- [2]
-						},
-					},
 					["Sanctuary of Malorne, Hyjal"] = {
 						["fmLoc"] = {
 							["y"] = "0.33",
@@ -7824,6 +7796,34 @@ Default_EFM_FlightData = {
 						},
 						["routes"] = {
 							"Shrine of Aviana, Hyjal", -- [1]
+						},
+					},
+					["Shrine of Aviana, Hyjal"] = {
+						["fmLoc"] = {
+							["y"] = "0.3",
+							["x"] = "0.56",
+						},
+						["wmLoc"] = {
+							["y"] = "0.31",
+							["x"] = "0.53",
+						},
+						["name"] = "Shrine of Aviana, Hyjal",
+						["zmLoc"] = {
+							["y"] = "42",
+							["x"] = "41",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.42",
+							["x"] = "0.23",
+						},
+						["routes"] = {
+							"Grove of Aessina, Hyjal", -- [1]
+							"Nordrassil, Hyjal", -- [2]
+							"Gates of Sothann, Hyjal", -- [3]
+							"Sanctuary of Malorne, Hyjal", -- [4]
+						},
+						["timers"] = {
+							["Gates of Sothann, Hyjal"] = 65,
 						},
 					},
 				},
@@ -7873,11 +7873,6 @@ Default_EFM_FlightData = {
 							["y"] = "0.52",
 							["x"] = "0.26",
 						},
-						["timers"] = {
-							["Gadgetzan, Tanaris"] = 335,
-							["Southern Rocketway, Azshara"] = 93,
-							["Nozzlepot's Outpost, Northern Barrens"] = 55,
-						},
 						["routes"] = {
 							"Bilgewater Harbor, Azshara", -- [1]
 							"Brackenwall Village, Dustwallow Marsh", -- [2]
@@ -7893,6 +7888,11 @@ Default_EFM_FlightData = {
 							"The Mor'Shan Ramparts, Ashenvale", -- [12]
 							"Thunder Bluff, Mulgore", -- [13]
 							"Valormok, Azshara", -- [14]
+						},
+						["timers"] = {
+							["Gadgetzan, Tanaris"] = 335,
+							["Southern Rocketway, Azshara"] = 93,
+							["Nozzlepot's Outpost, Northern Barrens"] = 55,
 						},
 					},
 				},
@@ -7946,9 +7946,6 @@ Default_EFM_FlightData = {
 							["y"] = "0.68",
 							["x"] = "0.21",
 						},
-						["timers"] = {
-							["Brackenwall Village, Dustwallow Marsh"] = 47,
-						},
 						["routes"] = {
 							"Brackenwall Village, Dustwallow Marsh", -- [1]
 							"Camp Mojache, Feralas", -- [2]
@@ -7956,6 +7953,37 @@ Default_EFM_FlightData = {
 							"Mudsprocket, Dustwallow Marsh", -- [4]
 							"Vendetta Point, Southern Barrens", -- [5]
 							"Westreach Summit, Thousand Needles", -- [6]
+						},
+						["timers"] = {
+							["Brackenwall Village, Dustwallow Marsh"] = 47,
+						},
+					},
+					["Hunter's Hill, Southern Barrens"] = {
+						["fmLoc"] = {
+							["y"] = "0.54",
+							["x"] = "0.51",
+						},
+						["wmLoc"] = {
+							["y"] = "0.55",
+							["x"] = "0.5",
+						},
+						["name"] = "Hunter's Hill, Southern Barrens",
+						["zmLoc"] = {
+							["y"] = "20",
+							["x"] = "39",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.6",
+							["x"] = "0.21",
+						},
+						["routes"] = {
+							"Desolation Hold, Southern Barrens", -- [1]
+							"The Crossroads, Northern Barrens", -- [2]
+							"Thunder Bluff, Mulgore", -- [3]
+							"Vendetta Point, Southern Barrens", -- [4]
+						},
+						["timers"] = {
+							["The Crossroads, Northern Barrens"] = 43,
 						},
 					},
 					["Vendetta Point, Southern Barrens"] = {
@@ -7988,64 +8016,8 @@ Default_EFM_FlightData = {
 							["Bloodhoof Village, Mulgore"] = 167,
 						},
 					},
-					["Hunter's Hill, Southern Barrens"] = {
-						["fmLoc"] = {
-							["y"] = "0.54",
-							["x"] = "0.51",
-						},
-						["wmLoc"] = {
-							["y"] = "0.55",
-							["x"] = "0.5",
-						},
-						["name"] = "Hunter's Hill, Southern Barrens",
-						["zmLoc"] = {
-							["y"] = "20",
-							["x"] = "39",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.6",
-							["x"] = "0.21",
-						},
-						["timers"] = {
-							["The Crossroads, Northern Barrens"] = 43,
-						},
-						["routes"] = {
-							"Desolation Hold, Southern Barrens", -- [1]
-							"The Crossroads, Northern Barrens", -- [2]
-							"Thunder Bluff, Mulgore", -- [3]
-							"Vendetta Point, Southern Barrens", -- [4]
-						},
-					},
 				},
 				["Stonetalon Mountains"] = {
-					["Sun Rock Retreat, Stonetalon Mountains"] = {
-						["fmLoc"] = {
-							["y"] = "0.47",
-							["x"] = "0.4",
-						},
-						["wmLoc"] = {
-							["y"] = "0.48",
-							["x"] = "0.43",
-						},
-						["name"] = "Sun Rock Retreat, Stonetalon Mountains",
-						["zmLoc"] = {
-							["y"] = "61",
-							["x"] = "48",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.54",
-							["x"] = "0.15",
-						},
-						["timers"] = {
-							["Shadowprey Village, Desolace"] = 143,
-						},
-						["routes"] = {
-							"Shadowprey Village, Desolace", -- [1]
-							"The Crossroads, Northern Barrens", -- [2]
-							"Thunder Bluff, Mulgore", -- [3]
-							"Zoram'gar Outpost, Ashenvale", -- [4]
-						},
-					},
 					["Cliffwalker Post, Stonetalon Mountains"] = {
 						["fmLoc"] = {
 							["y"] = "0.42",
@@ -8069,30 +8041,6 @@ Default_EFM_FlightData = {
 							"Malaka'jin, Stonetalon Mountains", -- [2]
 							"Sun Rock Retreat, Stonetalon Mountains", -- [3]
 							"Zoram'gar Outpost, Ashenvale", -- [4]
-						},
-					},
-					["The Sludgewerks, Stonetalon Mountains"] = {
-						["fmLoc"] = {
-							["y"] = "0.43",
-							["x"] = "0.42",
-						},
-						["wmLoc"] = {
-							["y"] = "0.44",
-							["x"] = "0.44",
-						},
-						["name"] = "The Sludgewerks, Stonetalon Mountains",
-						["zmLoc"] = {
-							["y"] = "40",
-							["x"] = "53",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.52",
-							["x"] = "0.16",
-						},
-						["routes"] = {
-							"Cliffwalker Post, Stonetalon Mountains", -- [1]
-							"Krom'gar Fortress, Stonetalon Mountains", -- [2]
-							"Sun Rock Retreat, Stonetalon Mountains", -- [3]
 						},
 					},
 					["Krom'gar Fortress, Stonetalon Mountains"] = {
@@ -8143,8 +8091,112 @@ Default_EFM_FlightData = {
 							"Thunder Bluff, Mulgore", -- [4]
 						},
 					},
+					["Sun Rock Retreat, Stonetalon Mountains"] = {
+						["fmLoc"] = {
+							["y"] = "0.47",
+							["x"] = "0.4",
+						},
+						["wmLoc"] = {
+							["y"] = "0.48",
+							["x"] = "0.43",
+						},
+						["name"] = "Sun Rock Retreat, Stonetalon Mountains",
+						["zmLoc"] = {
+							["y"] = "61",
+							["x"] = "48",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.54",
+							["x"] = "0.15",
+						},
+						["routes"] = {
+							"Shadowprey Village, Desolace", -- [1]
+							"The Crossroads, Northern Barrens", -- [2]
+							"Thunder Bluff, Mulgore", -- [3]
+							"Zoram'gar Outpost, Ashenvale", -- [4]
+						},
+						["timers"] = {
+							["Shadowprey Village, Desolace"] = 143,
+						},
+					},
+					["The Sludgewerks, Stonetalon Mountains"] = {
+						["fmLoc"] = {
+							["y"] = "0.43",
+							["x"] = "0.42",
+						},
+						["wmLoc"] = {
+							["y"] = "0.44",
+							["x"] = "0.44",
+						},
+						["name"] = "The Sludgewerks, Stonetalon Mountains",
+						["zmLoc"] = {
+							["y"] = "40",
+							["x"] = "53",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.52",
+							["x"] = "0.16",
+						},
+						["routes"] = {
+							"Cliffwalker Post, Stonetalon Mountains", -- [1]
+							"Krom'gar Fortress, Stonetalon Mountains", -- [2]
+							"Sun Rock Retreat, Stonetalon Mountains", -- [3]
+						},
+					},
 				},
 				["Tanaris"] = {
+					["Bootlegger Outpost, Tanaris"] = {
+						["fmLoc"] = {
+							["y"] = "0.86",
+							["x"] = "0.61",
+						},
+						["wmLoc"] = {
+							["y"] = "0.87",
+							["x"] = "0.57",
+						},
+						["name"] = "Bootlegger Outpost, Tanaris",
+						["zmLoc"] = {
+							["y"] = "60",
+							["x"] = "55",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.85",
+							["x"] = "0.26",
+						},
+						["routes"] = {
+							"Gadgetzan, Tanaris", -- [1]
+							"Dawnrise Expedition, Tanaris", -- [2]
+						},
+						["timers"] = {
+							["Gadgetzan, Tanaris"] = 60,
+						},
+					},
+					["Dawnrise Expedition, Tanaris"] = {
+						["fmLoc"] = {
+							["y"] = "0.9",
+							["x"] = "0.55",
+						},
+						["wmLoc"] = {
+							["y"] = "0.9",
+							["x"] = "0.53",
+						},
+						["name"] = "Dawnrise Expedition, Tanaris",
+						["zmLoc"] = {
+							["y"] = "77",
+							["x"] = "33",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.87",
+							["x"] = "0.22",
+						},
+						["routes"] = {
+							"Gadgetzan, Tanaris", -- [1]
+							"Ramkahen, Uldum", -- [2]
+						},
+						["timers"] = {
+							["Gadgetzan, Tanaris"] = 94,
+						},
+					},
 					["Gadgetzan, Tanaris"] = {
 						["fmLoc"] = {
 							["y"] = "0.8",
@@ -8186,88 +8238,8 @@ Default_EFM_FlightData = {
 							["Fizzle & Pozzik's Speedbarge, Thousand Needles"] = 50,
 						},
 					},
-					["Dawnrise Expedition, Tanaris"] = {
-						["fmLoc"] = {
-							["y"] = "0.9",
-							["x"] = "0.55",
-						},
-						["wmLoc"] = {
-							["y"] = "0.9",
-							["x"] = "0.53",
-						},
-						["name"] = "Dawnrise Expedition, Tanaris",
-						["zmLoc"] = {
-							["y"] = "77",
-							["x"] = "33",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.87",
-							["x"] = "0.22",
-						},
-						["routes"] = {
-							"Gadgetzan, Tanaris", -- [1]
-							"Ramkahen, Uldum", -- [2]
-						},
-						["timers"] = {
-							["Gadgetzan, Tanaris"] = 94,
-						},
-					},
-					["Bootlegger Outpost, Tanaris"] = {
-						["fmLoc"] = {
-							["y"] = "0.86",
-							["x"] = "0.61",
-						},
-						["wmLoc"] = {
-							["y"] = "0.87",
-							["x"] = "0.57",
-						},
-						["name"] = "Bootlegger Outpost, Tanaris",
-						["zmLoc"] = {
-							["y"] = "60",
-							["x"] = "55",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.85",
-							["x"] = "0.26",
-						},
-						["timers"] = {
-							["Gadgetzan, Tanaris"] = 60,
-						},
-						["routes"] = {
-							"Gadgetzan, Tanaris", -- [1]
-							"Dawnrise Expedition, Tanaris", -- [2]
-						},
-					},
 				},
 				["The Barrens"] = {
-					["The Mor'Shan Ramparts, Ashenvale"] = {
-						["fmLoc"] = {
-							["y"] = "0.46",
-							["x"] = "0.54",
-						},
-						["wmLoc"] = {
-							["y"] = "0.47",
-							["x"] = "0.52",
-						},
-						["name"] = "The Mor'Shan Ramparts, Ashenvale",
-						["zmLoc"] = {
-							["y"] = "15",
-							["x"] = "41",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.54",
-							["x"] = "0.22",
-						},
-						["routes"] = {
-							"Hellscream's Watch, Ashenvale", -- [1]
-							"Krom'gar Fortress, Stonetalon Mountains", -- [2]
-							"Nozzlepot's Outpost, Northern Barrens", -- [3]
-							"Orgrimmar, Durotar", -- [4]
-							"Silverwind Refuge, Ashenvale", -- [5]
-							"Splintertree Post, Ashenvale", -- [6]
-							"The Crossroads, Northern Barrens", -- [7]
-						},
-					},
 					["Nozzlepot's Outpost, Northern Barrens"] = {
 						["fmLoc"] = {
 							["y"] = "0.46",
@@ -8286,12 +8258,12 @@ Default_EFM_FlightData = {
 							["y"] = "0.54",
 							["x"] = "0.24",
 						},
-						["timers"] = {
-							["The Crossroads, Northern Barrens"] = 64,
-						},
 						["routes"] = {
 							"Orgrimmar, Durotar", -- [1]
 							"The Crossroads, Northern Barrens", -- [2]
+						},
+						["timers"] = {
+							["The Crossroads, Northern Barrens"] = 64,
 						},
 					},
 					["Ratchet, Northern Barrens"] = {
@@ -8337,11 +8309,6 @@ Default_EFM_FlightData = {
 							["y"] = "0.59",
 							["x"] = "0.23",
 						},
-						["timers"] = {
-							["Brackenwall Village, Dustwallow Marsh"] = 160,
-							["Nozzlepot's Outpost, Northern Barrens"] = 68,
-							["Zoram'gar Outpost, Ashenvale"] = 231,
-						},
 						["routes"] = {
 							"Bilgewater Harbor, Azshara", -- [1]
 							"Brackenwall Village, Dustwallow Marsh", -- [2]
@@ -8358,9 +8325,69 @@ Default_EFM_FlightData = {
 							"Westreach Summit, Thousand Needles", -- [13]
 							"Zoram'gar Outpost, Ashenvale", -- [14]
 						},
+						["timers"] = {
+							["Brackenwall Village, Dustwallow Marsh"] = 160,
+							["Nozzlepot's Outpost, Northern Barrens"] = 68,
+							["Zoram'gar Outpost, Ashenvale"] = 231,
+						},
+					},
+					["The Mor'Shan Ramparts, Ashenvale"] = {
+						["fmLoc"] = {
+							["y"] = "0.46",
+							["x"] = "0.54",
+						},
+						["wmLoc"] = {
+							["y"] = "0.47",
+							["x"] = "0.52",
+						},
+						["name"] = "The Mor'Shan Ramparts, Ashenvale",
+						["zmLoc"] = {
+							["y"] = "15",
+							["x"] = "41",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.54",
+							["x"] = "0.22",
+						},
+						["routes"] = {
+							"Hellscream's Watch, Ashenvale", -- [1]
+							"Krom'gar Fortress, Stonetalon Mountains", -- [2]
+							"Nozzlepot's Outpost, Northern Barrens", -- [3]
+							"Orgrimmar, Durotar", -- [4]
+							"Silverwind Refuge, Ashenvale", -- [5]
+							"Splintertree Post, Ashenvale", -- [6]
+							"The Crossroads, Northern Barrens", -- [7]
+						},
 					},
 				},
 				["Thousand Needles"] = {
+					["Fizzle & Pozzik's Speedbarge, Thousand Needles"] = {
+						["fmLoc"] = {
+							["y"] = "0.76",
+							["x"] = "0.61",
+						},
+						["wmLoc"] = {
+							["y"] = "0.76",
+							["x"] = "0.57",
+						},
+						["name"] = "Fizzle & Pozzik's Speedbarge, Thousand Needles",
+						["zmLoc"] = {
+							["y"] = "71",
+							["x"] = "79",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.76",
+							["x"] = "0.26",
+						},
+						["routes"] = {
+							"Gadgetzan, Tanaris", -- [1]
+							"Mudsprocket, Dustwallow Marsh", -- [2]
+							"Westreach Summit, Thousand Needles", -- [3]
+						},
+						["timers"] = {
+							["Mudsprocket, Dustwallow Marsh"] = 71,
+						},
+					},
 					["Westreach Summit, Thousand Needles"] = {
 						["fmLoc"] = {
 							["y"] = "0.68",
@@ -8394,33 +8421,6 @@ Default_EFM_FlightData = {
 							["Camp Mojache, Feralas"] = 49,
 						},
 					},
-					["Fizzle & Pozzik's Speedbarge, Thousand Needles"] = {
-						["fmLoc"] = {
-							["y"] = "0.76",
-							["x"] = "0.61",
-						},
-						["wmLoc"] = {
-							["y"] = "0.76",
-							["x"] = "0.57",
-						},
-						["name"] = "Fizzle & Pozzik's Speedbarge, Thousand Needles",
-						["zmLoc"] = {
-							["y"] = "71",
-							["x"] = "79",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.76",
-							["x"] = "0.26",
-						},
-						["routes"] = {
-							"Gadgetzan, Tanaris", -- [1]
-							"Mudsprocket, Dustwallow Marsh", -- [2]
-							"Westreach Summit, Thousand Needles", -- [3]
-						},
-						["timers"] = {
-							["Mudsprocket, Dustwallow Marsh"] = 71,
-						},
-					},
 				},
 				["Thunder Bluff"] = {
 					["Thunder Bluff, Mulgore"] = {
@@ -8441,9 +8441,6 @@ Default_EFM_FlightData = {
 							["y"] = "0.61",
 							["x"] = "0.17",
 						},
-						["timers"] = {
-							["Hunter's Hill, Southern Barrens"] = 65,
-						},
 						["routes"] = {
 							"Bilgewater Harbor, Azshara", -- [1]
 							"Bloodhoof Village, Mulgore", -- [2]
@@ -8459,36 +8456,12 @@ Default_EFM_FlightData = {
 							"Westreach Summit, Thousand Needles", -- [12]
 							"Zoram'gar Outpost, Ashenvale", -- [13]
 						},
+						["timers"] = {
+							["Hunter's Hill, Southern Barrens"] = 65,
+						},
 					},
 				},
 				["Uldum"] = {
-					["Ramkahen, Uldum"] = {
-						["fmLoc"] = {
-							["y"] = "0.89",
-							["x"] = "0.49",
-						},
-						["wmLoc"] = {
-							["y"] = "0.9",
-							["x"] = "0.49",
-						},
-						["name"] = "Ramkahen, Uldum",
-						["zmLoc"] = {
-							["y"] = "33",
-							["x"] = "56",
-						},
-						["worldMapLoc"] = {
-							["y"] = "0.87",
-							["x"] = "0.2",
-						},
-						["routes"] = {
-							"Dawnrise Expedition, Tanaris", -- [1]
-							"Oasis of Vir'sar, Uldum", -- [2]
-							"Schnottz's Landing, Uldum", -- [3]
-						},
-						["timers"] = {
-							["Dawnrise Expedition, Tanaris"] = 68,
-						},
-					},
 					["Oasis of Vir'sar, Uldum"] = {
 						["fmLoc"] = {
 							["y"] = "0.85",
@@ -8514,6 +8487,33 @@ Default_EFM_FlightData = {
 						},
 						["timers"] = {
 							["Ramkahen, Uldum"] = 122,
+						},
+					},
+					["Ramkahen, Uldum"] = {
+						["fmLoc"] = {
+							["y"] = "0.89",
+							["x"] = "0.49",
+						},
+						["wmLoc"] = {
+							["y"] = "0.9",
+							["x"] = "0.49",
+						},
+						["name"] = "Ramkahen, Uldum",
+						["zmLoc"] = {
+							["y"] = "33",
+							["x"] = "56",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.87",
+							["x"] = "0.2",
+						},
+						["routes"] = {
+							"Dawnrise Expedition, Tanaris", -- [1]
+							"Oasis of Vir'sar, Uldum", -- [2]
+							"Schnottz's Landing, Uldum", -- [3]
+						},
+						["timers"] = {
+							["Dawnrise Expedition, Tanaris"] = 68,
 						},
 					},
 					["Schnottz's Landing, Uldum"] = {
@@ -8611,15 +8611,15 @@ Default_EFM_FlightData = {
 							["y"] = "0.36",
 							["x"] = "0.27",
 						},
-						["timers"] = {
-							["Moonglade"] = 131,
-						},
 						["routes"] = {
 							"Bilgewater Harbor, Azshara", -- [1]
 							"Irontree Clearing, Felwood", -- [2]
 							"Moonglade", -- [3]
 							"Nordrassil, Hyjal", -- [4]
 							"Orgrimmar, Durotar", -- [5]
+						},
+						["timers"] = {
+							["Moonglade"] = 131,
 						},
 					},
 				},
