@@ -1,7 +1,5 @@
 --[[
 
-Entire file wiped, as this data is not necessarily valid for WoW Classic.
-
 This file contains all the flightpaths I have discovered in game.
 
 This file is where the data for specific factions is loaded from.
@@ -5050,7 +5048,7 @@ Default_EFM_FlightData = {
 					},
 				},
 				["Hellfire Peninsula"] = {
-					["Hellfire Peninsula, The Dark Portal, Alliance"] = {
+					["Hellfire Peninsula, The Dark Portal"] = {
 						["fmLoc"] = {
 							["y"] = "0.54",
 							["x"] = "0.78",
@@ -5059,7 +5057,7 @@ Default_EFM_FlightData = {
 							["y"] = "0.52",
 							["x"] = "0.68",
 						},
-						["name"] = "Hellfire Peninsula, The Dark Portal, Alliance",
+						["name"] = "Hellfire Peninsula, The Dark Portal",
 						["zmLoc"] = {
 							["y"] = "52",
 							["x"] = "87",
@@ -5099,14 +5097,14 @@ Default_EFM_FlightData = {
 						},
 						["routes"] = {
 							"Allerian Stronghold, Terokkar Forest", -- [1]
-							"Hellfire Peninsula, The Dark Portal, Alliance", -- [2]
+							"Hellfire Peninsula, The Dark Portal", -- [2]
 							"Shatter Point, Hellfire Peninsula", -- [3]
 							"Shattrath, Terokkar Forest", -- [4]
 							"Temple of Telhamat, Hellfire Peninsula", -- [5]
 						},
 						["timers"] = {
 							["Allerian Stronghold, Terokkar Forest"] = 119,
-							["Hellfire Peninsula, The Dark Portal, Alliance"] = 65,
+							["Hellfire Peninsula, The Dark Portal"] = 65,
 							["Shatter Point, Hellfire Peninsula"] = 58,
 							["Shattrath, Terokkar Forest"] = 128,
 							["Temple of Telhamat, Hellfire Peninsula"] = 77,
@@ -5131,11 +5129,11 @@ Default_EFM_FlightData = {
 							["x"] = "nil",
 						},
 						["routes"] = {
-							"Hellfire Peninsula, The Dark Portal, Alliance", -- [1]
+							"Hellfire Peninsula, The Dark Portal", -- [1]
 							"Honor Hold, Hellfire Peninsula", -- [2]
 						},
 						["timers"] = {
-							["Hellfire Peninsula, The Dark Portal, Alliance"] = 32,
+							["Hellfire Peninsula, The Dark Portal"] = 32,
 							["Honor Hold, Hellfire Peninsula"] = 57,
 						},
 					},
@@ -10067,7 +10065,7 @@ Default_EFM_FlightData = {
 							["Zabra'jin, Zangarmarsh"] = 150,
 						},
 					},
-					["Hellfire Peninsula, The Dark Portal, Horde"] = {
+					["Hellfire Peninsula, The Dark Portal"] = {
 						["fmLoc"] = {
 							["y"] = "0.53",
 							["x"] = "0.78",
@@ -10076,7 +10074,7 @@ Default_EFM_FlightData = {
 							["y"] = "0.51",
 							["x"] = "0.68",
 						},
-						["name"] = "Hellfire Peninsula, The Dark Portal, Horde",
+						["name"] = "Hellfire Peninsula, The Dark Portal",
 						["zmLoc"] = {
 							["y"] = "48",
 							["x"] = "87",
@@ -10139,13 +10137,13 @@ Default_EFM_FlightData = {
 						},
 						["routes"] = {
 							"Falcon Watch, Hellfire Peninsula", -- [1]
-							"Hellfire Peninsula, The Dark Portal, Horde", -- [2]
+							"Hellfire Peninsula, The Dark Portal", -- [2]
 							"Spinebreaker Ridge, Hellfire Peninsula", -- [3]
 							"Stonebreaker Hold, Terokkar Forest", -- [4]
 						},
 						["timers"] = {
 							["Falcon Watch, Hellfire Peninsula"] = 67,
-							["Hellfire Peninsula, The Dark Portal, Horde"] = 71,
+							["Hellfire Peninsula, The Dark Portal"] = 71,
 							["Spinebreaker Ridge, Hellfire Peninsula"] = 66,
 							["Stonebreaker Hold, Terokkar Forest"] = 129,
 						},
