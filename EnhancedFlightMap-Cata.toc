@@ -1,11 +1,11 @@
 ## Interface: 40400
 ## Title: Enhanced Flight Map
 ## Author: Lysidia of Feathermoon/Myrzael & Thengel of Mankrik/Westfall (Classic)
-## Version: 3.3.1-Wrath-Classic
+## Version: 4.1.0-Classic/Cata
 ## Notes: Adds enhancements to the flight system!
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## X-Expansion-Level: 3
+## X-Expansion-Level: 4
 ## X-Curse-Project-ID: 489980
 ## SavedVariables: EFM_Data,EFM_WaterNodes,EFM_ImportData
 ## SavedVariablesPerCharacter: EFM_MyConf,EFM_KnownNodes,EFM_ReachableNodes

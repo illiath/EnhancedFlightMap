@@ -9,7 +9,7 @@ These strings are not to be localised, so they are here, and not in any of the l
 ]]
 
 -- Global define
-EFM_Version				= "3.2.1-Classic/TBC";
+EFM_Version				= "4.1.0-Classic/Cata";
 
 -- Define some stuff here to handle global stuff...
 EFM_Global_Faction			= UnitFactionGroup("player");
@@ -17,6 +17,7 @@ EFM_Global_Faction			= UnitFactionGroup("player");
 -- Timer variables (see timer.lua)
 EFM_Timer_StartRecording		= false;
 EFM_Timer_Recording			= false;
+EFM_Timer_Paused			= false;
 EFM_Timer_LastTime			= time();
 EFM_Timer_TimeRemaining			= 0;
 EFM_Timer_TimeKnown			= false;

@@ -1,3 +1,8 @@
+2024-05-17  Version 4.1.0-Classic/Cata
+---------------------------------
+Add ~all Horde flight times. Boy, are my arms tired!
+
+
 2024-05-12  Version 4.0.0-Classic/Cata
 ---------------------------------
 Fix later Wrath/Cata LUA errors, sorry...
