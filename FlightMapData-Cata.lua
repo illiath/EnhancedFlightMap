@@ -511,6 +511,31 @@ Default_EFM_FlightData = {
 					},
 				},
 				["Eastern Plaguelands"] = {
+					["Acherus: The Ebon Hold"] = {
+						["fmLoc"] = {
+							["y"] = "0.34",
+							["x"] = "0.62",
+						},
+						["wmLoc"] = {
+							["y"] = "0.32",
+							["x"] = "0.58",
+						},
+						["name"] = "Acherus: The Ebon Hold",
+						["zmLoc"] = {
+							["y"] = "50",
+							["x"] = "83",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.39",
+							["x"] = "0.88",
+						},
+						["routes"] = {
+							"Light's Hope Chapel, Eastern Plaguelands", -- [1]
+						},
+						["timers"] = {
+							["Light's Hope Chapel, Eastern Plaguelands"] = 52,
+						},
+					},
 					["Crown Guard Tower, Eastern Plaguelands"] = {
 						["fmLoc"] = {
 							["y"] = "0.36",
@@ -592,18 +617,20 @@ Default_EFM_FlightData = {
 							["x"] = "0.87",
 						},
 						["routes"] = {
-							"Aerie Peak, The Hinterlands", -- [1]
-							"Chillwind Camp, Western Plaguelands", -- [2]
-							"Eastwall Tower, Eastern Plaguelands", -- [3]
-							"Fuselight, Badlands", -- [4]
-							"Ironforge, Dun Morogh", -- [5]
-							"Light's Shield Tower, Eastern Plaguelands", -- [6]
-							"Shattered Sun Staging Area", -- [7]
-							"Stormfeather Outpost, The Hinterlands", -- [8]
-							"Thondroril River, Eastern Plaguelands", -- [9]
-							"Zul'Aman, Ghostlands", -- [10]
+							"Acherus: The Ebon Hold", -- [1]
+							"Aerie Peak, The Hinterlands", -- [2]
+							"Chillwind Camp, Western Plaguelands", -- [3]
+							"Eastwall Tower, Eastern Plaguelands", -- [4]
+							"Fuselight, Badlands", -- [5]
+							"Ironforge, Dun Morogh", -- [6]
+							"Light's Shield Tower, Eastern Plaguelands", -- [7]
+							"Shattered Sun Staging Area", -- [8]
+							"Stormfeather Outpost, The Hinterlands", -- [9]
+							"Thondroril River, Eastern Plaguelands", -- [10]
+							"Zul'Aman, Ghostlands", -- [11]
 						},
 						["timers"] = {
+							["Acherus: The Ebon Hold"] = 70,
 							["Aerie Peak, The Hinterlands"] = 167,
 							["Chillwind Camp, Western Plaguelands"] = 146,
 							["Eastwall Tower, Eastern Plaguelands"] = 23,
@@ -5848,6 +5875,31 @@ Default_EFM_FlightData = {
 					},
 				},
 				["Eastern Plaguelands"] = {
+					["Acherus: The Ebon Hold"] = {
+						["fmLoc"] = {
+							["y"] = "0.34",
+							["x"] = "0.62",
+						},
+						["wmLoc"] = {
+							["y"] = "0.32",
+							["x"] = "0.58",
+						},
+						["name"] = "Acherus: The Ebon Hold",
+						["zmLoc"] = {
+							["y"] = "50",
+							["x"] = "83",
+						},
+						["worldMapLoc"] = {
+							["y"] = "0.39",
+							["x"] = "0.88",
+						},
+						["routes"] = {
+							"Light's Hope Chapel, Eastern Plaguelands", -- [1]
+						},
+						["timers"] = {
+							["Light's Hope Chapel, Eastern Plaguelands"] = 52,
+						},
+					},
 					["Crown Guard Tower, Eastern Plaguelands"] = {
 						["fmLoc"] = {
 							["y"] = "0.36",
@@ -6106,16 +6158,18 @@ Default_EFM_FlightData = {
 							["x"] = "0.87",
 						},
 						["routes"] = {
-							"Eastwall Tower, Eastern Plaguelands", -- [1]
-							"Fuselight, Badlands", -- [2]
-							"Light's Shield Tower, Eastern Plaguelands", -- [3]
-							"Revantusk Village, The Hinterlands", -- [4]
-							"Thondroril River, Eastern Plaguelands", -- [5]
-							"Tranquillien, Ghostlands", -- [6]
-							"Undercity, Tirisfal", -- [7]
-							"Zul'Aman, Ghostlands", -- [8]
+							"Acherus: The Ebon Hold", -- [1]
+							"Eastwall Tower, Eastern Plaguelands", -- [2]
+							"Fuselight, Badlands", -- [3]
+							"Light's Shield Tower, Eastern Plaguelands", -- [4]
+							"Revantusk Village, The Hinterlands", -- [5]
+							"Thondroril River, Eastern Plaguelands", -- [6]
+							"Tranquillien, Ghostlands", -- [7]
+							"Undercity, Tirisfal", -- [8]
+							"Zul'Aman, Ghostlands", -- [9]
 						},
 						["timers"] = {
+							["Acherus: The Ebon Hold"] = 70,
 							["Eastwall Tower, Eastern Plaguelands"] = 23,
 							["Fuselight, Badlands"] = 323,
 							["Light's Shield Tower, Eastern Plaguelands"] = 35,
