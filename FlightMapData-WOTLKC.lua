@@ -195,14 +195,16 @@ Default_EFM_FlightData = {
 							["x"] = "0.87",
 						},
 						["routes"] = {
-							"Aerie Peak, The Hinterlands", -- [1]
-							"Chillwind Camp, Western Plaguelands", -- [2]
-							"Ironforge, Dun Morogh", -- [3]
-							"Shattered Sun Staging Area", -- [4]
-							"Thondoril River, Western Plaguelands", -- [5]
-							"Zul'Aman, Ghostlands", -- [6]
+							"Acherus: The Ebon Hold", -- [1]
+							"Aerie Peak, The Hinterlands", -- [2]
+							"Chillwind Camp, Western Plaguelands", -- [3]
+							"Ironforge, Dun Morogh", -- [4]
+							"Shattered Sun Staging Area", -- [5]
+							"Thondoril River, Western Plaguelands", -- [6]
+							"Zul'Aman, Ghostlands", -- [7]
 						},
 						["timers"] = {
+							["Acherus: The Ebon Hold"] = 70,
 							["Aerie Peak, The Hinterlands"] = 163,
 							["Chillwind Camp, Western Plaguelands"] = 150,
 							["Ironforge, Dun Morogh"] = 368,
@@ -3285,13 +3287,15 @@ Default_EFM_FlightData = {
 							["x"] = "0.87",
 						},
 						["routes"] = {
-							"Revantusk Village, The Hinterlands", -- [1]
-							"Thondoril River, Western Plaguelands", -- [2]
-							"Tranquillien, Ghostlands", -- [3]
-							"Undercity, Tirisfal", -- [4]
-							"Zul'Aman, Ghostlands", -- [5]
+							"Acherus: The Ebon Hold", -- [1]
+							"Revantusk Village, The Hinterlands", -- [2]
+							"Thondoril River, Western Plaguelands", -- [3]
+							"Tranquillien, Ghostlands", -- [4]
+							"Undercity, Tirisfal", -- [5]
+							"Zul'Aman, Ghostlands", -- [6]
 						},
 						["timers"] = {
+							["Acherus: The Ebon Hold"] = 70,
 							["Tranquillien, Ghostlands"] = 118,
 							["Zul'Aman, Ghostlands"] = 102,
 							["Thondoril River, Western Plaguelands"] = 99,
