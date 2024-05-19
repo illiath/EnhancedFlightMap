@@ -1,3 +1,8 @@
+2024-05-19  Version 4.1.2-Classic/Cata
+---------------------------------
+Add missing comma in horde data
+
+
 2024-05-17  Version 4.1.1-Classic/Cata
 ---------------------------------
 Add Acherus: The Ebon Hold

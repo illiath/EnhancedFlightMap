@@ -1,7 +1,7 @@
 ## Interface: 20504
 ## Title: Enhanced Flight Map
 ## Author: Lysidia of Feathermoon/Myrzael & Thengel of Mankrik/Westfall/Pagle (Classic)
-## Version: 4.1.1-Classic/Cata
+## Version: 4.1.2-Classic/Cata
 ## Notes: Adds enhancements to the flight system!
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
