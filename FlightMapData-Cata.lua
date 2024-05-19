@@ -6310,7 +6310,7 @@ Default_EFM_FlightData = {
 							["Undercity, Tirisfal"] = 160,
 						},
 					},
-				}
+				},
 				["Eversong Woods"] = {
 					["Fairbreeze Village, Eversong Woods"] = {
 						["fmLoc"] = {
