@@ -24,7 +24,7 @@
 				</Anchors>
 				<Layers>
 					<Layer>
-						<FontString name="$parentLabel" setAllPoints="true" font="Fonts\FRIZQT__.TTF" text="Text Timer">
+						<FontString name="$parentLabel" setAllPoints="true" font="Fonts\2002.TTF" text="Text Timer">
 							<FontHeight>
 								<AbsValue val="12" />
 							</FontHeight>
@@ -99,7 +99,7 @@
 				</Anchors>
 				<Layers>
 					<Layer>
-						<FontString name="$parentLabel" setAllPoints="true" font="Fonts\FRIZQT__.TTF" text="Flying To:">
+						<FontString name="$parentLabel" setAllPoints="true" font="Fonts\2002.TTF" text="Flying To:">
 							<FontHeight>
 								<AbsValue val="12" />
 							</FontHeight>
